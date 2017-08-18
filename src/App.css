@@ -1,0 +1,26 @@
+.app{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(images/bj.jpg);
+	background-size: 100% 100%;
+}
+.app a:first-of-type{
+	margin-top: 50%;
+}
+.app a{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	text-align: center;
+	display: block;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	font-size: 0.85rem;
+	border-radius: 1rem;
+}
