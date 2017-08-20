@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../css/yezhuindex.css'
 
 import {
   BrowserRouter as Router,
@@ -10,8 +11,8 @@ import {
 class Yezhuindex extends Component {
   render() {
     return (
-		<div>
-          333
+				<div>
+          <h2 id="c">333</h2>
         </div>    
     );
   }
