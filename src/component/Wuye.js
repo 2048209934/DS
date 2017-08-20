@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Wuyeindex from './Wuyeindex';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +10,14 @@ import {
 class Wuye extends Component {
   render() {
     return (
-       <div>
-          222
-       </div>
+       <Router>
+    	  <div>
+    	  	<Route exact path='/wuye' render={() => (
+            <Link to="/wuye/index">登录</Link>
+           )} />  
+          <Route path="/wuye/index" component={Wuyeindex} />
+        </div>
+    	 </Router>  
     );
   }
 }
