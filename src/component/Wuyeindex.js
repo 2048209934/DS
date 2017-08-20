@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../css/wuyeindex.css'
 
 import {
   BrowserRouter as Router,
@@ -13,8 +14,7 @@ class Wuyeindex extends Component {
 		    <div className="property">
             <div className="banner">
                 <img src="../images/banner.jpg" alt=""/>
-            </div>
-        </div>    
+            </div>  
     );
   }
 }

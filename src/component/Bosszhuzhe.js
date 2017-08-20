@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './../css/yezhuindex.css'
 
 import {
   BrowserRouter as Router,
@@ -8,14 +7,14 @@ import {
 } from 'react-router-dom'
 
 
-class Yezhuindex extends Component {
+class Bosszhuzhe extends Component {
   render() {
     return (
-				<div>
-          <h2 id="c">333</h2>
-        </div>    
+    	  <div>
+    	  	zhuzhe
+        </div>
     );
   }
 }
 
-export default Yezhuindex;
+export default Bosszhuzhe;
