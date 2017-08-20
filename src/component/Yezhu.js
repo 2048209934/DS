@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Yezhuindex from './Yezhuindex';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +10,14 @@ import {
 class Yezhu extends Component {
   render() {
     return (
-       <div>
-          3333
-       </div>
+       <Router>
+    	  <div>
+    	  	<Route exact path='/yezhu' render={() => (
+            <Link to="/yezhu/index">登录</Link>
+           )} />  
+          <Route path="/yezhu/index" component={Yezhuindex} />
+        </div>
+    	 </Router> 
     );
   }
 }

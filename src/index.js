@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux'
 import {createStore,applyMiddleware} from 'redux'
-import reducer from './component/reducer'
+import reducer from './reducer/reducer'
 import thunk from 'redux-thunk'
 
 let store=createStore(reducer,applyMiddleware(thunk))

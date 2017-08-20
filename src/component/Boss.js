@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Bossindex from './Bossindex';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +10,14 @@ import {
 class Boss extends Component {
   render() {
     return (
-       <div>
-          1111
-       </div>
+    	 <Router>
+    	  <div>
+    	  	<Route exact path='/boss' render={() => (
+            <Link to="/boss/index">登录</Link>
+           )} />  
+          <Route path="/boss/index" component={Bossindex} />
+        </div>
+    	 </Router>      
     );
   }
 }

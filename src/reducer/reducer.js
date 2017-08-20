@@ -1,5 +1,10 @@
-import {combineReducers} from 'redux'
-
+import {combineReducers} from 'redux';
+/*
+import {} from './ghj';
+import {} from './hcc';
+import {} from './mds';
+import {} from './my';
+*/
 
 function a(state=[],action){
 	switch(action.type){
