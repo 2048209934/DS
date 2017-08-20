@@ -10,8 +10,10 @@ import {
 class Wuyeindex extends Component {
   render() {
     return (
-		<div>
-          222
+		    <div className="property">
+            <div className="banner">
+                <img src="../images/banner.jpg" alt=""/>
+            </div>
         </div>    
     );
   }
