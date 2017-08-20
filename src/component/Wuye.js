@@ -10,8 +10,8 @@ import {
 class Wuye extends Component {
   render() {
     return (
-       <div>
-          222
+       <div className="property">
+            333
        </div>
     );
   }
