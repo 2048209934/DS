@@ -1,3 +1,333 @@
-#c{
-	color: blue;
+/* 业主住这儿 */
+body{
+	overflow-x:hidden;
+	background:#fcfbf9;
+}
+/* header */
+.head{
+	width:100%;
+	height:3.4rem;
+	background:rbga(255,255,255,0);
+	transition:2s;
+	position:fixed;
+	top:0;
+	left:0;
+	font:1.2rem/3.4rem 'Microsoft Yahei';
+	text-align:center;
+}
+.head img{
+	width:1.3rem;
+	position:absolute;
+	top:1rem;
+	left:1rem;
+}
+/* banner */
+.banner img{
+	width:100%;
+	display:block;
+}
+/* ewm and yb */
+.accept{
+	width:100%;
+	height:5rem;
+	background:#f4f3f1;
+	padding:0.5rem 0;
+	border-top:2px solid #e7e6e4;
+	border-bottom:2px solid #e7e6e4;
+}
+.accept_left{
+	width:49%;
+	height:100%;
+	background:#90c472;
+}
+.word{
+	width:75%;
+	height:calc(100% - 1rem);
+	padding-top:1rem;
+}
+.word p{
+	padding-left:1rem;
+	color:#fff;
+	font-family:'Microsoft Yahei';
+}
+.word p:first-child{
+	font-size:1.2rem;
+	line-height:2rem;
+}
+.word p:last-child{
+	font-size:0.8rem;
+}
+.icon img{
+	width:1.5rem;
+	height:1.5rem;
+	margin-top:1.8rem;
+}
+.accept_right{
+	width:49%;
+	height:100%;
+	background:#cba979;
+}
+/* fresh */
+.fresh{
+	width:100%;
+	height:3rem; 
+	font:1rem/3rem 'Microsoft Yahei';
+	padding-left:5%;
+}
+/* content */
+.content{
+	width:100%;
+	border-top:2px solid #e7e6e4;
+	border-bottom:2px solid #e7e6e4;
+	margin-bottom:4.9rem;
+}
+.box{
+	width:94%;
+	margin:0 auto;
+}
+.box p{
+	font:0.8rem/1.2rem 'Microsoft Yahei';
+}
+.name{
+	width:100%;
+	height:3rem;
+}
+.name img{
+	display:block;
+	width:1.6rem;
+	margin-top:0.7rem;
+}
+.name span{
+	font:0.8rem/3rem 'Microsoft Yahei';
+}
+.name span:first-of-type{
+	margin:0 0.5rem;
+}
+.name span:nth-of-type(2){
+	color:#a1a09e;
+}
+.name span:last-of-type{
+	color:#ff9500;
+}
+.prompt{
+	width:100%;
+	display:block;
+	margin-top:0.6rem;
+}
+.time{
+	width:100%;
+	height:3rem;
+	font:0.8rem/3rem 'Microsoft Yahei';
+	color:#888785;
+}
+/* footer */
+.admin_con{
+	width:100%;
+	height:4.9rem;
+	line-height:4.9rem;
+	background:#fcfbf9;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:1000;
+}
+.admin_con a{
+	text-align:center;
+	float:left;
+	width:25%;
+	height:4.9rem;
+	color:#3e3e3e;
+	border-top:4px solid #fcfbf9;
+}
+/* hover时变样式 */
+.admin_con a:hover{
+	color:#ed860a;
+	border-top:4px solid #f39800;
+}
+
+
+
+
+
+
+
+
+/* 业主管家 */
+
+/* steward */
+.steward{
+	width:80%;
+	height:9rem;
+	background:url("../images/bg_02.jpg");
+	padding:2rem 10% 1rem;
+}
+.steward p{
+	text-align:center;
+	font:0.8rem/1.2rem 'Microsoft Yahei';
+	color:#43604c;
+}
+.steward button{
+	width:100%;
+	height:2.7rem;
+	background:#fff;
+	text-align:center;
+	font:1rem/2.7rem 'Microsoft Yahei';
+	border-radius:1.5rem;
+	margin-top:1.4rem;
+	color:#e4a10a;
+	border:none;
+	outline:none;
+	font-weight:bold;
+}
+/* talk */
+.talk{
+	width:88%;
+	padding:4% 7% 3% 5%;
+	font:0.8rem 'Microsoft Yahei';
+	color:#43604c;
+}
+.talk p{
+	line-height:1.2rem;
+	margin-bottom:0.2rem;
+}
+.talk .detail span:first-of-type{
+	width:15%;
+	color:#f19808;
+}
+.talk .detail span:last-of-type{
+	width:85%;
+}
+/* list */
+.list{
+	margin-bottom:4.9rem;
+}
+.list li{
+	width:90%;
+	border-top:1px solid #ccc;
+	padding:0 5%;
+	font:1rem/3rem 'Microsoft Yahei';
+}
+.list li span:last-of-type{
+	color:#43604c;
+	font-size:1.4rem;
+}
+.list li.white{
+	height:1rem;
+	background:#f4f3ef;
+}
+.list li:last-of-type{
+	border-bottom:1px solid #ccc;
+}
+
+
+
+
+
+/* 业主 我 */
+.myself{
+	width:100%;
+	height:19.75rem;
+	background:url("../images/banner_two.jpg") no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	clear:both;
+}
+/* yezhu touxiang 物业我的里的头像 */
+.myself_top{
+	width:100%;
+	height:19.75rem;
+}
+
+
+/* 上次的头像 */
+.file {
+	width:9.2rem;
+	height:9.2rem;
+	background:#fff;
+	margin: 0 auto;
+	position: relative;
+	display: inline-block;
+	background: white;
+	border-radius:50%;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: 0;
+	margin-bottom: 0.65rem;
+	line-height: 1rem;
+	color: #000;
+	top:3.2rem;
+	left: 43%;
+	margin-left: -2.35rem;
+	clear:both;
+}
+/* 头像区域 */
+.file p{
+	width:1.4rem;
+	height:1.4rem;
+	background:#fff;
+	border-radius:50%;
+}
+/* 输入的头像 */
+.file input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+/* 名称 */
+.myself_word{
+	text-align:center;
+	position: absolute;
+	bottom:2.6rem;
+	left:40%;
+}
+.myself_word p:first-of-type{
+	color:#fcfbf9;
+	font-size:1.5rem;
+}
+.myself_word p:nth-of-type(2){
+	color:#fcfbf9;
+	font-size:1rem;
+	margin-top:1rem;
+}
+
+/* 身份和人数 */
+.myself_now{
+	height:7.2rem;
+	width:100%;
+	background:#fcfbf9;
+	border-bottom:2px solid #e0ddda;
+}
+/* now_left */
+.now_left{
+	text-align:center;
+	width:48%;
+	height:7.2rem;
+	border-right:2px solid #e0ddda;
+	float:left;
+}
+.now_left p:first-of-type{
+	margin-top:2.1rem;
+}
+.now_left p:nth-of-type(2){
+	margin-top:0.25rem;
+	color:#ef982f;
+}
+/* now_right */
+.now_right{
+	text-align:center;
+	width:48%;
+	height:7.2rem;
+	float:right;
+}
+
+.now_right p:first-of-type{
+	margin-top:2.1rem;
+}
+.now_right p:nth-of-type(2){
+	margin-top:0.25rem;
+	color:#ef982f;
 }
