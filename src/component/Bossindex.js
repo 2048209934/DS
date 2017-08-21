@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './../css/bossindex.css'
-import Bosszhuzhe from './Bosszhuzhe'
-import Bosssteward from './Bosssteward'
-import Bossshequ from './Bossshequ'
-import Bossme from './Bossme'
+import './../css/bossindex.css';
+import Bosszhuzhe from './Bosszhuzhe';
+import Bosssteward from './Bosssteward';
+import Bossshequ from './Bossshequ';
+import Bossme from './Bossme';
 import {
   BrowserRouter as Router,
   Route,
