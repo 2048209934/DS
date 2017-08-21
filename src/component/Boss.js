@@ -13,7 +13,7 @@ class Boss extends Component {
     	 <Router>
     	  <div>
     	  	<Route exact path='/boss' render={() => (
-            <Link to="/boss/index">登录</Link>
+    	  		<Link to="/boss/index">登录</Link>
            )} />  
           <Route path="/boss/index" component={Bossindex} />
         </div>

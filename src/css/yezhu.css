@@ -1,0 +1,55 @@
+.yezhuruhuma{
+	display: none;
+}
+.yezhuzhuce{
+	display: none;
+}
+.yezhudenglu{
+	
+}
+.yezhudenglu h2{
+	text-align: center;
+	margin: 2.375rem 0 1.425rem;
+	font-weight: normal;
+	font-size: 1rem;
+	font-family: "Microsoft YaHei";
+	color: #333;
+}
+.yezhudenglu div{
+	position: relative;
+}
+.yezhudenglu div span{
+	position: absolute;
+	left: 5%;
+	top: 0;
+	height: 100%;
+	font-size: 0.5rem;
+	line-height: 1.625rem;
+	color: #333;
+	font-family: "Microsoft YaHei";
+	font-weight: 500;
+}
+.yezhudenglu input{
+	width: 100%;
+	height: 1.625rem;
+	border-top:1px solid #eee;
+	box-sizing: border-box;
+	padding-left: 15%;
+	outline: none;
+	font-size: 0.625rem;
+	line-height: 1.625rem;
+}
+.yezhudenglu input[type=text]{
+	width: 100%;
+	border-top:1px solid #ccc;
+}
+.yezhudenglu input[type=password]{
+	width: 100%;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 0.75rem;
+}
+.zhuce{
+	padding: 2% 0 0 5%;
+	display: block;
+	color: orange;
+}

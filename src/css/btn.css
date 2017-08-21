@@ -1,0 +1,11 @@
+.btn{
+	width: 90%;
+	height: 1.55rem;
+	margin: 0 auto;
+	display: block;
+	color: #fff;
+	font-size: 0.6rem;
+	font-weight: bold;
+	background: orange;
+	border-radius: 0.2rem;
+}

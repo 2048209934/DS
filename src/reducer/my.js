@@ -1,3 +1,3 @@
-export function a(){
-	
+export function (state=[],action){
+
 }
