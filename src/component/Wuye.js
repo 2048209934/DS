@@ -18,6 +18,7 @@ class Wuye extends Component {
           <Route path="/wuye/index" component={Wuyeindex} />
         </div>
     	 </Router>  
+
     );
   }
 }
