@@ -71,8 +71,8 @@ body{
 }
 /* property_con   住这儿的管理的每个小块 */
 .property_manage a{
-	width:48%;
-	height:7.2rem;
+	width:49%;
+	height:100%;
 	margin-top:0.8rem;
 
 }
