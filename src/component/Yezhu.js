@@ -13,18 +13,42 @@ import {connect} from 'react-redux';
 
 
 class Yezhu extends Component {
+	yezhufh1(){
+		$(".yezhudenglu").show()
+		$(".yezhuzhuce").hide()
+		$(".yezhuruhuma").hide()
+	}
+	yezhufh2(){
+		$(".yezhudenglu").hide()
+		$(".yezhuzhuce").hide()
+		$(".yezhuruhuma").show()
+	}
 	yezhuzhuce(){
 		$(".yezhudenglu").hide()
 		$(".yezhuzhuce").hide()
 		$(".yezhuruhuma").show()
 	}
-	dl(e){
-		if ($("#dluser").val()==''||$("#dlpass").val()=='') {
+	yezhudl(e){
+		if ($("#yezhudluser").val()==''||$("#yezhudlpass").val()=='') {
 			alert("请输入内容")
 			e.preventDefault()
 		} else{
-			this.props.dlv($("#dluser").val(),$("#dlpass").val())	
+			this.props.yezhudlv($("#yezhudluser").val(),$("#yezhudlpass").val())	
 			e.preventDefault()
+		}
+	}
+	yezhurhm(){
+		if ($("#yezhurhm").val()=='') {
+			alert("请输入内容")
+		} else{
+			this.props.yezhurhmv($("#yezhurhm").val())	
+		}
+	}
+	yezhuzc(e){
+		if ($("#yezhuzcuser").val()==''||$("#yezhuzcpass").val()=='') {
+			alert("请输入内容")
+		} else{
+			this.props.yezhuzcv($("#yezhuzcuser").val(),$("#yezhuzcpass").val())	
 		}
 	}
   render() {
@@ -37,19 +61,26 @@ class Yezhu extends Component {
     	  			  入户码
     	  			*/}
     	  			<div className="yezhuruhuma">
-    	  				<span className="fh">返回</span>
-    	  				<h3>请输入入户码</h3>
-    	  				<input type="text" ref="" />
-    	  				<Btn btnVal="确定" />
+    	  				<span className="fh" onClick={this.yezhufh1}>返回</span>
+    	  				<h2>请输入入户码</h2>
+    	  				<input type="text" id="yezhurhm" />
+    	  				<span onClick={this.yezhurhm.bind(this)}><Btn btnVal="确定"/></span>
     	  			</div>
     	  			{/*
     	  			  注册	
     	  			*/}
     	  			<div className="yezhuzhuce">
-    	  				<span className="fh">返回</span>
-    	  				<input type="text" ref=""  placeholder="请输入" />
-    	  				<input type="password" ref=""  placeholder="请输入" />
-    	  				<Btn btnVal="注册" />
+    	  				<span className="fh" onClick={this.yezhufh2}>返回</span>
+    	  					<h2>注册新账户</h2>
+    	  				<div>
+    	  					<span>账号</span>
+    	  					<input type="text" id="yezhuzcuser"  placeholder="请输入" />
+    	  				</div>
+    	  				<div>
+    	  					<span>密码</span>
+    	  					<input type="password" id="yezhuzcpass"  placeholder="请输入" />
+    	  				</div>
+    	  				<span onClick={this.yezhuzc.bind(this)}><Btn btnVal="注册" /></span>
     	  			</div>
     	  			{/*
     	  			  登录	
@@ -58,13 +89,13 @@ class Yezhu extends Component {
     	  				<h2>欢迎回家</h2>
     	  				<div>
     	  					<span>账号</span>
-    	  					<input type="text" id="dluser" placeholder="请输入" />
+    	  					<input type="text" id="yezhudluser" placeholder="请输入" />
     	  				</div>
     	  				<div>
     	  					<span>密码</span>
-    	  					<input type="password" id="dlpass"  placeholder="请输入" />
+    	  					<input type="password" id="yezhudlpass"  placeholder="请输入" />
     	  				</div>    	  	  	  				
-    	  				<Link to="/yezhu/index" onClick={this.dl.bind(this)}><Btn btnVal="登 录" /></Link>
+    	  				<Link to="/yezhu/index" onClick={this.yezhudl.bind(this)}><Btn btnVal="登 录" /></Link>
     	  				<span className="zhuce" onClick={this.yezhuzhuce}>注册</span>
     	  			</div>           	
     	  		</div>
