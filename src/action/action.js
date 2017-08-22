@@ -1,5 +1,14 @@
-import {yezhudlpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
 
-export function dlv(dluser,dlpass){
+export function yezhudlv(dluser,dlpass){
 	return yezhudlpost(dluser,dlpass)
+}
+export function yezhurhmv(homeyard){
+	return yezhurhmpost(homeyard)
+}
+export function yezhuzcv(zcuser,zcpass){
+	return yezhuzcpost(zcuser,zcpass)
+}
+export function wuyedlv(dluser,dlpass){
+	return wuyedlpost(dluser,dlpass)
 }

@@ -17,7 +17,7 @@ body{
 	width:25%;
 	height:4.9rem;
 	color:#3e3e3e;
-	font-size:0.8rem;
+	font-size:0.6rem;
 	border-top:4px solid #fcfbf9;
 }
 /* hover时变样式 */
@@ -40,10 +40,11 @@ body{
 }
 /* banner 图片上的盒子 */
 .banner_box{
-	position:absolute;
+	position:fixed;
+	background: #fff;
 	top:0;
 	width:100%;
-	height:4.65rem;
+	height:2.8rem;
 	border-bottom:1px solid #9c9a96;
 
 }
@@ -51,19 +52,20 @@ body{
 .banner .banner_word{
 	color:#fff;
 	position:absolute;
-	top:2.1rem;
+	top:0.8rem;
+	color: #333;
 	left:30%;
 	font-size:0.8rem;
 }
 /* 信息 news */
 .banner .banner_news img{
-	width:1.8rem;
-	height:2rem;
+	width:1rem;
+	height:1.1rem;
 }
 .banner .banner_news{
 	position:absolute;
-	top:1.5rem;
-	right:5%;
+	top:0.9rem;
+	left:5%;
 }
 
 
@@ -115,7 +117,7 @@ body{
 .organize_right{
 	float:right;
 	margin-top:0.8rem;
-	margin-right:0.2rem;
+	margin-right:0.6rem;
 	margin-bottom:0.8rem;
 }
 .organize_right img{
@@ -138,10 +140,6 @@ body{
 .name{
 	width:100%;
 	height:3rem;
-}
-.name p{
-	font-size:0.8rem;
-	line-height:1.6rem;
 }
 .name img{
 	display:block;
@@ -299,23 +297,109 @@ body{
 	color:#ef982f;
 }
 
-.self_means div{
+.self_means .daturn_top{
 	width:100%;
-	height:4.8rem;
+	height:3.8rem;
 	background:#fff;
 }
-.self_means div:first-of-type{
+.self_means .daturn_top:first-of-type{
 	text-align: center;
-	line-height:4.75rem;
+	line-height:3.8rem;
 	border-bottom:1px solid #e0ddda;
 }
-.self_means div:first-of-type span:first-of-type{
+.self_means .daturn_top:first-of-type span:first-of-type{
 	position:absolute;
 	left:0.8rem;
 	font-size:0.6rem;
 	color:#f39800;
 }
-.self_means div:first-of-type span:nth-of-type(2){
+.self_means .daturn_top:first-of-type span:nth-of-type(2){
 	color:#3c3c3c;
 	font-size:0.8rem;
+}
+.wuye_head{
+	width:5rem;
+	height:5rem;
+	border-radius:50%;
+	background:#eee;
+	margin:0 auto;
+	margin-top:1.5rem;
+}
+.daturn_bottom p{
+	text-align:center;
+	margin-top:0.4rem;
+}
+.daturn_bottom p:first-of-type{
+	font-size:0.8rem;
+}
+.daturn_bottom p:last-of-type{
+	font-size:0.6rem;
+}
+.put{
+	width:10.75rem;
+	height:1.98rem;
+	background:#ed860a;
+	margin:0 auto;
+	border-radius:0.4rem 0.4rem;
+	margin-top:1.2rem;
+	line-height:1.8rem;
+	text-align:center;
+	color:#fff;
+	font-size:0.6rem;
+}
+.modify_top{
+	height:3rem;
+	line-height:3rem;
+	text-align:center;
+	background:#fff;
+}
+.modify_top span:first-of-type{
+	font-size:0.4rem;
+	position:absolute;
+	left:0.8rem;
+	top:0;
+	color:#f1a549;
+}
+.modify_top span:nth-of-type(2){
+	font-size:0.8rem;
+	color:#393939;
+
+}
+.modify input[type="text"]{
+	width:100%;
+	height:2rem;
+	border:none;
+	padding-left:0.5rem;
+}
+.modify input:first-of-type{
+	border-top:2px solid #e0ddda;
+	border-bottom:1px solid #e0ddda;
+	margin-top:4rem;
+}
+.modify input:nth-of-type(2){
+	border-top:1px solid #e0ddda;
+	border-bottom:2px solid #e0ddda;
+}
+.modify input:nth-of-type(3){
+	border-bottom:2px solid #e0ddda;
+}
+.modify input:nth-of-type(4){
+	margin-top:1.2rem;
+	margin-left:38%;
+}
+.modify input:nth-of-type(5){
+	margin-top:1.2rem;
+	margin-left:0.6rem;
+}
+/* 提交按钮 （物业） */
+.submit{
+	width:80%;
+	height:2rem;
+	line-height:2rem;
+	text-align:center;
+	color:#fff;
+	margin:0 auto;
+	margin-top:1.6rem;
+	background:#ee9121;
+	border-radius:0.4rem 0.4rem;
 }

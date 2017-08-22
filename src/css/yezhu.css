@@ -1,17 +1,75 @@
 .yezhuruhuma{
 	display: none;
 }
+.yezhuruhuma h2{
+	text-align: center;
+    font-size: 1rem;
+    margin: 1.125rem 0 0;
+    font-weight: normal;
+}
+.yezhuruhuma input{
+	margin: 2rem 0 1.5rem;
+	text-align: center;
+	outline: none;
+	width: 100%;
+	height: 1.925rem;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
+	border-top: 1px solid #b8b8b8;
+	border-bottom: 1px solid #b8b8b8;
+}
 .yezhuzhuce{
 	display: none;
+}
+.yezhuzhuce h2{
+	text-align: center;
+	margin: 2.375rem 0 1.425rem;
+	font-weight: normal;
+	font-size: 1rem;
+	font-family: "Microsoft YaHei";
+	color: #333;
+}
+.yezhuzhuce div{
+	position: relative;
+}
+.yezhuzhuce div span{
+	position: absolute;
+	left: 5%;
+	top: 0;
+	height: 100%;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
+	color: #333;
+	font-family: "Microsoft YaHei";
+	font-weight: 500;
+}
+.yezhuzhuce input{
+	width: 100%;
+	height: 1.925rem;
+	border-top:1px solid #eee;
+	box-sizing: border-box;
+	padding-left: 15%;
+	outline: none;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
+}
+.yezhuzhuce input[type=text]{
+	width: 100%;
+	border-top:1px solid #ccc;
+}
+.yezhuzhuce input[type=password]{
+	width: 100%;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 0.75rem;
 }
 .yezhudenglu{
 	
 }
 .yezhudenglu h2{
 	text-align: center;
-	margin: 2.375rem 0 1.425rem;
+	margin: 3.75rem 0 1.925rem;
 	font-weight: normal;
-	font-size: 1rem;
+	font-size: 2rem;
 	font-family: "Microsoft YaHei";
 	color: #333;
 }
@@ -23,21 +81,21 @@
 	left: 5%;
 	top: 0;
 	height: 100%;
-	font-size: 0.5rem;
-	line-height: 1.625rem;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
 	color: #333;
 	font-family: "Microsoft YaHei";
 	font-weight: 500;
 }
 .yezhudenglu input{
 	width: 100%;
-	height: 1.625rem;
+	height: 1.925rem;
 	border-top:1px solid #eee;
 	box-sizing: border-box;
 	padding-left: 15%;
 	outline: none;
 	font-size: 0.625rem;
-	line-height: 1.625rem;
+	line-height: 1.925rem;
 }
 .yezhudenglu input[type=text]{
 	width: 100%;
@@ -46,10 +104,17 @@
 .yezhudenglu input[type=password]{
 	width: 100%;
 	border-bottom:1px solid #ccc;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.75rem;
 }
 .zhuce{
-	padding: 2% 0 0 5%;
+	padding: 5% 0 0 5%;
 	display: block;
+	font-size: 0.725rem;
 	color: orange;
+}
+.fh{
+	color: orange;
+	display: block;
+	font-size: 0.725rem;
+	padding: 4% 0 0 5%;
 }

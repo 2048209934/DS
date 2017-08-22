@@ -1,0 +1,44 @@
+.wuyedenglu{
+	
+}
+.wuyedenglu h2{
+	text-align: center;
+	margin: 3.75rem 0 1.925rem;
+	font-weight: normal;
+	font-size: 2rem;
+	font-family: "Microsoft YaHei";
+	color: #333;
+}
+.wuyedenglu div{
+	position: relative;
+}
+.wuyedenglu div span{
+	position: absolute;
+	left: 5%;
+	top: 0;
+	height: 100%;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
+	color: #333;
+	font-family: "Microsoft YaHei";
+	font-weight: 500;
+}
+.wuyedenglu input{
+	width: 100%;
+	height: 1.925rem;
+	border-top:1px solid #eee;
+	box-sizing: border-box;
+	padding-left: 15%;
+	outline: none;
+	font-size: 0.625rem;
+	line-height: 1.925rem;
+}
+.wuyedenglu input[type=text]{
+	width: 100%;
+	border-top:1px solid #ccc;
+}
+.wuyedenglu input[type=password]{
+	width: 100%;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 1.75rem;
+}
