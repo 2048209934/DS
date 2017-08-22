@@ -4,6 +4,9 @@ import Yezhuzhuzhe from './Yezhuzhuzhe';
 import Yezhusteward from './Yezhusteward';
 import Yezhushequ from './Yezhushequ';
 import Yezhume from './Yezhume';
+import  YezhuAccept from './Yezhu_accept';
+import  YezhuPackage from './Yezhu_package';
+import  YezhuShare from './Yezhu_share';
 
 import {
   BrowserRouter as Router,
@@ -21,6 +24,9 @@ class Yezhuindex extends Component {
               <Route path="/yezhu/index/steward" component={Yezhusteward} />
               <Route path="/yezhu/index/shequ" component={Yezhushequ} />
               <Route path="/yezhu/index/me" component={Yezhume} />
+              <Route path="/yezhu/index/accept" component={YezhuAccept}/>
+              <Route path="/yezhu/index/package" component={YezhuPackage}/>
+              <Route path="/yezhu/index/share" component={YezhuShare}/>
     
               <div className="admin_con">
                   <Link to="/yezhu/index">住这儿</Link>

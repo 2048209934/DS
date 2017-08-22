@@ -23,14 +23,26 @@ class Yezhume extends Component {
             </div>
             <div className="myself_now">
                 <div className="now_left">
-                    <p>评价</p>
-                    <p>内容</p>
+                    <p>身份</p>
+                    <p>待审核</p>
                 </div> 
                 <div className="now_right">
-                    <p>评价分数</p>
+                    <p>当前房屋人数</p>
                     <p>0</p>
                 </div> 
             </div>
+            {/*list*/}
+                <ul className="list">
+                    <li className="white">  </li>
+                    <li className="clear">
+                        <span className="left">我的房屋</span>
+                        <span className="right">></span>
+                    </li>
+                    <li className="clear">
+                        <span className="left">我参与的活动</span>
+                        <span className="right">></span>
+                    </li>
+                </ul>
         </div>
     );
   }
