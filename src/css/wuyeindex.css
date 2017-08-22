@@ -1,4 +1,4 @@
-body{
+modify_topbody{
 	background:#f5f3ef;
 }
 /* Admin button 管理按钮 */
@@ -354,7 +354,7 @@ body{
 	background:#fff;
 }
 .modify_top span:first-of-type{
-	font-size:0.4rem;
+	font-size:0.6rem;
 	position:absolute;
 	left:0.8rem;
 	top:0;
