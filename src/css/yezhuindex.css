@@ -6,20 +6,19 @@ body{
 /* header */
 .head{
 	width:100%;
-	height:3.4rem;
-	background:rbga(255,255,255,0);
-	transition:2s;
+	height:2.8rem;
+	background:#fff;
 	position:fixed;
 	top:0;
 	left:0;
-	font:1.2rem/3.4rem 'Microsoft Yahei';
+	font:0.9rem/2.8rem 'Microsoft Yahei';
 	text-align:center;
 	z-index:1000;
 }
 .head img{
-	width:1.3rem;
+	width:1rem;
 	position:absolute;
-	top:1rem;
+	top:0.9rem;
 	left:1rem;
 }
 /* banner */
@@ -30,7 +29,7 @@ body{
 /* ewm and yb */
 .accept{
 	width:100%;
-	height:5rem;
+	height:4rem;
 	background:#f4f3f1;
 	padding:0.5rem 0;
 	border-top:2px solid #e7e6e4;
@@ -44,24 +43,24 @@ body{
 .word{
 	width:75%;
 	height:calc(100% - 1rem);
-	padding-top:1rem;
+	padding-top:0.7rem;
 }
 .word p{
-	padding-left:1rem;
+	padding-left:0.8rem;
 	color:#fff;
 	font-family:'Microsoft Yahei';
 }
 .word p:first-child{
-	font-size:1.2rem;
-	line-height:2rem;
+	font-size:0.9rem;
+	line-height:1.5rem;
 }
 .word p:last-child{
-	font-size:0.8rem;
+	font-size:0.6rem;
 }
 .icon img{
 	width:1.5rem;
 	height:1.5rem;
-	margin-top:1.8rem;
+	margin-top:1.2rem;
 }
 .accept_right{
 	width:49%;
@@ -71,15 +70,15 @@ body{
 /* fresh */
 .fresh{
 	width:100%;
-	height:3rem; 
-	font:1rem/3rem 'Microsoft Yahei';
+	height:2rem; 
+	font:0.7rem/2rem 'Microsoft Yahei';
 	padding-left:5%;
 }
 /* content */
 .content{
 	width:100%;
-	border-top:2px solid #e7e6e4;
-	border-bottom:2px solid #e7e6e4;
+	border-top:1px solid #e7e6e4;
+	border-bottom:1px solid #e7e6e4;
 	margin-bottom:4.9rem;
 }
 .box{
@@ -87,19 +86,19 @@ body{
 	margin:0 auto;
 }
 .box p{
-	font:0.8rem/1.2rem 'Microsoft Yahei';
+	font:0.6rem/1rem 'Microsoft Yahei';
 }
 .name{
 	width:100%;
-	height:3rem;
+	height:2.4rem;
 }
 .name img{
 	display:block;
-	width:1.6rem;
-	margin-top:0.7rem;
+	width:1.2rem;
+	margin-top:0.6rem;
 }
 .name span{
-	font:0.8rem/3rem 'Microsoft Yahei';
+	font:0.6rem/2.4rem 'Microsoft Yahei';
 }
 .name span:first-of-type{
 	margin:0 0.5rem;
@@ -113,12 +112,12 @@ body{
 .prompt{
 	width:100%;
 	display:block;
-	margin-top:0.6rem;
+	margin-top:0.4rem;
 }
 .time{
 	width:100%;
-	height:3rem;
-	font:0.8rem/3rem 'Microsoft Yahei';
+	height:2rem;
+	font:0.6rem/2rem 'Microsoft Yahei';
 	color:#888785;
 }
 /* footer */
@@ -164,15 +163,15 @@ body{
 }
 .steward p{
 	text-align:center;
-	font:0.8rem/1.2rem 'Microsoft Yahei';
+	font:0.7rem/1rem 'Microsoft Yahei';
 	color:#43604c;
 }
 .steward button{
 	width:100%;
-	height:2.7rem;
+	height:2rem;
 	background:#fff;
 	text-align:center;
-	font:1rem/2.7rem 'Microsoft Yahei';
+	font:0.8rem/2rem 'Microsoft Yahei';
 	border-radius:1.5rem;
 	margin-top:1.4rem;
 	color:#e4a10a;
@@ -184,11 +183,11 @@ body{
 .talk{
 	width:88%;
 	padding:4% 7% 3% 5%;
-	font:0.8rem 'Microsoft Yahei';
+	font:0.6rem 'Microsoft Yahei';
 	color:#43604c;
 }
 .talk p{
-	line-height:1.2rem;
+	line-height:1rem;
 	margin-bottom:0.2rem;
 }
 .talk .detail span:first-of-type{
@@ -206,14 +205,14 @@ body{
 	width:90%;
 	border-top:1px solid #ccc;
 	padding:0 5%;
-	font:1rem/3rem 'Microsoft Yahei';
+	font:0.7rem/2.2rem 'Microsoft Yahei';
 }
 .list li span:last-of-type{
 	color:#43604c;
-	font-size:1.4rem;
+	font-size:1rem;
 }
 .list li.white{
-	height:1rem;
+	height:0.6rem;
 	background:#f4f3ef;
 }
 .list li:last-of-type{
@@ -224,7 +223,123 @@ body{
 
 
 
+/* 业主 我 */
+.myself{
+	width:100%;
+	height:12rem;
+	background:url("../images/banner_two.jpg") no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	clear:both;
+}
+/* yezhu touxiang 物业我的里的头像 */
+.myself_top{
+	width:100%;
+	height:12rem;
+}
 
 
+/* 上次的头像 */
+.file {
+	width:5rem;
+	height:5rem;
+	background:#fff;
+	margin: 0 auto;
+	position: relative;
+	display: inline-block;
+	background: white;
+	border-radius:50%;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: 0;
+	margin-bottom: 0.65rem;
+	line-height: 1rem;
+	color: #000;
+	top:2.2rem;
+	left: 50%;
+	margin-left: -2.35rem;
+	clear:both;
+}
+/* 头像区域 */
+.file p{
+	background:#fff;
+	border-radius:50%;
+}
+/* 输入的头像 */
+.file input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+
+/* 名称 */
+.myself_word{
+	position: absolute;
+	bottom:1.2rem;
+	text-align:center;
+	left:35%;
+}
+.myself_word p:first-of-type{
+	color:#fcfbf9;
+	font-size:0.8rem;
+}
+.myself_word p:nth-of-type(2){
+	color:#fcfbf9;
+	font-size:0.8rem;
+	margin-top:0.5rem;
+}
+/* 箭头 */
+.arrow{
+	width:0.75rem;
+	height:1.2rem;
+	position:absolute;
+	right:1.6rem;
+	font-size:1.6rem;
+	color:#fff;
+	line-height:2.8rem;
+	cursor:pointer;
+}
+
+/* 身份和人数 */
+.myself_now{
+	height:4.1rem;
+	width:100%;
+	background:#fcfbf9;
+	border-bottom:2px solid #e0ddda;
+}
+/* now_left */
+.now_left{
+	text-align:center;
+	width:49.6%;
+	height:100%;
+	border-right:2px solid #e0ddda;
+	float:left;
+}
+.now_left p:first-of-type{
+	margin-top:1.1rem;
+}
+.now_left p:nth-of-type(2){
+	margin-top:0.1rem;
+	color:#ef982f;
+}
+/* now_right */
+.now_right{
+	text-align:center;
+	width:49.6%;
+	height:100%;
+	float:right;
+}
+
+.now_right p:first-of-type{
+	margin-top:1.1rem;
+}
+.now_right p:nth-of-type(2){
+	margin-top:0.25rem;
+	color:#ef982f;
+}
 
 
