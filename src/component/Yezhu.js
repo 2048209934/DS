@@ -37,13 +37,16 @@ class Yezhu extends Component {
     	  			  入户码
     	  			*/}
     	  			<div className="yezhuruhuma">
-    	  				<input type="text" ref=""  placeholder="请输入" />
+    	  				<span className="fh">返回</span>
+    	  				<h3>请输入入户码</h3>
+    	  				<input type="text" ref="" />
     	  				<Btn btnVal="确定" />
     	  			</div>
     	  			{/*
     	  			  注册	
     	  			*/}
     	  			<div className="yezhuzhuce">
+    	  				<span className="fh">返回</span>
     	  				<input type="text" ref=""  placeholder="请输入" />
     	  				<input type="password" ref=""  placeholder="请输入" />
     	  				<Btn btnVal="注册" />

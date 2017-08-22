@@ -17,7 +17,7 @@ export function yezhudlpost(dluser,dlpass){
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
 					alert("输入错误")
 				}else{
-					window.location.href="http://localhost:3000/yezhu/index"
+					window.location.href="http://localhost:3000/yezhu/index?id="+data[0].id
 				}
 			},
 			error:function(){
