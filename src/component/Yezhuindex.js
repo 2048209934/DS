@@ -10,10 +10,13 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Yezhuindex extends Component {
   render() {
+  	console.log(this.props.data)
     return (
       <Router>
   		  <div>
@@ -34,4 +37,4 @@ class Yezhuindex extends Component {
   }
 }
 
-export default Yezhuindex;
+export default connect(e=>({data:e.yezhuid}),action)(Yezhuindex);

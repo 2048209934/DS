@@ -14,6 +14,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Wuyeindex extends Component {

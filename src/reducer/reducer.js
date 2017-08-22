@@ -6,6 +6,9 @@ import {} from './mds';
 import {} from './my';
 */
 
+import {yezhuid} from './my';
+
+/*
 function a(state=[],action){
 	switch(action.type){
 		case 'SHOWDATA':
@@ -14,7 +17,8 @@ function a(state=[],action){
 		return state
 	}
 }
+*/
 
 export default combineReducers({
-	a
+	yezhuid
 })
