@@ -74,6 +74,7 @@ body{
 	width:48%;
 	height:7.2rem;
 	margin-top:0.8rem;
+
 }
 /* img size 小块图片的大小 */
 .property_manage a div img{
@@ -102,13 +103,15 @@ body{
 .organize_left{
 	color:#fff;
 	float:left;
-	margin-left:1.65rem;
+	width: 50%;
+	margin-left:0.5rem;
 }
 .organize_left .one{
 	margin-top:2rem;
 	font-weight:bold;
 }
 .organize_left .two{
+	font-size: 0.75rem;
 	margin-top:0.2rem;
 }
 /* word right小块里边的字和图片 */
