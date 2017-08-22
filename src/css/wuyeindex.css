@@ -51,12 +51,12 @@ body{
 	color:#fff;
 	position:absolute;
 	top:2.1rem;
-	left:35%;
+	left:30%;
 }
 /* 信息 news */
 .banner .banner_news img{
-	width:2rem;
-	height:2.2rem;
+	width:1.8rem;
+	height:2rem;
 }
 .banner .banner_news{
 	position:absolute;
@@ -71,8 +71,7 @@ body{
 }
 /* property_con   住这儿的管理的每个小块 */
 .property_manage a{
-	
-	width:49%;
+	width:48%;
 	height:6rem;
 	margin-top:0.4rem;
 }
@@ -103,22 +102,23 @@ body{
 .organize_left{
 	color:#fff;
 	float:left;
-	width: 50%;
-	margin-left:0.5rem;
+	width: 45%;
+	margin-left:5%;
 }
 .organize_left .one{
-	margin-top:2rem;
+	margin-top:2.2rem;
+	font-size: 0.725rem;
 	font-weight:bold;
 }
 .organize_left .two{
-	font-size: 0.75rem;
+	font-size: 0.6rem;
 	margin-top:0.2rem;
 }
 /* word right小块里边的字和图片 */
 .organize_right{
 	float:right;
 	margin-top:1.88rem;
-	margin-right:1.3rem;
+	margin-right:0.6rem;
 }
 
 /* content */
@@ -180,7 +180,7 @@ body{
 /* wuyeMe */
 .myself{
 	width:100%;
-	height:19.75rem;
+	height:15rem;
 	background:url("../images/banner_two.jpg") no-repeat;
 	background-size: 100% 100%;
 	position: relative;
@@ -189,14 +189,14 @@ body{
 /* wuye touxiang 物业我的里的头像 */
 .myself_top{
 	width:100%;
-	height:19.75rem;
+	height:15rem;
 }
 
 
 /* 上次的头像 */
 .file {
-	width:9.2rem;
-	height:9.2rem;
+	width:7rem;
+	height:7rem;
 	background:#fff;
 	margin: 0 auto;
 	position: relative;
@@ -216,8 +216,6 @@ body{
 }
 /* 头像区域 */
 .file p{
-	width:1.4rem;
-	height:1.4rem;
 	background:#fff;
 	border-radius:50%;
 }
@@ -236,17 +234,17 @@ body{
 .myself_word{
 	text-align:center;
 	position: absolute;
-	bottom:2.6rem;
-	left:40%;
+	bottom:1.2rem;
+	left:38%;
 }
 .myself_word p:first-of-type{
 	color:#fcfbf9;
-	font-size:1.5rem;
+	font-size:1rem;
 }
 .myself_word p:nth-of-type(2){
 	color:#fcfbf9;
-	font-size:1rem;
-	margin-top:1rem;
+	font-size:0.8rem;
+	margin-top:0.5rem;
 }
 /* 箭头 */
 .arrow{
@@ -262,7 +260,7 @@ body{
 
 /* 身份和人数 */
 .myself_now{
-	height:7.2rem;
+	height:4.1rem;
 	width:100%;
 	background:#fcfbf9;
 	border-bottom:2px solid #e0ddda;
@@ -271,92 +269,50 @@ body{
 .now_left{
 	text-align:center;
 	width:48%;
-	height:7.2rem;
+	height:100%;
 	border-right:2px solid #e0ddda;
 	float:left;
 }
 .now_left p:first-of-type{
-	margin-top:2.1rem;
+	margin-top:1.1rem;
 }
 .now_left p:nth-of-type(2){
-	margin-top:0.25rem;
+	margin-top:0.1rem;
 	color:#ef982f;
 }
 /* now_right */
 .now_right{
 	text-align:center;
 	width:48%;
-	height:7.2rem;
+	height:100%;
 	float:right;
 }
 
 .now_right p:first-of-type{
-	margin-top:2.1rem;
+	margin-top:1.1rem;
 }
 .now_right p:nth-of-type(2){
 	margin-top:0.25rem;
 	color:#ef982f;
 }
-.revise{
-	width:100%;
-	height:100%;
-	background:#f5f3ef;
-}
+
 .self_means div{
 	width:100%;
 	height:4.8rem;
 	background:#fff;
 }
 .self_means div:first-of-type{
+	text-align: center;
 	line-height:4.75rem;
 	border-bottom:1px solid #e0ddda;
 }
 .self_means div:first-of-type span:first-of-type{
-	float:left;
-	font-size:1.8rem;
+	position:absolute;
+	left:0.8rem;
+	font-size:1.2rem;
 	color:#f39800;
-	margin-left:1.35rem;
 }
 .self_means div:first-of-type span:nth-of-type(2){
-	float:left;
-	margin-left:25%;
 	color:#3c3c3c;
-	font-size:1.7rem;
+	font-size:1.2rem;
 }
-.self_data{
-	margin-top:1.2rem;
-	width:90%;
-	margin:0 auto;
-	margin-top:5rem;
-}
-.self_data li{
-	width:100%;
-	height:4.8rem;
-}
-
-.self_data li input[type=text]{
-	padding-left:0.8rem;
-	border-radius:0.4rem 0.4rem;
-	border:1px solid #f39800;
-	background:#eee;
-	width:20.3rem;
-	height:3.4rem;
-	margin-left:2.2rem;
-	margin-top:1rem;
-}
-.self_data li input[type=radio]{
-	margin-left:30%;
-	margin-top:1.8rem;
-}
-.btn{
-	text-align:center;
-	color:#fff;
-	width:20.3rem;
-	height:3.4rem;
-	border-radius:0.4rem 0.4rem;
-	background:#577ba2;
-	line-height:3.4rem;
-	margin-left:13%;
-	margin-top:1.5rem;
-}
-
