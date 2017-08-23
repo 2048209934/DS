@@ -8,13 +8,20 @@ import {
 
 
 class YezhuAccept extends Component {
-  render() {
-    return (
-    	  <div>
-    	  	88888888888
-        </div>
-    );
-  }
+    fn=function(){
+        window.history.go(-1);
+    }
+    render() {
+        return (
+            <div>
+                <div className="package_head">
+                    <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
+                    访客邀请
+                </div>
+                
+            </div>
+        )
+    }
 }
 
 export default YezhuAccept;

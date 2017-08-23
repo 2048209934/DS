@@ -40,7 +40,7 @@ class Wuyeme extends Component {
                   </div>
                 </div>
             )} />
-             <Route path="/wuye/index/me/amend" component={Wuyeamend}/>  
+            <Route path="/wuye/index/me/amend" component={Wuyeamend}/>  
           </div>
         </Router>
     );

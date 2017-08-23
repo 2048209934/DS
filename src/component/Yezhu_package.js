@@ -9,13 +9,13 @@ import {
 
 class YezhuPackage extends Component {
     fn=function(){
-        window.history.go(-1)
+        window.history.go(-1);
     }
     render() {
         return (
             <div>
                 <div className="package_head">
-                    <img src="../../images/arrow.png" onClick={this.fn} alt="" />
+                    <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
                     邮包
                 </div>
                 <img className="YB" src="../../images/youbao_img.png" alt="" />
