@@ -8,6 +8,7 @@ import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
 
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
@@ -18,8 +19,18 @@ import {connect} from 'react-redux';
 
 
 class Yezhuindex extends Component {
-  render() {
-  	console.log(this.props.data)
+	componentDidMount(){
+		setTimeout(()=>{
+//			console.log(this.props.data)
+//			var yezhustr=JSON.stringify(this.props.data)
+//			console.log(yezhustr)
+			var yezhudata=this.props.data
+			if(yezhudata==0){
+				$(".wrap").parent().parent().html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
+			}
+		},1)
+	}
+  render() {	
     return (
       <Router>
   		  <div>
@@ -43,4 +54,4 @@ class Yezhuindex extends Component {
   }
 }
 
-export default connect(e=>({data:e.yezhuid}),action)(Yezhuindex);
+export default connect(e=>({data:e.yezhudata}),action)(Yezhuindex);

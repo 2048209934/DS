@@ -2,12 +2,20 @@ import config from './../config'
 import $ from 'jquery'
 
 var id;
-function yezhuid(id){
+export function yezhuid(data){
 	return {
-		type:"YEZHUID",
-		yezhuid:id
+		type:"YEZHUDATA",
+		yezhudata:data
 	}
 }
+
+export function wuyeid(data){
+	return {
+		type:"WUYEDATA",
+		wuyedata:data
+	}
+}
+
 export function yezhudlpost(dluser,dlpass){
 	return dispatch=>{
 		return $.ajax({
@@ -19,12 +27,11 @@ export function yezhudlpost(dluser,dlpass){
 			},
 			success:function(data){
 				if(data.length==0){
-					alert("输入错误")					
+					dispatch(yezhuid(0))
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
-					alert("输入错误")
-				}else{
-					window.location.href="http://localhost:3000/yezhu/index?id="+data[0].id
-					dispatch(yezhuid(data[0].id))
+					dispatch(yezhuid(0))
+				}else{					
+					dispatch(yezhuid(data))
 				}
 			},
 			error:function(){
@@ -80,7 +87,10 @@ export function yezhuzcpost(zcuser,zcpass){
 							id:id
 						},
 						success:function(data){
-							window.location.href="http://localhost:3000/yezhu/index?id="+id
+							alert("注册成功")
+							$(".yezhudenglu").show()
+							$(".yezhuzhuce").hide()
+							$(".yezhuruhuma").hide()
 						},
 						error:function(){
 							alert("0.0")
@@ -96,6 +106,7 @@ export function yezhuzcpost(zcuser,zcpass){
 		});	
 	}
 }
+
 export function wuyedlpost(dluser,dlpass){
 	return dispatch=>{
 		return $.ajax({
@@ -106,12 +117,12 @@ export function wuyedlpost(dluser,dlpass){
 				pass:dlpass
 			},
 			success:function(data){
-				if(data.length==0){
-					alert("输入错误")					
-				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
-					alert("输入错误")
+				if(data.length==0){	
+					dispatch(wuyeid(0))
+				}else if(dluser!=data[0].user||dlpass!=data[0].pass){	
+					dispatch(wuyeid(0))
 				}else{
-					window.location.href="http://localhost:3000/wuye/index?id="+data[0].id
+					dispatch(wuyeid(data))
 				}
 			},
 			error:function(){

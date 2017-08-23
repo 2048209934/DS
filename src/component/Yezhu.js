@@ -33,8 +33,10 @@ class Yezhu extends Component {
 			alert("请输入内容")
 			e.preventDefault()
 		} else{
-			this.props.yezhudlv($("#yezhudluser").val(),$("#yezhudlpass").val())	
-			e.preventDefault()
+			this.props.yezhudlv($("#yezhudluser").val(),$("#yezhudlpass").val())
+//			setTimeout(()=>{
+//				console.log(this.props.data.yezhudata)
+//			},1)
 		}
 	}
 	yezhurhm(){

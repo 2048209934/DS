@@ -19,7 +19,6 @@ class Wuye extends Component {
 			e.preventDefault()
 		} else{
 			this.props.wuyedlv($("#wuyedluser").val(),$("#wuyedlpass").val())	
-			e.preventDefault()
 		}
 	}
   render() {

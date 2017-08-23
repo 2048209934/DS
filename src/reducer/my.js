@@ -1,9 +1,17 @@
-export function yezhuid(state=0,action){
+export function yezhudata(state=null,action){
 	switch(action.type){
-		case 'YEZHUID':
-		return action.yezhuid
+		case 'YEZHUDATA':
+		return action.yezhudata
 		default:
-		console.log(action.type)
+		return state
+	}
+}
+
+export function wuyedata(state=null,action){
+	switch(action.type){
+		case 'WUYEDATA':
+		return action.wuyedata
+		default:
 		return state
 	}
 }
