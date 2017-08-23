@@ -107,14 +107,14 @@
 	margin-bottom: 1.75rem;
 }
 .zhuce{
-	padding: 5% 0 0 5%;
-	display: block;
+	margin: 5% 0 0 5%;
+	display: inline-block;
 	font-size: 0.725rem;
 	color: orange;
 }
 .fh{
 	color: orange;
-	display: block;
+	display: inline-block;
 	font-size: 0.725rem;
-	padding: 4% 0 0 5%;
+	margin: 4% 0 0 5%;
 }
