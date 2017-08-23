@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../css/wuye_guarantee.css';
-import wuyealready from './wuye_already'
+import wuyealready from './wuye_already';
+import $ from 'jquery'
 
 import {
   BrowserRouter as Router,
@@ -10,6 +11,12 @@ import {
 
 
 class WuyeGuarantee extends Component {
+  componentDidMount(){
+    $(".admin_con").hide()
+  }
+  componentWillUnmount(){
+    $(".admin_con").show()
+  }
   tip=function(){
     window.history.go(-1)
   }

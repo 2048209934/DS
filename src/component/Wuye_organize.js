@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './../css/wuye_organize.css';
+import $ from 'jquery'
 
 import {
   BrowserRouter as Router,
@@ -9,6 +10,12 @@ import {
 
 
 class WuyeOrganize extends Component {
+    componentDidMount(){
+    $(".admin_con").hide()
+  }
+  componentWillUnmount(){
+    $(".admin_con").show()
+  }
   ok=function(){
     window.history.go(-1)
   }

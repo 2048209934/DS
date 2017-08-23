@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './../css/wuye_notice.css';
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
@@ -8,6 +9,12 @@ import {
 
 
 class WuyeNotice extends Component {
+   componentDidMount(){
+    $(".admin_con").hide()
+  }
+  componentWillUnmount(){
+    $(".admin_con").show()
+  }
   ok=function(){
     window.history.go(-1)
   }
