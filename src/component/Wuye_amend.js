@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  Wuyemake from './Wuye_make';
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
@@ -8,6 +9,12 @@ import {
 
 
 class Wuyeamend extends Component {
+    componentDidMount(){
+    $(".admin_con").hide()
+  }
+  componentWillUnmount(){
+    $(".admin_con").show()
+  }
   go=function(){
     window.history.go(-1)
   }

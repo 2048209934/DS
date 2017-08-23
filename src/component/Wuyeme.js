@@ -28,7 +28,7 @@ class Wuyeme extends Component {
                            <div className="arrow">></div>
                       </Link>
                   </div>
-                  <div className="myself_now">
+                  <div className="myself_nows">
                       <div className="now_left">
                           <p>评价</p>
                           <p>内容</p>

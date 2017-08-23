@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../css/wuye_guarantee.css';
-import wuyealready from './wuye_already'
+import wuyealready from './wuye_already';
+import $ from 'jquery'
 
 import {
   BrowserRouter as Router,
@@ -10,6 +11,12 @@ import {
 
 
 class WuyeGuarantee extends Component {
+  componentDidMount(){
+    $(".admin_con").hide()
+  }
+  componentWillUnmount(){
+    $(".admin_con").show()
+  }
   tip=function(){
     window.history.go(-1)
   }
@@ -22,7 +29,7 @@ class WuyeGuarantee extends Component {
                 </div>
     	  	  <div className="guarantee_top">
                 <p><Link to="/wuye/index/guarantee">未处理</Link></p>
-                <p><Link to="/wuye/index/alreadyguarantee">已处理</Link></p>
+                <p><Link to="/wuye/index/already">已处理</Link></p>
             </div>
             <Route path="/wuye/index/guarantee" render={()=>(
                 <div className="guarantee_bottom">
@@ -48,7 +55,7 @@ class WuyeGuarantee extends Component {
                     </div>
                 </div>
               )} />
-            <Route path="/wuye/index/alreadyguarantee" component={wuyealready} />
+            <Route path="/wuye/index/already" component={wuyealready} />
             
         </div>
       </Router>
