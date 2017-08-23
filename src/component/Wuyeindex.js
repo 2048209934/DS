@@ -32,10 +32,22 @@ class Wuyeindex extends Component {
             <Route path="/wuye/index/organize" component={WuyeOrganize}/>
             <Route path="/wuye/index/guarantee" component={WuyeGuarantee}/>
             <div className="admin_con">
-                <Link to="/wuye/index">住这儿</Link>
-                <Link to="/wuye/index/steward">管家</Link>
-                <Link to="/wuye/index/shequ">社区</Link>
-                <Link to="/wuye/index/me">我</Link>
+                 <Link to="/wuye/index">
+                    <p className="admin_one" id="admin_one"><i className="fa fa-facebook"></i></p>
+                    <p className="admin_word" id="admin_word">住这儿</p>
+                </Link>
+                <Link to="/wuye/index/steward">
+                    
+                    <p>管家</p>
+                </Link>
+                <Link to="/wuye/index/shequ">
+                    
+                    <p>社区</p>
+                </Link>
+                <Link to="/wuye/index/me">
+                    
+                    <p>我</p>
+                </Link>
             </div>
         </div> 
       </Router>    

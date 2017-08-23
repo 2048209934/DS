@@ -1,0 +1,129 @@
+
+/* 清除浮动 */
+.organize{
+	clear:both;
+}
+
+/* 发布的input框 */
+.organize .orgin{
+	width:80%;
+	height:1.8rem;
+	margin-left:10%;
+	margin-top:0.8rem;
+	border:1px solid #3e3e3e;
+	outline:none;
+	padding-left:0.4rem;
+}
+
+/* 发布按钮 */
+.orgin_btn{
+	width:2.2rem;
+	height:1.6rem;
+	background:#7f8393;
+	cursor:pointer;
+	float:right;
+	margin-right:0.9rem;
+	margin-top:0.6rem;
+	line-height:1.6rem;
+	text-align:center;
+	color:#fff;
+	margin-bottom:0.8rem;
+	border-radius:0.4rem 0.4rem;
+}
+
+/* 清除浮动 */
+.orgin_con{
+	clear:both;
+}
+
+/* 发布的内容的盒子 */
+.orgin_box{	
+	margin:0 auto;
+	width:13rem;
+	height:8rem;
+	border:1px solid #eee;
+	box-shadow:5px 5px 10px #eee;
+}
+
+/* 人，时间，内容 */
+.orgin_box p:first-of-type{
+	margin-top:0.6rem;
+}
+.orgin_box p:nth-of-type(2){
+	margin-top:1rem;
+	text-align:center;
+}
+.orgin_box p:nth-of-type(2) span:first-of-type{
+	font-size:0.8rem;
+	font-weight:700;
+
+}
+.orgin_box p:nth-of-type(3){
+	padding-top:1.4rem;
+	margin-left:3.8rem;
+}
+.orgin_box p:nth-of-type(3) span:first-of-type{
+	font-weight:bold;
+}
+
+.orgin_box p:nth-of-type(4){
+	margin-top:0.4rem;
+	margin-left:0.8rem;
+	margin-right:0.4rem;
+	float:right;
+}
+.orgin_box p:nth-of-type(4) span{
+	float:left;
+}
+.orgin_box p:nth-of-type(5) span{
+	float:left;
+}
+
+.orgin_box p:nth-of-type(4) span:nth-of-type(2){
+	margin-top:0.1rem;
+	margin-left:0.2rem
+}
+.orgin_box p:nth-of-type(5) span:nth-of-type(2){
+	margin-top:0.1rem;
+	margin-left:0.2rem
+}
+.orgin_box p:nth-of-type(5){
+	margin-top:0.4rem;
+	margin-left:0.8rem;
+	float:right;	
+}
+
+.orgin_box p span img{
+	width:1rem;
+	height:1rem;
+}
+.orgin_box p:first-of-type span:first-of-type{
+	font-size:0.7rem;
+	margin-left:0.2rem;
+}
+.orgin_box p:first-of-type span:nth-of-type(2){
+	font-size:0.7rem;
+	font-weight:800;
+	margin-left:0.4rem;
+}
+
+/* 返回按钮及信息 */
+ .notice_editor{
+	height:3.1rem;
+	background:#46a1ff;
+	line-height:3.1rem;
+	text-align:center;
+}
+ .notice_editor span:nth-of-type(2){
+	font-size:0.8rem;
+	color:#fff;
+}
+ .notice_editor span:first-of-type{
+	position:absolute;
+	left:0.8rem;
+	top:0.4rem;
+}
+ .notice_editor span:first-of-type img{
+	width:1rem;
+	height:1rem;
+}
