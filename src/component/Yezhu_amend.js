@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import  Yezhumake from './Yezhu_make';
+
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
@@ -8,6 +10,12 @@ import {
 
 
 class Yezhuamend extends Component {
+	componentDidMount(){
+		$(".admin_con").hide()
+	}
+	componentWillUnmount(){
+		$(".admin_con").show()
+	}
   go=function(){
     window.history.go(-1)
   }
