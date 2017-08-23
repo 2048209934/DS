@@ -14,6 +14,7 @@ body{
 	font:0.9rem/2.8rem 'Microsoft Yahei';
 	text-align:center;
 	z-index:1000;
+	border-bottom:1px solid #ccc;
 }
 .head img{
 	width:1rem;
@@ -80,6 +81,12 @@ body{
 	border-top:1px solid #e7e6e4;
 	border-bottom:1px solid #e7e6e4;
 	margin-bottom:4.9rem;
+}
+.contents{
+	width:100%;
+	border-top:1px solid #e7e6e4;
+	margin-bottom:4.9rem;
+	margin-top:2.8rem;
 }
 .box{
 	width:94%;
@@ -331,12 +338,19 @@ body{
 	text-align:center;
 	position:relative;
 	font:0.8rem/2.5rem 'Microsoft Yahei';
+	border-bottom:1px solid #ccc;
 }
-.package_head img{
+.package_head .back{
 	width:1rem;
 	position:absolute;
 	top:0.7rem;
 	left:0.5rem;
+}
+.package_head .more{
+	width:1rem;
+	position:absolute;
+	top:1.2rem;
+	right:0.5rem;
 }
 .YB{
 	width:6rem;
@@ -353,4 +367,31 @@ body{
 	position:absolute;
 	left:0;
 	top:10rem;
+}
+
+
+
+
+
+/* 业主  分享 */
+.live{
+	width:100%;
+	background:#fff;
+	border-bottom:1px solid #ccc;
+}
+.lives{
+	width:90%;
+	margin:0 auto;
+}
+.pl_detail{
+	width:100%;
+	height:2.6rem;
+}
+.pl_detail img{
+	width:1.4rem;
+	margin-top:0.6rem;
+	margin-right:0.3rem;
+}
+.pl_detail span{
+	font:0.7rem/2.6rem 'Microsoft Yahei';
 }

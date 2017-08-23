@@ -6,7 +6,7 @@ import {} from './mds';
 import {} from './my';
 */
 
-import {yezhuid} from './my';
+import {yezhudata,wuyedata} from './my';
 
 /*
 function a(state=[],action){
@@ -20,5 +20,6 @@ function a(state=[],action){
 */
 
 export default combineReducers({
-	yezhuid
+	yezhudata,
+	wuyedata
 })

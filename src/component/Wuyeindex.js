@@ -9,6 +9,7 @@ import  WuyeGuarantee from './Wuye_guarantee';
 import  WuyeNotice from './Wuye_notice';
 import  WuyeOrganize from './Wuye_organize';
 
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,15 @@ import {connect} from 'react-redux';
 
 
 class Wuyeindex extends Component {
+	componentDidMount(){
+		setTimeout(()=>{
+//			console.log(this.props.data)
+			var wuyedata=this.props.data
+			if(wuyedata==0){
+				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
+			}
+		},1)
+	}
   render() {
     return (
       <Router>
@@ -55,4 +65,4 @@ class Wuyeindex extends Component {
   }
 }
 
-export default Wuyeindex;
+export default connect(e=>({data:e.wuyedata}),action)(Wuyeindex);
