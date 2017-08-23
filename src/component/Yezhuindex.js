@@ -19,6 +19,14 @@ import {connect} from 'react-redux';
 
 
 class Yezhuindex extends Component {
+  submits=function(){
+    var admin_one=document.getElementById("admin_one")
+    var admin_two=document.getElementById("admin_two")
+    var admin_word=document.getElementById("admin_word")
+      admin_one.style.display="none",
+      admin_two.style.display="block",
+      admin_word.style.color="#ff9500"
+  }
 	componentDidMount(){
 		setTimeout(()=>{
 //			console.log(this.props.data)
@@ -43,11 +51,27 @@ class Yezhuindex extends Component {
               <Route path="/yezhu/index/share" component={YezhuShare}/>
     
               <div className="admin_con">
-                  <Link to="/yezhu/index">住这儿</Link>
-                  <Link to="/yezhu/index/steward">管家</Link>
-                  <Link to="/yezhu/index/shequ">社区</Link>
-                  <Link to="/yezhu/index/me">我</Link>
-              </div>
+                 <Link to="/yezhu/index">
+                    <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_eight.png" alt=""/></p>
+                    <p className="admin_two" id="admin_two"><img src="../images/account_server.png" alt=""/></p>
+                    <p className="admin_word" id="admin_word">住这儿</p>
+                </Link>
+                <Link to="/yezhu/index/steward">
+                     <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_five.png" alt=""/></p>
+                    <p className="admin_two" id="admin_two"><img src="../images/account_six.png" alt=""/></p>
+                    <p>管家</p>
+                </Link>
+                <Link to="/yezhu/index/shequ">
+                    <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_four.png" alt=""/></p>
+                    <p className="admin_two" id="admin_two"><img src="../images/account_three.png" alt=""/></p>
+                    <p>社区</p>
+                </Link>
+                <Link to="/yezhu/index/me">
+                     <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_one.png" alt=""/></p>
+                    <p className="admin_two" id="admin_two"><img src="../images/account_two.png" alt=""/></p>
+                    <p>我</p>
+                </Link>
+            </div>
           </div>    
       </Router>
     );
