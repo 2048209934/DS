@@ -214,6 +214,7 @@ body{
 	border-top:1px solid #ccc;
 	padding:0 5%;
 	font:0.7rem/2.2rem 'Microsoft Yahei';
+	color:#000;
 }
 .list li span:last-of-type{
 	color:#43604c;
@@ -348,6 +349,9 @@ body{
 .now_right p:nth-of-type(2){
 	margin-top:0.25rem;
 	color:#ef982f;
+}
+.SC{
+	margin-top:3.5rem;
 }
 
 

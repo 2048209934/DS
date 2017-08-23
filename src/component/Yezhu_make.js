@@ -14,10 +14,11 @@ class Yezhumake extends Component {
   render() {
     return (
     	  <div>
-            <div className="modify_top">
-                <span onClick={this.back}>返回</span>
+            {/*header*/}
+            <p className="head" id="head">
+                <img onClick={this.back} src="../../../../images/arrow.png" alt="" />
                 <span>编辑资料</span>
-            </div>
+            </p>
             <div className="modify">
                 <input type="text" defaultValue="昵称"/>
                 <input  type="text" defaultValue="手机号"/>

@@ -23,25 +23,27 @@ class Yezhuamend extends Component {
     return (
         <Router>
     	  	<div className="revise">
-           <Route exact path='/yezhu/index/me/amend' render={() => (
-            <div className="self_means">
-                <div className="daturn_top">
-                    <span onClick={this.go}>返回</span>
-                    <span>个人资料</span>
-                </div>
-                <div className="daturn_bottom">
-                    <div className="wuye_head"></div>
-                    <p>游客</p>
-                    <p>大圣城市花园</p>
-                </div>
-                <Link to="/yezhu/index/me/amend/make">
-                     <div className="put">修改信息</div>
-                </Link>
+                <Route exact path='/yezhu/index/me/amend' render={() => (
+                    <div className="self_means">
+                        <p className="head" id="head">
+                            <img onClick={this.go} src="../../../images/arrow.png" alt="" />
+                            <span>个人资料</span>
+                        </p>
+                        <div className="SC">
+                            <div className="daturn_bottom">
+                                <div className="wuye_head"></div>
+                                <p>游客</p>
+                                <p>大圣城市花园</p>
+                            </div>
+                        </div>
+                        <Link to="/yezhu/index/me/amend/make">
+                             <div className="put">修改信息</div>
+                        </Link>
+                    </div>
+                 )} />
+                <Route path="/yezhu/index/me/amend/make" component={Yezhumake}/>  
             </div>
-             )} />
-            <Route path="/yezhu/index/me/amend/make" component={Yezhumake}/>  
-        </div>
-      </Router>
+        </Router>
     );
   }
 }

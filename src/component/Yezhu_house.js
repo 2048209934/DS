@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 
-class Yezhuactivity extends Component {
+class Yezhuhouse extends Component {
 	componentDidMount(){
 		$(".admin_con").hide()
 	}
@@ -24,11 +24,11 @@ class Yezhuactivity extends Component {
             {/*header*/}
             <p className="head" id="head">
                 <img onClick={this.go} src="../../../images/arrow.png" alt="" />
-                <span>我参与的活动</span>
+                <span>我的房屋</span>
             </p>
-        </div>
+        </div>  	
     )
   }
 }
 
-export default Yezhuactivity;
+export default Yezhuhouse;

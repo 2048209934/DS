@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import  Yezhuamend from './Yezhu_amend';
+import  Yezhuactivity from './Yezhu_activity';
+import  Yezhuhouse from './Yezhu_house';
 import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 
 class Yezhume extends Component {
@@ -40,18 +42,24 @@ class Yezhume extends Component {
                         {/*list*/}
                         <ul className="list">
                             <li className="white">  </li>
-                            <li className="clear">
-                                <span className="left">我的房屋</span>
-                                <span className="right">></span>
-                            </li>
-                            <li className="clear">
-                                <span className="left">我参与的活动</span>
-                                <span className="right">></span>
-                            </li>
+                            <Link to="/yezhu/index/me/house">
+                                <li className="clear">
+                                    <span className="left">我的房屋</span>
+                                    <span className="right">></span>
+                                </li>
+                            </Link>
+                            <Link to="/yezhu/index/me/activity">
+                                <li className="clear">
+                                    <span className="left">我参与的活动</span>
+                                    <span className="right">></span>
+                                </li>
+                            </Link>
                         </ul>
                     </div>
                 )} />
-                <Route path="/yezhu/index/me/amend" component={Yezhuamend}/>  
+                <Route path="/yezhu/index/me/amend" component={Yezhuamend}/>
+                <Route path="/yezhu/index/me/activity" component={Yezhuactivity}/>   
+                <Route path="/yezhu/index/me/house" component={Yezhuhouse}/>  
             </div>
         </Router>
     )
