@@ -6,6 +6,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+
+
 import * as action from './../action/action'
 import {connect} from 'react-redux';
 
@@ -40,5 +42,4 @@ class WuyeNotice extends Component {
     );
   }
 }
-
 export default connect(e=>({data:e.wuyenotice}),action)(WuyeNotice);

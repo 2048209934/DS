@@ -13,7 +13,7 @@ export function yezhuzcv(zcuser,zcpass){
 export function wuyedlv(dluser,dlpass){
 	return wuyedlpost(dluser,dlpass)
 }
-export function wuyetz(notice){
-	return wuyenotice(notice)
+export function wuyetz(data){
+	return wuyenotice(data)
 }
 

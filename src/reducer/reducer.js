@@ -25,3 +25,4 @@ export default combineReducers({
 	wuyedata,
 	wuyenotice
 })
+
