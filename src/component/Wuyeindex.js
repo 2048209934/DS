@@ -8,6 +8,7 @@ import  WuyeParcel from './Wuye_parcel';
 import  WuyeGuarantee from './Wuye_guarantee';
 import  WuyeNotice from './Wuye_notice';
 import  WuyeOrganize from './Wuye_organize';
+import OldMenuLink from './Navs'
 
 import $ from 'jquery'
 import {
@@ -20,14 +21,14 @@ import {connect} from 'react-redux';
 
 
 class Wuyeindex extends Component {
-  submits=function(){
-    var admin_one=document.getElementById("admin_one")
-    var admin_two=document.getElementById("admin_two")
-    var admin_word=document.getElementById("admin_word")
-      admin_one.style.display="none",
-      admin_two.style.display="block",
-      admin_word.style.color="#ff9500"
-  }
+//submits=function(){
+//  var admin_one=document.getElementById("admin_one")
+//  var admin_two=document.getElementById("admin_two")
+//  var admin_word=document.getElementById("admin_word")
+//    admin_one.style.display="none",
+//    admin_two.style.display="block",
+//    admin_word.style.color="#ff9500"
+//}
 	componentDidMount(){
 		setTimeout(()=>{
 			var wuyesj=window.sessionStorage.getItem('wuye')
@@ -58,26 +59,10 @@ class Wuyeindex extends Component {
             <Route path="/wuye/index/organize" component={WuyeOrganize}/>
             <Route path="/wuye/index/guarantee" component={WuyeGuarantee}/>
             <div className="admin_con">
-                <Link to="/wuye/index">
-                    <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_eight.png" alt=""/></p>
-                    <p className="admin_two" id="admin_two"><img src="../images/account_server.png" alt=""/></p>
-                    <p className="admin_word" id="admin_word">住这儿</p>
-                </Link>
-                <Link to="/wuye/index/steward">
-                     <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_five.png" alt=""/></p>
-                    <p className="admin_two" id="admin_two"><img src="../images/account_six.png" alt=""/></p>
-                    <p>管家</p>
-                </Link>
-                <Link to="/wuye/index/shequ">
-                    <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_four.png" alt=""/></p>
-                    <p className="admin_two" id="admin_two"><img src="../images/account_three.png" alt=""/></p>
-                    <p>社区</p>
-                </Link>
-                <Link to="/wuye/index/me">
-                     <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_one.png" alt=""/></p>
-                    <p className="admin_two" id="admin_two"><img src="../images/account_two.png" alt=""/></p>
-                    <p>我</p>
-                </Link>
+                <OldMenuLink to={'/wuye/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={'../images/account_eight.png'} img2={'../images/account_server.png'}></OldMenuLink>
+              	<OldMenuLink to={'/wuye/index/steward'} label={'管家'} img1={'../images/account_five.png'} img2={'../images/account_six.png'}></OldMenuLink>
+              	<OldMenuLink to={'/wuye/index/shequ'} label={'社区'} img1={'../images/account_four.png'} img2={'../images/account_three.png'}></OldMenuLink>
+              	<OldMenuLink to={'/wuye/index/me'} label={'我'} img1={'../images/account_one.png'} img2={'../images/account_two.png'}></OldMenuLink>
             </div>
         </div> 
       </Router>    
