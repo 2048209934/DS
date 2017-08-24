@@ -6,11 +6,11 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 class WuyeNotice extends Component {
-  
-   componentDidMount(){
+  componentDidMount(){
     $(".admin_con").hide()
   }
   componentWillUnmount(){
@@ -24,7 +24,7 @@ class WuyeNotice extends Component {
     	  <div className="notice">
     	  	  <div className="notice_editor">
                 <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
-                <span>小区通知</span>
+                <span>{console.log(this.props.con)}</span>
             </div>
             <div className="editor_con">
                 <div className="ed_con"  contentEditable="true"></div>
@@ -41,4 +41,4 @@ class WuyeNotice extends Component {
   }
 }
 
-export default WuyeNotice;
+export default connect(e=>({data:e.wuyenotice}),action)(WuyeNotice);

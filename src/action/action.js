@@ -1,5 +1,5 @@
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
-import {wuyetz_data} from './ghj'
+import {wuyenotice} from './ghj'
 
 export function yezhudlv(dluser,dlpass){
 	return yezhudlpost(dluser,dlpass)
@@ -13,7 +13,7 @@ export function yezhuzcv(zcuser,zcpass){
 export function wuyedlv(dluser,dlpass){
 	return wuyedlpost(dluser,dlpass)
 }
-export function wuyetz_data(notice){
+export function wuyetz(notice){
 	return wuyenotice(notice)
 }
 

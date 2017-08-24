@@ -13,7 +13,7 @@ export function wuyenotice(notice){
 			type:"post",
 			url:config.url+"/notice/wytongzhi",
 			data:{
-				notice:notice;
+				notice:notice
 			},
 			success:function(data){			
 					dispatch(wuyeid(data))
@@ -24,3 +24,4 @@ export function wuyenotice(notice){
 		});	
 	}
 }
+

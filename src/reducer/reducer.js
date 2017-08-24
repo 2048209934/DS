@@ -22,8 +22,6 @@ function a(state=[],action){
 
 export default combineReducers({
 	yezhudata,
-	wuyedata
-})
-export default combineReducers({
+	wuyedata,
 	wuyenotice
 })
