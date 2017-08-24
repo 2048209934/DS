@@ -6,6 +6,8 @@ import {} from './mds';
 import {} from './my';
 */
 
+
+import {a} from './hcc';
 import {yezhudata,wuyedata} from './my';
 import {wuyenotice} from './ghj';
 
@@ -23,7 +25,6 @@ function a(state=[],action){
 export default combineReducers({
 	yezhudata,
 	wuyedata,
-	wuyenotice
+	wuyenotice,
+	a
 })
-
-

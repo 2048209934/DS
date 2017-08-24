@@ -399,3 +399,27 @@ body{
 .pl_detail span{
 	font:0.7rem/2.6rem 'Microsoft Yahei';
 }
+.publish{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:2.4rem;
+	border-top:1px solid #ccc;
+}
+.publish input{
+	width:12rem;
+	height:1.3rem;
+	border-radius:5px;
+	border:1px solid #ccc;
+	outline:none;
+	margin:0.5rem 0.3rem 0 0.5rem;
+}
+.publish button{
+	width:2.7rem;
+	height:1.33rem;
+	background:#dedace;
+	border-radius:5px;
+	color:#fff;
+	outline:none;
+}
