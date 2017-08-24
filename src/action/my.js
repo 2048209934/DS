@@ -28,10 +28,15 @@ export function yezhudlpost(dluser,dlpass){
 			success:function(data){
 				if(data.length==0){
 					dispatch(yezhuid(0))
+					window.sessionStorage.setItem('yezhu',0)
+					sessionStorage
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
 					dispatch(yezhuid(0))
+					window.sessionStorage.setItem('yezhu',0)
 				}else{					
 					dispatch(yezhuid(data))
+					var yezhustr=JSON.stringify(data)
+					window.sessionStorage.setItem('yezhu',yezhustr)
 				}
 			},
 			error:function(){
@@ -119,10 +124,14 @@ export function wuyedlpost(dluser,dlpass){
 			success:function(data){
 				if(data.length==0){	
 					dispatch(wuyeid(0))
+					window.sessionStorage.setItem('wuye',0)
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){	
 					dispatch(wuyeid(0))
+					window.sessionStorage.setItem('wuye',0)
 				}else{
 					dispatch(wuyeid(data))
+					var wuyestr=JSON.stringify(data)
+					window.sessionStorage.setItem('wuye',wuyestr)
 				}
 			},
 			error:function(){

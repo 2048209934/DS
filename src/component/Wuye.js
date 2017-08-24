@@ -18,7 +18,7 @@ class Wuye extends Component {
 			alert("请输入内容")
 			e.preventDefault()
 		} else{
-			this.props.wuyedlv($("#wuyedluser").val(),$("#wuyedlpass").val())	
+			this.props.wuyedlv($("#wuyedluser").val(),$("#wuyedlpass").val())
 		}
 	}
   render() {
