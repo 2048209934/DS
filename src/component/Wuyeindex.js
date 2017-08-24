@@ -33,7 +33,7 @@ class Wuyeindex extends Component {
 		setTimeout(()=>{
 			var wuyesj=window.sessionStorage.getItem('wuye')
 			var wuyesjjson=JSON.parse(wuyesj)
-			console.log(wuyesjjson)
+			//console.log(wuyesjjson)
 			if(wuyesjjson==0){
 				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
 			}

@@ -15,3 +15,4 @@ export function wuyedata(state=null,action){
 		return state
 	}
 }
+

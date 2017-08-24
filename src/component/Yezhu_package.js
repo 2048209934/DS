@@ -6,11 +6,16 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 class YezhuPackage extends Component {
 	componentDidMount(){
 		$(".admin_con").hide()
+        var yezhusj=window.sessionStorage.getItem('yezhu');
+        var yezhusjjson=JSON.parse(yezhusj);
+        console.log(yezhusjjson)
+        this.props.yezhu_spackage(yezhusjjson[0].family,yezhusjjson[0].address);
 	}
 	componentWillUnmount(){
 		$(".admin_con").show()
@@ -26,10 +31,10 @@ class YezhuPackage extends Component {
                     邮包
                 </div>
                 <img className="YB" src="../../images/youbao_img.png" alt="" />
-                <p className="nows">您现在有<span>0</span>个包裹噢~</p>
+                <p className="nows">您现在有<span>{this.props.data.length}</span>个包裹噢~</p>
             </div>
         )
     }
 }
 
-export default YezhuPackage;
+export default connect(e=>({data:e.a}),action)(YezhuPackage);

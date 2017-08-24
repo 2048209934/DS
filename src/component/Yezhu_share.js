@@ -23,7 +23,7 @@ class YezhuShare extends Component {
             <div>
                 <div className="package_head">
                     <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
-                    <img className="more" src="../../images/circle.png" onClick={this.fn} alt="" />
+                    <img className="more" src="../../images/circle.png" alt="" />
                     邻里分享
                 </div>
                 <div className="live">
@@ -38,6 +38,11 @@ class YezhuShare extends Component {
                         <img className="prompt" src="../../images/prompt_03.jpg" alt="" />
                         <div className="time">23小时前</div>
                     </div>
+                </div>
+
+                <div className="publish">
+                    <input type="text" placeholder="评论" />
+                    <button>发表</button>
                 </div>
             </div>
         )

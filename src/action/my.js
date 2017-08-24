@@ -1,5 +1,5 @@
-import config from './../config'
-import $ from 'jquery'
+import config from './../config';
+import $ from 'jquery';
 
 var id;
 export function yezhuid(data){

@@ -7,15 +7,15 @@ import Yezhume from './Yezhume';
 import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
-import OldMenuLink from './Navs'
+import OldMenuLink from './Navs';
 
-import $ from 'jquery'
+import $ from 'jquery';
 import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
-import * as action from './../action/action'
+} from 'react-router-dom';
+import * as action from './../action/action';
 import {connect} from 'react-redux';
 
 
@@ -32,7 +32,6 @@ class Yezhuindex extends Component {
 		setTimeout(()=>{
 			var yezhusj=window.sessionStorage.getItem('yezhu')
 			var yezhusjjson=JSON.parse(yezhusj)
-			console.log(yezhusjjson)
 			if(yezhusjjson==0){
 				$(".wrap").parent().parent().html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
 			}
