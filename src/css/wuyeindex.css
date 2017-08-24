@@ -28,13 +28,24 @@ modify_topbody{
 	height:1.5rem;
 	margin-top:0.7rem;
 }
+.admin_con a .admin_one{
+	display:block;
+}
+.admin_con a .admin_two{
+	display:none;
+}
 /* hover时变样式 */
-.admin_con a:hover{
-	color:#ed860a;
+.admin_con a.active{
 	border-top:4px solid #f39800;
 }
-.admin_two{
+.admin_con a.active .admin_one{
 	display:none;
+}
+.admin_con a.active .admin_two{
+	display:block;
+}
+.admin_con a.active p:last-of-type{
+	color:#ed860a;
 }
 
 /* property banner 住这儿的banner */
