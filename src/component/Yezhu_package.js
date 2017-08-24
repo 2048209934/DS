@@ -6,7 +6,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 class YezhuPackage extends Component {
 	componentDidMount(){
@@ -26,10 +27,10 @@ class YezhuPackage extends Component {
                     邮包
                 </div>
                 <img className="YB" src="../../images/youbao_img.png" alt="" />
-                <p className="nows">您现在有<span>0</span>个包裹噢~</p>
+                <p className="nows">您现在有<span>{this.props.data}</span>个包裹噢~</p>
             </div>
         )
     }
 }
 
-export default YezhuPackage;
+export default connect(e=>({data:e.yezhudata}),action)(YezhuPackage);
