@@ -31,10 +31,15 @@ class Wuyeindex extends Component {
 	componentDidMount(){
 		setTimeout(()=>{
 //			console.log(this.props.data)
-			var wuyedata=this.props.data
+			var wuyestr=JSON.stringify(this.props.data)
+			window.localStorage.setItem('wuye',wuyestr)
+			var wuyesj=window.localStorage.getItem('wuye')
+			var wuyesjjson=JSON.parse(wuyesj)
+//			console.log(wuyesjjson)
+			/*var wuyedata=this.props.data
 			if(wuyedata==0){
 				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
-			}
+			}*/
 		},1)
 	}
   render() {
@@ -50,7 +55,7 @@ class Wuyeindex extends Component {
             <Route path="/wuye/index/organize" component={WuyeOrganize}/>
             <Route path="/wuye/index/guarantee" component={WuyeGuarantee}/>
             <div className="admin_con">
-                 <Link to="/wuye/index">
+                <Link to="/wuye/index">
                     <p className="admin_one" id="admin_one" onClick={this.submits}><img src="../images/account_eight.png" alt=""/></p>
                     <p className="admin_two" id="admin_two"><img src="../images/account_server.png" alt=""/></p>
                     <p className="admin_word" id="admin_word">住这儿</p>

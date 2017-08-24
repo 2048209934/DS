@@ -30,12 +30,15 @@ class Yezhuindex extends Component {
 	componentDidMount(){
 		setTimeout(()=>{
 //			console.log(this.props.data)
-//			var yezhustr=JSON.stringify(this.props.data)
-//			console.log(yezhustr)
-			var yezhudata=this.props.data
+			var yezhustr=JSON.stringify(this.props.data)
+			window.localStorage.setItem('yezhu',yezhustr)
+			var yezhusj=window.localStorage.getItem('yezhu')
+			var yezhusjjson=JSON.parse(yezhusj)
+//			console.log(yezhusjjson)
+			/*var yezhudata=this.props.data
 			if(yezhudata==0){
 				$(".wrap").parent().parent().html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
-			}
+			}*/
 		},1)
 	}
   render() {	
