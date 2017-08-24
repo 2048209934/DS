@@ -4,15 +4,27 @@ var id;
 export function wuyeid(data){
 	return {
 		type:"WUYENOTICE",
-		data
+		cons:data
 	}
 }
 
-export function wuyenotice(){
+export function wuyenotice(village,name,con){
 	return dispatch=>{
-		return fetch('http://localhost:8100/notice/wytongzhi')
-		.then(e=>e.json())
-		.then(data=>dispatch(wuyeid(data.data)))
-		.catch(e=>alert("失败"))
+			return $.ajax({
+			type:"post",
+			url:config.url+"/notice/wytongzhi",
+			data:{
+				village:village,
+				name:name,
+				con:con
+			},
+			success:function(data){
+				dispatch(wuyeid(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
 	}
 }
+

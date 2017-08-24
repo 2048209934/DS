@@ -1,8 +1,8 @@
-export function wuyenotice(state=null,action){
+export function wuyenotice(aa=null,action){
 	switch(action.type){
 		case 'WUYENOTICE':
-		return action.data;
+		return action.cons;
 		default:
-		return state
+		return aa
 	}
 }

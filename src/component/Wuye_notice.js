@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
 
 class WuyeNotice extends Component {
   componentDidMount(){
-    $(".admin_con").hide()
+  $(".admin_con").hide()
   }
   componentWillUnmount(){
     $(".admin_con").show()
@@ -21,23 +21,28 @@ class WuyeNotice extends Component {
   ok=function(){
     window.history.go(-1)
   }
+  fn(){
+    var aa=JSON.parse(window.sessionStorage.getItem("wuye"))
+    this.props.wuyetz(aa[0].village,aa[0].name,$("#wuyenotice").val())
+    console.log(this.props.data)
+  }
   render() {
     return (
     	  <div className="notice">
     	  	  <div className="notice_editor">
+                {/* {console.log(this.props.data[this.props.data.length-1].con)}*/}
                 <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
-                <span>{console.log(this.props.con)}</span>
+                <span>小区通知</span>
             </div>
-            <div className="editor_con">
-                <div className="ed_con"  contentEditable="true"></div>
-                <div className="issue">
-                    <p><img src="../../images/comments.png" alt=""/></p>
-                    <p>发布</p>
-                </div>
-                <div className="fixed">
-                    <img src="../../images/book.png" alt=""/>
-                </div>
+            <div className="editor_con">    
+                <input type="text"  id="wuyenotice" placeholder="请输入"/>
+                <p onClick={this.fn.bind(this)}>发布</p>
             </div>
+            <ul className="notice_con">
+             {console.log(this.props.data)}
+                
+            </ul>
+             }
         </div>
     );
   }
