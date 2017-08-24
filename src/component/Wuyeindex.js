@@ -30,17 +30,20 @@ class Wuyeindex extends Component {
   }
 	componentDidMount(){
 		setTimeout(()=>{
-//			console.log(this.props.data)
-			var wuyestr=JSON.stringify(this.props.data)
-			window.localStorage.setItem('wuye',wuyestr)
-			var wuyesj=window.localStorage.getItem('wuye')
+			var wuyesj=window.sessionStorage.getItem('wuye')
 			var wuyesjjson=JSON.parse(wuyesj)
-//			console.log(wuyesjjson)
-			/*var wuyedata=this.props.data
+			console.log(wuyesjjson)
+			if(wuyesjjson==0){
+				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
+			}
+		},10)
+		/*setTimeout(()=>{
+//			console.log(this.props.data)
+			var wuyedata=this.props.data
 			if(wuyedata==0){
 				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
-			}*/
-		},1)
+			}
+		*/
 	}
   render() {
     return (
