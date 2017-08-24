@@ -9,6 +9,7 @@ import {
 
 
 class WuyeNotice extends Component {
+  
    componentDidMount(){
     $(".admin_con").hide()
   }

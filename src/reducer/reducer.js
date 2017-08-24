@@ -7,6 +7,7 @@ import {} from './my';
 */
 
 import {yezhudata,wuyedata} from './my';
+import {wuyenotice} from './ghj';
 
 /*
 function a(state=[],action){
@@ -22,4 +23,7 @@ function a(state=[],action){
 export default combineReducers({
 	yezhudata,
 	wuyedata
+})
+export default combineReducers({
+	wuyenotice
 })
