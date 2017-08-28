@@ -39,7 +39,11 @@ class YezhuShare extends Component {
                         <div className="time">23小时前</div>
                     </div>
                 </div>
+                <div className="dianzan">
+                    <span className="left">已有0人点赞</span>
+                    <button className="right"><img src="../../images/kkk.png" alt="" /></button>
 
+                </div>
                 <div className="publish">
                     <input type="text" placeholder="评论" />
                     <button>发表</button>
