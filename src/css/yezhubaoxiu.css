@@ -1,0 +1,52 @@
+.del_top p:first-of-type,.del_top p:nth-of-type(3){
+	width:0.622rem;
+	height:0.1rem;
+	background:red;
+	margin-top:1.333rem;
+	background:#f39800;
+}
+.del_top p:nth-of-type(2){
+	margin-top:0.977rem;
+	margin-left:0.8rem;
+	margin-right:0.8rem;
+	color:#656566;
+}
+.del_top p{
+	float:left;
+}
+.del_top{
+	margin:0 auto;
+	width:6rem;
+}
+.deal_con{
+	clear:both;
+	width:12rem;
+	margin:0 auto;
+}
+.deal_con input{
+	width:12rem;
+	height:1.4rem;
+	outline:none;
+	border:2px solid #dfe0df;
+	margin-top:0.4rem;
+}
+
+.deal_con input:first-of-type{
+	margin-top:0.65rem;
+}
+.yz_bx{
+	width:12.2rem;
+	height:1.2rem;
+	background:#e5e5e5;
+	margin-top:0.8rem;
+	padding-left:0.6rem;
+	line-height:1.2rem;
+}
+.choose_box{
+	height:1.733rem;
+	border-bottom:2px solid #ecebeb;
+	margin-top:0.8rem;
+}
+.choose_box .choose{
+	line-height:1.733rem;
+}

@@ -59,7 +59,7 @@
 
 }
 .orgin_box p:nth-of-type(3){
-	padding-top:1.4rem;
+	
 	margin-left:3.8rem;
 }
 .orgin_box p:nth-of-type(3) span:first-of-type{
@@ -67,7 +67,7 @@
 }
 
 .orgin_box p:nth-of-type(4){
-	margin-top:0.4rem;
+	margin-top:2rem;
 	margin-left:0.8rem;
 	margin-right:0.4rem;
 	float:right;
@@ -88,7 +88,7 @@
 	margin-left:0.2rem
 }
 .orgin_box p:nth-of-type(5){
-	margin-top:0.4rem;
+	margin-top:2rem;
 	margin-left:0.8rem;
 	float:right;	
 }

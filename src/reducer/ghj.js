@@ -6,3 +6,13 @@ export function wuyenotice(aa=null,action){
 		return aa
 	}
 }
+
+export function wuyeantee(bb=null,action){
+	switch(action.type){
+		case 'WUYEANTEE':
+		return action.con;
+		default:
+		return bb
+	}
+}
+

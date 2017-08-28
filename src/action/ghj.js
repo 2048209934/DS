@@ -28,3 +28,31 @@ export function wuyenotice(village,name,con){
 	}
 }
 
+export function wuyeids(data){
+	return {
+		type:"WUYEANTEE",
+		con:data
+	}
+}
+
+export function wuyeantee(village,address,con){
+	return dispatch=>{
+			return $.ajax({
+			type:"post",
+			url:config.url+"/guarantee/wyguarantee",
+			data:{
+				village:village,
+				address:address,
+				con:con
+			},
+			success:function(data){
+				dispatch(wuyeids(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+

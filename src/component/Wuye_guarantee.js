@@ -9,7 +9,8 @@ import {
   Link
 } from 'react-router-dom'
 
-
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 class WuyeGuarantee extends Component {
   componentDidMount(){
     $(".admin_con").hide()
@@ -19,6 +20,11 @@ class WuyeGuarantee extends Component {
   }
   tip=function(){
     window.history.go(-1)
+  }
+  deal(){
+    var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
+    console.log(  this.props.yezhu_antee(bb[0].village,bb[0].name,bb[0].user))
+   
   }
   render() {
     return (
@@ -34,9 +40,10 @@ class WuyeGuarantee extends Component {
             <Route path="/wuye/index/guarantee" render={()=>(
                 <div className="guarantee_bottom">
                     <ul className="repari">
+                    
                         <li>
                             <div className="repari_top">
-                                <p>感应灯坏了，一直都不亮，请师傅尽快安排维修，要不然没办法走路。</p>
+                                <p>{console.log(this.props.data)}</p>
                             </div>
                             <div className="repari_bottom">
                                 <div className="book">
@@ -46,9 +53,10 @@ class WuyeGuarantee extends Component {
                                         <p>大圣花园小区</p>
                                     </div>
                                 </div>
-                                <div className="tener">标记为处理</div>
+                                <div className="tener" onClick={this.deal.bind(this)}>标记为处理</div>
                             </div>
                         </li>
+                       
                     </ul>
                      <div className="tip" onClick={this.tip}>
                         <p><img src="../../images/tip.png" alt=""/></p>
@@ -62,5 +70,4 @@ class WuyeGuarantee extends Component {
     );
   }
 }
-
-export default WuyeGuarantee;
+export default connect(e=>({data:e.wuyeantee}),action)(WuyeGuarantee);

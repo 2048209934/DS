@@ -24,13 +24,12 @@ class WuyeNotice extends Component {
   fn(){
     var aa=JSON.parse(window.sessionStorage.getItem("wuye"))
     this.props.wuyetz(aa[0].village,aa[0].name,$("#wuyenotice").val())
-    console.log(this.props.data)
+   
   }
   render() {
     return (
     	  <div className="notice">
-    	  	  <div className="notice_editor">
-                {/* {console.log(this.props.data[this.props.data.length-1].con)}*/}
+    	  	  <div className="notice_editor"> 
                 <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
                 <span>小区通知</span>
             </div>
@@ -39,10 +38,10 @@ class WuyeNotice extends Component {
                 <p onClick={this.fn.bind(this)}>发布</p>
             </div>
             <ul className="notice_con">
-             {console.log(this.props.data)}
-                
+                 {this.props.data.map(function(e,i){
+                     <li> {console.log(e.con)} </li>
+                 })}              
             </ul>
-             }
         </div>
     );
   }

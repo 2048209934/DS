@@ -1,6 +1,6 @@
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
 import {wuyehdpost,wuyehdtjpost} from './mds'
-import {wuyenotice} from './ghj'
+import {wuyenotice,wuyeantee} from './ghj'
 import {spackage} from './hcc'
 
 
@@ -35,4 +35,9 @@ export function wuyetz(village,name,con){
 export function yezhu_spackage(village,address){
 	return spackage(village,address)
 }
+
+export function yezhu_antee(village,address,con){
+	return wuyeantee(village,address,con)
+}
+
 
