@@ -33,7 +33,17 @@ class Yezhuindex extends Component {
 			var yezhusj=window.sessionStorage.getItem('yezhu')
 			var yezhusjjson=JSON.parse(yezhusj)
 			if(yezhusjjson==0){
-				$(".wrap").parent().parent().html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
+				$(".wrap").parent().parent().html(`
+					<div>
+						<div style="height:50px; line-height:50px; text-align:center; position:relative; border-bottom:1px solid #ccc; font-size:16px;">
+							<img id="hyezhudl" src="../images/arrow.png" alt="" style="width:20px; height:22px; position:absolute; top:30%; left:15px;">登录
+						</div>
+						<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>
+					<div>
+					`)
+				$("#hyezhudl").click(function(){
+					window.history.go(-1)
+				})
 			}
 		},10)
 		/*setTimeout(()=>{

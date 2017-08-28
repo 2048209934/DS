@@ -450,3 +450,56 @@ modify_topbody{
 	background:#ee9121;
 	border-radius:0.4rem 0.4rem;
 }
+
+/*
+     住户管理
+ */
+.zhgl h2{
+	text-align: center;
+	font-size: 0.8rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-family: "microsoft yahei";
+	font-weight: 500;
+	border-bottom: 1px solid #ccc;
+	background: #46a1ff;
+	color: #fff;
+}
+.zhgl .tjgl,.zhgl .sytj{
+	height: 2.75rem;
+	line-height: 2.75rem;
+	padding: 0 0 0 1rem;
+	font-size: 0.75rem;
+	color: #707070;
+	border-bottom: 1px solid #d4d4d4;
+}
+.zhgl .sytj{
+	border-bottom: none;
+}
+.zhgl .tjglk{
+	/*display: none;*/
+}
+.zhgl .tjglk input{
+	outline: none;
+}
+.zhgl .zhlist li{
+	width: 90%;
+	margin: 0 auto 0.75rem;
+	padding: 0 0 0 5%;
+	background: #fff;
+	overflow: hidden;
+	border-radius: 0.25rem;
+	box-shadow: 0px 3px 7px 3px #c2bfbf;
+}
+.zhgl .zhlist li p{
+	float: left;
+	width: 100%;
+	height:1.5rem;
+	line-height:1.5rem;
+	margin: 0;
+	font-size: 0.625rem;
+}
+.zhgl .zhlist li p:first-of-type{
+	font-size: 0.8rem;
+	margin: 0.25rem 0;
+}
