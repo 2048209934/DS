@@ -399,6 +399,36 @@ body{
 .pl_detail span{
 	font:0.7rem/2.6rem 'Microsoft Yahei';
 }
+
+.dianzan{
+	width:100%;
+	height:2.4rem;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin-top:0.7rem;
+	font:0.7rem/2.4rem 'Microsoft Yahei';
+	color:#fd9800;	
+}
+.dianzan span{
+	margin-left:1rem;
+}
+.dianzan button{
+	width:2.7rem;
+	height:1.33rem;
+	background:#f5f4f0;
+	border-radius:5px;
+	outline:none;
+	border:1px solid #ccc;
+	margin-top:0.5rem;
+	margin-right:0.8rem;
+	position:relative;
+}
+.dianzan img{
+	position:absolute;
+	width:0.9rem;
+	top:0.2rem;
+	left:0.9rem;
+}
 .publish{
 	position:fixed;
 	bottom:0;
@@ -422,4 +452,55 @@ body{
 	border-radius:5px;
 	color:#fff;
 	outline:none;
+}
+
+
+
+
+
+
+/* 业主  服务 */
+.kong{
+	width:100%;
+	height:2.8rem;
+}
+.serves{
+	width:calc(100% - 2rem);
+	padding:0.5rem 1rem 0.3rem;
+	border-bottom:1px solid #ccc;
+}
+.serves_left{
+	width:2.6rem;
+	height:4rem;
+}
+.serves_left img{
+	width:2rem;
+}
+.serves_right{
+	width:calc(100% - 2.6rem);
+	height:4rem;
+}
+.serves_right>p:first-child{
+	font:0.7rem/1rem 'Microsoft Yahei';
+	color:#3f3f3f;
+}
+.serves_right>p:nth-child(2){
+	font:0.6rem/1rem 'Microsoft Yahei';
+	color:#858585;
+}
+.zan{
+	margin-top:0.5rem;
+}
+.zan>img{
+	width:1.1rem;
+}
+.zan_first img,.zan_second img{
+	width:1rem;
+	margin-right:0.3rem;
+}
+.zan_first span,.zan_second span{
+	font:0.6rem/1rem 'Microsoft Yahei';
+}
+.zan_first{
+	margin-right:1.6rem;
 }

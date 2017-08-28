@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
+import { Carousel } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Route,
@@ -36,10 +37,16 @@ class Yezhuzhuzhe extends Component {
                                 <img src="../images/xiaoxi.png" alt="" />
                                 <span>北京半岛馨苑</span>
                             </p>
+
+
                             {/*banner*/}
                 	  	    <div className="banner">
                                 <img src="../images/ggg.jpg" alt="" />
                             </div>
+
+                            
+
+
                             {/*ewm and yb*/}
                             <div className="accept clear">
                                 <Link to="/yezhu/index/accept">

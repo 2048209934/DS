@@ -26,6 +26,67 @@ class Yezhuserves extends Component {
                 <img onClick={this.go} src="../../../images/arrow.png" alt="" />
                 <span>他们为你服务</span>
             </p>
+            <div className="kong"></div>
+            <div className="serves clear">
+                <div className="serves_left left">
+                    <img src="../../../images/bai.png" alt="" />
+                </div>
+                <div className="serves_right left">
+                    <p>白桐</p>
+                    <p>网格管家</p>
+                    <div className="zan clear">
+                        <p className="left zan_first clear">
+                            <img className="left" src="../../../images/nozan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <p className="left zan_second clear">
+                            <img className="left" src="../../../images/zan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <img className="right" src="../../../images/hb.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className="serves clear">
+                <div className="serves_left left">
+                    <img src="../../../images/peoplen.png" alt="" />
+                </div>
+                <div className="serves_right left">
+                    <p>白桐</p>
+                    <p>网格管家</p>
+                    <div className="zan clear">
+                        <p className="left zan_first clear">
+                            <img className="left" src="../../../images/nozan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <p className="left zan_second clear">
+                            <img className="left" src="../../../images/zan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <img className="right" src="../../../images/hb.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className="serves clear">
+                <div className="serves_left left">
+                    <img src="../../../images/peoplen.png" alt="" />
+                </div>
+                <div className="serves_right left">
+                    <p>白桐</p>
+                    <p>网格管家</p>
+                    <div className="zan clear">
+                        <p className="left zan_first clear">
+                            <img className="left" src="../../../images/nozan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <p className="left zan_second clear">
+                            <img className="left" src="../../../images/zan.png" alt="" />
+                            <span className="left">0</span>
+                        </p>
+                        <img className="right" src="../../../images/hb.png" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>  	
     )
   }
