@@ -42,7 +42,6 @@ class YezhuShare extends Component {
                 <div className="dianzan">
                     <span className="left">已有0人点赞</span>
                     <button className="right"><img src="../../images/kkk.png" alt="" /></button>
-
                 </div>
                 <div className="publish">
                     <input type="text" placeholder="评论" />
