@@ -2,19 +2,29 @@
 /* 清除浮动 */
 .organize{
 	clear:both;
+	height: 0;
+	transition: 1s;
+	overflow: hidden;
 }
 
 /* 发布的input框 */
 .organize .orgin{
-	width:80%;
-	height:1.8rem;
-	margin-left:10%;
+	width:90%;
+	height:3.8rem;
+	margin-left:5%;
+	box-sizing: border-box;
 	margin-top:0.8rem;
+	margin-bottom: 0.4rem;
 	border:1px solid #3e3e3e;
+	resize: none;
 	outline:none;
-	padding-left:0.4rem;
+	padding:2%;
 }
-
+.organize p{ width: 90%;
+margin: 0 auto;
+color: red;
+opacity: 0;
+font-family: "微软雅黑";}
 /* 发布按钮 */
 .orgin_btn{
 	width:2.2rem;
@@ -30,7 +40,8 @@
 	margin-bottom:0.8rem;
 	border-radius:0.4rem 0.4rem;
 }
-
+.btns{ margin-top: 1.2rem;}
+.topsbtn{ margin-top: 1rem;}
 /* 清除浮动 */
 .orgin_con{
 	clear:both;
@@ -39,18 +50,21 @@
 /* 发布的内容的盒子 */
 .orgin_box{	
 	margin:0 auto;
-	width:13rem;
-	height:8rem;
+	width:90%;
+	padding: 0.6rem;
+	font-family: "微软雅黑";
+	transition: 1s;
+	box-sizing: border-box;
 	border:1px solid #eee;
-	box-shadow:5px 5px 10px #eee;
+	margin-top: 1.1rem;
+	box-shadow:2px 2px 5px #eee;
 }
 
 /* 人，时间，内容 */
 .orgin_box p:first-of-type{
-	margin-top:0.6rem;
+
 }
 .orgin_box p:nth-of-type(2){
-	margin-top:1rem;
 	text-align:center;
 }
 .orgin_box p:nth-of-type(2) span:first-of-type{
@@ -59,11 +73,11 @@
 
 }
 .orgin_box p:nth-of-type(3){
-	padding-top:1.4rem;
-	margin-left:3.8rem;
+	width: 100%;
 }
 .orgin_box p:nth-of-type(3) span:first-of-type{
 	font-weight:bold;
+	margin-right: 0.3rem;
 }
 
 .orgin_box p:nth-of-type(4){
@@ -99,11 +113,10 @@
 }
 .orgin_box p:first-of-type span:first-of-type{
 	font-size:0.7rem;
-	margin-left:0.2rem;
+		font-weight:800;
 }
 .orgin_box p:first-of-type span:nth-of-type(2){
 	font-size:0.7rem;
-	font-weight:800;
 	margin-left:0.4rem;
 }
 
@@ -127,3 +140,27 @@
 	width:1rem;
 	height:1rem;
 }
+
+
+
+.lisfootcolor1{
+	width: 90%;
+height: 1.2rem;
+line-height: 1.2rem;
+color: white;
+margin: 0 auto;
+font-family: "微软雅黑";
+text-align: center;
+	background: red;
+}
+.lisfootcolor2{
+	width: 90%;
+height: 1.2rem;
+line-height: 1.2rem;
+margin: 0 auto;
+font-family: "微软雅黑";
+text-align: center;
+color: white;
+	background: green;
+}
+.btnspan{display: none;}
