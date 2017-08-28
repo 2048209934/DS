@@ -6,6 +6,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Wuyesteward extends Component {
@@ -16,6 +18,7 @@ class Wuyesteward extends Component {
 		$(".tjglk").slideDown()
 	}
 	wysq(){
+		
 		$(".tjglk").slideUp()
 	}
   render() {
@@ -46,7 +49,7 @@ class Wuyesteward extends Component {
     	  		<li>
     	  			<p>户主 : 呵呵</p>
     	  			<p>联系方式 : 123444567897</p>
-    	  			<p>住址 : 大时代</p>
+    	  			<p>住址 : 101A</p>
     	  		</li>
     	  	</ul>
         </div>
@@ -54,4 +57,4 @@ class Wuyesteward extends Component {
   }
 }
 
-export default Wuyesteward;
+export default connect(e=>({data:e}),action)(Wuyesteward);
