@@ -9,10 +9,9 @@ import {} from './my';
 
 import {a} from './hcc';
 import {yezhudata,wuyedata} from './my';
-import {huodong} from './mds';
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
 import {huodong,yezhuhuodong} from './mds';
-import {wuyenotice} from './ghj';
+import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
+
 /*
 function a(state=[],action){
 	switch(action.type){
@@ -31,6 +30,6 @@ export default combineReducers({
 	wuyenotice,
 	a,
 	wuyeantee,
-	wuyebaoxiu
+	wuyebaoxiu,
 	yezhuhuodong
 })

@@ -46,7 +46,6 @@ class Yezhusteward extends Component {
                                         <span className="right">></span>
                                     </li>
                                 </Link>
-<<<<<<< HEAD
                                 <Link to="/yezhu/index/steward/baoxiu">
                                     <li className="clear">
                                         <span className="left">保修</span>
@@ -57,14 +56,12 @@ class Yezhusteward extends Component {
                                     <span className="left">访客邀请</span>
                                     <span className="right">></span>
                                 </li>
-=======
                                <Link to="/yezhu/index/steward/huodong">
                                     <li className="clear">
                                         <span className="left">社区活动</span>
                                         <span className="right">></span>
                                     </li>
                                 </Link>
->>>>>>> origin/master
                                 <li className="clear">
                                     <span className="left">邮包</span>
                                     <span className="right">></span>
@@ -99,11 +96,8 @@ class Yezhusteward extends Component {
                         </div>
                     )} />  
                     <Route path="/yezhu/index/steward/serves" component={YezhuServes}/>
-<<<<<<< HEAD
                     <Route path="/yezhu/index/steward/baoxiu" component={Yezhubaoxiu}/>
-=======
                     <Route path="/yezhu/index/steward/huodong" component={Yezhuhuodong}/>
->>>>>>> origin/master
                 </div>
             </Router>
         )
