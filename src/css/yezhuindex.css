@@ -504,3 +504,34 @@ body{
 .zan_first{
 	margin-right:1.6rem;
 }
+
+
+
+
+
+
+/* 业主   我的房屋 */
+.my_house{
+	margin-top:2.8rem;
+	border-bottom:1px solid #ccc;
+}
+.xq_name{
+	padding-top:0.3rem;
+	text-align:center;
+}
+.xq_name p{
+	font:0.7rem/1.2rem 'Microsoft Yahei';
+	margin-left:1rem;
+}
+.xq_name p:nth-child(2){
+	font:0.6rem/1.2rem 'Microsoft Yahei';
+}
+.my_house span{
+	margin-right:1rem;
+	font:0.7rem/3rem 'Microsoft Yahei';
+}
+.house_list li{
+	padding-left:0.7rem;
+	font:0.7rem/1.4rem 'Microsoft Yahei';
+	border-bottom:1px solid #ccc;
+}
