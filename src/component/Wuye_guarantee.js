@@ -14,6 +14,8 @@ import {connect} from 'react-redux';
 class WuyeGuarantee extends Component {
   componentDidMount(){
     $(".admin_con").hide()
+    var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
+    this.props.yezhu_antee(bb[0].village)
   }
   componentWillUnmount(){
     $(".admin_con").show()
@@ -22,8 +24,7 @@ class WuyeGuarantee extends Component {
     window.history.go(-1)
   }
   deal(){
-    var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
-    console.log(  this.props.yezhu_antee(bb[0].village,bb[0].name,bb[0].user))
+    
    
   }
   render() {
@@ -40,14 +41,14 @@ class WuyeGuarantee extends Component {
             <Route path="/wuye/index/guarantee" render={()=>(
                 <div className="guarantee_bottom">
                     <ul className="repari">
-                    
-                        <li>
+                      {this.props.data.map( (v,i)=>{
+                        return <li key={i}>
                             <div className="repari_top">
-                                <p>{console.log(this.props.data)}</p>
+                                <p>{}</p>
                             </div>
                             <div className="repari_bottom">
                                 <div className="book">
-                                    <p className="porto"></p>
+                                    <p className="porto">{v.con}</p>
                                     <div className="porto_con">
                                         <p>大圣</p>
                                         <p>大圣花园小区</p>
@@ -56,7 +57,7 @@ class WuyeGuarantee extends Component {
                                 <div className="tener" onClick={this.deal.bind(this)}>标记为处理</div>
                             </div>
                         </li>
-                       
+                      })}
                     </ul>
                      <div className="tip" onClick={this.tip}>
                         <p><img src="../../images/tip.png" alt=""/></p>

@@ -7,7 +7,7 @@ export function wuyenotice(aa=null,action){
 	}
 }
 
-export function wuyeantee(bb=null,action){
+export function wuyeantee(bb=[],action){
 	switch(action.type){
 		case 'WUYEANTEE':
 		return action.con;
@@ -15,4 +15,13 @@ export function wuyeantee(bb=null,action){
 		return bb
 	}
 }
+export function wuyebaoxiu(cc=[],action){
+	switch(action.type){
+		case 'WUYEBAOXIU':
+		return action.contents;
+		default:
+		return cc
+	}
+}
+
 

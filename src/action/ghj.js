@@ -35,18 +35,44 @@ export function wuyeids(data){
 	}
 }
 
-export function wuyeantee(village,address,con){
+export function wuyeantee(village){
 	return dispatch=>{
 			return $.ajax({
 			type:"post",
 			url:config.url+"/guarantee/wyguarantee",
 			data:{
-				village:village,
-				address:address,
-				con:con
+				village:village
 			},
 			success:function(data){
 				dispatch(wuyeids(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+export function wuye_bx(data){
+	return {
+		type:"WUYEBAOXIU",
+		contents:data
+	}
+}
+
+export function wuyebaoxiu(con,village,address){
+	return dispatch=>{
+			return $.ajax({
+			type:"post",
+			url:config.url+"/guarantee/yzguarantee",
+			data:{
+				con:con,
+				village:village,
+				address:address
+			},
+			success:function(data){
+				console.log(data)
+				dispatch(wuye_bx(data))
 			},
 			error:function(){
 				alert("0.0")

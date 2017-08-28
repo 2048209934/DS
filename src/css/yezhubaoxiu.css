@@ -16,22 +16,24 @@
 }
 .del_top{
 	margin:0 auto;
-	width:6rem;
+	width:5.5rem;
 }
 .deal_con{
 	clear:both;
 	width:12rem;
 	margin:0 auto;
 }
-.deal_con input{
+.deal_con .input{
 	width:12rem;
 	height:1.4rem;
 	outline:none;
 	border:2px solid #dfe0df;
 	margin-top:0.4rem;
+	color:#757474;
+	padding-left:0.4rem;
 }
 
-.deal_con input:first-of-type{
+.deal_con .input:first-of-type{
 	margin-top:0.65rem;
 }
 .yz_bx{
@@ -43,10 +45,38 @@
 	line-height:1.2rem;
 }
 .choose_box{
-	height:1.733rem;
+	height:2.733rem;
 	border-bottom:2px solid #ecebeb;
-	margin-top:0.8rem;
 }
-.choose_box .choose{
-	line-height:1.733rem;
+.choose_box span{
+	float:left;
+	margin-top:1.2rem;
+	margin-left:0.6rem;
+	color:#757474;
+}
+.choose_box input{
+	float:right;
+	margin-top:1.2rem;
+	width:1.2rem;
+	height:1.2rem;
+	margin-right:0.6rem;
+}
+.btn_area{
+	width:12rem;
+	height:4.2rem;
+	outline:none;
+	margin-top:0.6rem;
+	border:1px solid #ecebeb;
+	padding-left:0.4rem;
+	padding-top:0.4rem;
+	color:#757474;
+}
+.btn_boxs{
+	width:12.5rem;
+	height:1.5rem;
+	margin-top:0.6rem;
+	line-height:1.5rem;
+	text-align:center;
+	color:#fff;
+	background:#ff6e40;
 }
