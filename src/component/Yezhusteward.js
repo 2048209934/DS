@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  YezhuServes from './Yezhu_serves';
+import  Yezhuhuodong from './Yezhuhuodong';
 import {
   BrowserRouter as Router,
   Route,
@@ -44,10 +45,12 @@ class Yezhusteward extends Component {
                                         <span className="right">></span>
                                     </li>
                                 </Link>
-                                <li className="clear">
-                                    <span className="left">访客邀请</span>
-                                    <span className="right">></span>
-                                </li>
+                               <Link to="/yezhu/index/steward/huodong">
+                                    <li className="clear">
+                                        <span className="left">社区活动</span>
+                                        <span className="right">></span>
+                                    </li>
+                                </Link>
                                 <li className="clear">
                                     <span className="left">邮包</span>
                                     <span className="right">></span>
@@ -82,6 +85,7 @@ class Yezhusteward extends Component {
                         </div>
                     )} />  
                     <Route path="/yezhu/index/steward/serves" component={YezhuServes}/>
+                    <Route path="/yezhu/index/steward/huodong" component={Yezhuhuodong}/>
                 </div>
             </Router>
         )

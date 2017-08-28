@@ -1,5 +1,5 @@
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
-import {wuyehdpost,wuyehdtjpost} from './mds'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
 import {wuyenotice} from './ghj'
 import {spackage} from './hcc'
 
@@ -25,6 +25,12 @@ export function wuyehd(village){
 }
 export function wuyehdtj(village,name,con){
 	return wuyehdtjpost(village,name,con)
+}
+export function yezhuhd(village,id){
+	return yezhuhdpost(village,id)
+}
+export function yezhuhds(id,uid,village){
+	return yezhuhdposts(id,uid,village)
 }
 
 export function wuyetz(village,name,con){

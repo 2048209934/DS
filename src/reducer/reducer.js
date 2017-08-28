@@ -9,7 +9,7 @@ import {} from './my';
 
 import {a} from './hcc';
 import {yezhudata,wuyedata} from './my';
-import {huodong} from './mds';
+import {huodong,yezhuhuodong} from './mds';
 import {wuyenotice} from './ghj';
 
 /*
@@ -28,5 +28,6 @@ export default combineReducers({
 	wuyedata,
 	huodong,
 	wuyenotice,
-	a
+	a,
+	yezhuhuodong
 })

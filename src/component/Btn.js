@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import btn from './../css/btn.css';
+import './../css/btn.css';
 
 
 class Btn extends Component {

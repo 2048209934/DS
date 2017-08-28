@@ -35,7 +35,17 @@ class Wuyeindex extends Component {
 			var wuyesjjson=JSON.parse(wuyesj)
 			//console.log(wuyesjjson)
 			if(wuyesjjson==0){
-				$(".Admin").html('<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>')	
+				$(".Admin").html(`
+					<div>
+						<div style="height:50px; line-height:50px; text-align:center; position:relative; border-bottom:1px solid #ccc; font-size:16px;">
+							<img id="hwuyedl" src="../images/arrow.png" alt="" style="width:20px; height:22px; position:absolute; top:30%; left:15px;">登录
+						</div>
+						<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>
+					<div>
+					`)
+				$("#hwuyedl").click(function(){
+					window.history.go(-1)
+				})
 			}
 		},10)
 		/*setTimeout(()=>{
