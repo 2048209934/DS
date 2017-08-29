@@ -53,7 +53,7 @@ class Yezhushequ extends Component {
                             <p>今日限行</p>
                             <p>【今夜山区有雨 注意防范】今天白天阴转多云，早晨有轻雾并有分散小阵雨，最高气温30℃；夜间多云间阴，山区有阵雨或雷阵雨，最低气温23℃，受轻雾影响，今晨能见度不...</p>
                             <img className="prompt" src="../../images/prompt_03.jpg" alt="" />
-                            <div className="time">23小时前</div>
+                            <div className="timess">23小时前</div>
                         </li>
                         
                     </ul>

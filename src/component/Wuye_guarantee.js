@@ -9,10 +9,14 @@ import {
   Link
 } from 'react-router-dom'
 
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 class WuyeGuarantee extends Component {
   componentDidMount(){
     $(".admin_con").hide()
+    var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
+    this.props.yezhu_antee(bb[0].village)
   }
   componentWillUnmount(){
     $(".admin_con").show()
@@ -20,12 +24,19 @@ class WuyeGuarantee extends Component {
   tip=function(){
     window.history.go(-1)
   }
+  ok=function(){
+    window.history.go(-1)
+  }
+  move=function(id,village,address){
+    this.props.wuye_box(id,village,address)
+  }
   render() {
     return (
       <Router>
     	  <div className="guarantee">
-            <div className="go_back">
-                    <span>保修服务</span>
+                <div className="notice_editor">
+                     <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
+                      <span>保修服务</span>
                 </div>
     	  	  <div className="guarantee_top">
                 <p><Link to="/wuye/index/guarantee">未处理</Link></p>
@@ -33,26 +44,20 @@ class WuyeGuarantee extends Component {
             </div>
             <Route path="/wuye/index/guarantee" render={()=>(
                 <div className="guarantee_bottom">
-                    <ul className="repari">
-                        <li>
-                            <div className="repari_top">
-                                <p>感应灯坏了，一直都不亮，请师傅尽快安排维修，要不然没办法走路。</p>
-                            </div>
-                            <div className="repari_bottom">
-                                <div className="book">
-                                    <p className="porto"></p>
-                                    <div className="porto_con">
-                                        <p>大圣</p>
-                                        <p>大圣花园小区</p>
-                                    </div>
-                                </div>
-                                <div className="tener">标记为处理</div>
-                            </div>
-                        </li>
-                    </ul>
-                     <div className="tip" onClick={this.tip}>
-                        <p><img src="../../images/tip.png" alt=""/></p>
-                    </div>
+             <ul className="orgin_con">
+              {console.log(this.props.data)}
+              {this.props.data.map(function(e,i){
+    return        <li key={i} className="baoxiu_box">
+                      <div className="one">
+                          <span>{e.village}</span>
+                          <span>{e.address}</span>
+                          <span onClick={this.move.bind(this,e.id,e.village,e.address)}>标记为处理</span>
+                      </div>
+                      <p className="two">{e.con}</p>
+                      <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>
+                  </li>
+                }.bind(this))}
+            </ul>
                 </div>
               )} />
             <Route path="/wuye/index/already" component={wuyealready} />
@@ -62,5 +67,4 @@ class WuyeGuarantee extends Component {
     );
   }
 }
-
-export default WuyeGuarantee;
+export default connect(e=>({data:e.wuyeantee}),action)(WuyeGuarantee);
