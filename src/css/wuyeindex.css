@@ -454,6 +454,9 @@ modify_topbody{
 /*
      住户管理
  */
+.zhgl {
+	margin: 0 0 4.1rem;
+}
 .zhgl h2{
 	text-align: center;
 	font-size: 0.8rem;
@@ -505,6 +508,7 @@ modify_topbody{
     display: block;
     margin: 0.5rem auto;
 	border-radius: 0.5rem;
+	outline: none;
 }
 .zhgl .zhlist li{
 	width: 90%;

@@ -1,4 +1,4 @@
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
 import {wuyenotice} from './ghj'
 import {spackage} from './hcc'
@@ -15,6 +15,12 @@ export function yezhuzcv(zcuser,zcpass){
 }
 export function wuyedlv(dluser,dlpass){
 	return wuyedlpost(dluser,dlpass)
+}
+export function wuyegllist(address){
+	return wuyegllistpost(address)
+}
+export function wuyegltj(address,name,sex,phone,family,homeyard){
+	return wuyegltjpost(address,name,sex,phone,family,homeyard)
 }
 
 

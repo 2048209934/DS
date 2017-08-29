@@ -12,14 +12,28 @@ import {connect} from 'react-redux';
 
 class Wuyesteward extends Component {
 	componentDidMount(){
-		
+		var wuyesj=window.sessionStorage.getItem('wuye')
+		var wuyesjjson=JSON.parse(wuyesj)
+		this.props.wuyegllist(wuyesjjson[0].village)
 	}
 	wyxq(){
 		$(".tjglk").slideDown()
 	}
 	wysq(){
-		
-		$(".tjglk").slideUp()
+		if($("#wyhzxm").val()==''||$("#wyhzsex").val()==''||$("#wylxfs").val()==''||$("#wyhzzz").val()==''){
+			alert("请输入内容")
+		}else{
+			var wuyesj=window.sessionStorage.getItem('wuye')
+			var wuyesjjson=JSON.parse(wuyesj)
+			var datetime=new Date().getTime()
+			this.props.wuyegltj(wuyesjjson[0].village,$("#wyhzxm").val(),$("#wyhzsex").val(),$("#wylxfs").val(),$("#wyhzzz").val(),datetime)
+			$(".tjglk").slideUp()
+			$("#wyhzxm").val('')
+			$("#wyhzsex").val('')
+			$("#wylxfs").val('')
+			$("#wyhzzz").val('')
+		}
+//		$(".tjglk").slideUp()
 	}
   render() {
     return (
@@ -32,29 +46,39 @@ class Wuyesteward extends Component {
     	  	<div className="tjglk">
     	  		<div>
     	  			<span>户主姓名</span>
-    	  			<input type="text" placeholder="户主姓名" />
+    	  			<input type="text" placeholder="户主姓名" id="wyhzxm" />
+    	  		</div>
+    	  		<div>
+    	  			<span>户主性别</span>
+    	  			<input type="text" placeholder="户主性别" id="wyhzsex" />
     	  		</div>
     	  		<div>
     	  			<span>联系方式</span>
-    	  			<input type="text" placeholder="联系方式" />
+    	  			<input type="text" placeholder="联系方式" id="wylxfs" />
     	  		</div>
     	  		<div>
     	  			<span>户主住址</span>
-    	  			<input type="text" placeholder="户主住址" />
+    	  			<input type="text" placeholder="户主住址" id="wyhzzz" />
     	  		</div>
     	  		<button onClick={this.wysq.bind(this)}>确定</button>
     	  	</div>
     	  	<p className="sytj"><img src="../../images/addpeople.png" alt="" />所有住户</p>
     	  	<ul className="zhlist">  	
-    	  		<li>
-    	  			<p>户主 : 呵呵</p>
-    	  			<p>联系方式 : 123444567897</p>
-    	  			<p>住址 : 101A</p>
-    	  		</li>
+    	  		{
+    	  			this.props.data.map(function(v,i){
+    	  				return <li key={i}>
+		    	  			<p>户主 : {v.name}</p>
+		    	  			<p>性别 : {v.sex}</p>
+		    	  			<p>住址 : {v.family}</p>
+		    	  			<p>住户码 : {v.homeyard}</p>
+		    	  			<p>联系方式 : {v.phone}</p>
+		    	  		</li>
+    	  			})
+    	  		}
     	  	</ul>
         </div>
     );
   }
 }
 
-export default connect(e=>({data:e}),action)(Wuyesteward);
+export default connect(e=>({data:e.wuyegllb}),action)(Wuyesteward);

@@ -16,3 +16,13 @@ export function wuyedata(state=null,action){
 	}
 }
 
+export function wuyegllb(state=[],action){
+	switch(action.type){
+		case 'WUYEGLDATA':
+		return action.wuyeglbdata
+		case 'WUYETJDATA':
+		return action.wuyetjdata
+		default:
+		return state
+	}
+}
