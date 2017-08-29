@@ -101,3 +101,100 @@ export function wuyehdtjpost(village,name,con){
 		});	
 	}
 }
+
+
+
+//业主接收论坛
+export function yezhultjs(data){
+	return {
+		type:"YEZHULUNTAN",
+		yezhuluntan:data
+	}
+}
+
+
+export function yezhultjspost(village,uid){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/forum/yzluntans",
+			data:{
+				village:village,
+				uid:uid
+			},
+			success:function(data){
+				dispatch(yezhultjs(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+//业主接收论坛详情
+export function yezhultxq(data){
+	return {
+		type:"YEZHULUNTANXQ",
+		yezhuluntanxq:data
+	}
+}
+
+
+export function yezhultxqpost(id,uid){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/forum/yzluntxq",
+			data:{
+				id:id,
+				uid:uid
+			},
+			success:function(data){
+				dispatch(yezhultxq(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+//业主论坛详情点赞
+export function yezhultzan(id,uid){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/forum/yzluntanzan",
+			data:{
+				id:id,
+				uid:uid
+			},
+			success:function(data){
+				dispatch(yezhultxq(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+//业主论坛评论展示
+export function yezhultpinglun(uid){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/reply/yzpingluncx",
+			data:{
+				uid:uid
+			},
+			success:function(data){
+			console.log(data)
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}

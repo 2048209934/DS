@@ -1,5 +1,5 @@
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun} from './mds'
 import {wuyenotice} from './ghj'
 import {spackage} from './hcc'
 
@@ -17,9 +17,20 @@ export function wuyedlv(dluser,dlpass){
 	return wuyedlpost(dluser,dlpass)
 }
 
-
-
-
+//论坛
+export function yezhutljs(village,uid){
+	return yezhultjspost(village,uid)
+}
+export function yezhutlxq(id,uid){
+	return yezhultxqpost(id,uid)
+}
+export function yezhutlzan(id,uid){  //点赞
+	return yezhultzan(id,uid)
+}
+export function yezhuplzs(uid){  //评论
+	return yezhultpinglun(uid)
+}
+//活动
 export function wuyehd(village){
 	return wuyehdpost(village)
 }

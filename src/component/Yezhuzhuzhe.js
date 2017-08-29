@@ -75,8 +75,9 @@ class Yezhuzhuzhe extends Component {
                             {/*fresh things*/}
                             <p className="fresh">社区新鲜事</p>
                             {/*content*/}
-                            <Link to="/yezhu/index/share">
+                            
                                 <div className="content">
+                                <Link to="/yezhu/index/share">
                                     <div className="box">
                                         <p className="name clear">
                                             <img className="left" src="../images/guanjia_03.jpg" alt="" />
@@ -91,8 +92,9 @@ class Yezhuzhuzhe extends Component {
                                         <img className="prompt" src="../images/prompt_03.jpg" alt="" />
                                         <div className="time">23小时前</div>
                                     </div>
+                                    </Link>
                                 </div>
-                            </Link>
+                            
                         </div>
                     )} />  
                     <Route path="/yezhu/index/accept" component={YezhuAccept}/>
