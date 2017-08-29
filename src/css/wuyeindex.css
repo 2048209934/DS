@@ -2,6 +2,13 @@ modify_topbody{
 	background:#f5f3ef;
 }
 
+
+
+
+
+
+
+
 /* Admin button 管理按钮 */
 .admin_con{
 	width:100%;
@@ -34,6 +41,13 @@ modify_topbody{
 .admin_con a .admin_two{
 	display:none;
 }
+
+
+
+
+
+
+
 /* hover时变样式 */
 .admin_con a.active{
 	border-top:4px solid #f39800;
@@ -48,6 +62,14 @@ modify_topbody{
 	color:#ed860a;
 }
 
+
+
+
+
+
+
+
+
 /* property banner 住这儿的banner */
 .banner{
 	width:100%;
@@ -60,6 +82,13 @@ modify_topbody{
 	height:15rem;
 }
 
+
+
+
+
+
+
+
 /* banner 图片上的盒子 */
 .banner_box{
 	position:fixed;
@@ -70,6 +99,10 @@ modify_topbody{
 	border-bottom:1px solid #9c9a96;
 }
 
+
+
+
+
 /* 文字 word */
 .banner .banner_word{
 	color:#fff;
@@ -79,6 +112,12 @@ modify_topbody{
 	left:30%;
 	font-size:0.8rem;
 }
+
+
+
+
+
+
 
 /* 信息 news */
 .banner .banner_news img{
@@ -92,16 +131,35 @@ modify_topbody{
 }
 
 
+
+
+
 /* property_con   住这儿的管理内容 */
 .property_manage{
 	clear:both;
 }
+
+
+
+
+
+
+
+
 
 /* property_con   住这儿的管理的每个小块 */
 .property_manage a{
 	width:48%;
 	margin-top:0.4rem;
 }
+
+
+
+
+
+
+
+
 
 /* every 每个小块的样式 */
 .life{
@@ -121,6 +179,14 @@ modify_topbody{
 	float:left;
 }
 
+
+
+
+
+
+
+
+
 /* word left小块里边的字和图片 */
 .organize_left{
 	color:#fff;
@@ -138,6 +204,13 @@ modify_topbody{
 	
 }
 
+
+
+
+
+
+
+
 /* word right小块里边的字和图片 */
 .organize_right{
 	float:right;
@@ -150,6 +223,12 @@ modify_topbody{
 	height:2rem;
 }
 
+
+
+
+
+
+
 /* content */
 .content{
 	width:100%;
@@ -158,11 +237,26 @@ modify_topbody{
 	margin-bottom:4.9rem;
 	clear:both;
 }
+
+
+
+
+
+
+
 /* 盒子 */
 .box{
 	width:94%;
 	margin:0 auto;
 }
+
+
+
+
+
+
+
+
 /* 信息以及内容 */
 .name{
 	width:100%;
@@ -186,6 +280,12 @@ modify_topbody{
 	color:#ff9500;
 }
 
+
+
+
+
+
+
 /* 图片 */
 .prompt{
 	width:100%;
@@ -193,13 +293,25 @@ modify_topbody{
 	margin-top:0.6rem;
 }
 
+
+
+
+
+
 /* 时间 */
-.time{
+.timess{
 	width:100%;
-	height:3rem;
-	font:0.8rem/3rem 'Microsoft Yahei';
+	height:2rem;
+	font:0.6rem/2rem 'Microsoft Yahei';
 	color:#888785;
 }
+
+
+
+
+
+
+
 
 /* fresh */
 .fresh{
@@ -209,6 +321,13 @@ modify_topbody{
 	font:1rem/3rem 'Microsoft Yahei';
 	padding-left:5%;
 }
+
+
+
+
+
+
+
 
 /* wuyeMe */
 .myself{
@@ -220,11 +339,30 @@ modify_topbody{
 	clear:both;
 }
 
+
+
+
+
+
+
+
+
+
 /* wuye touxiang 物业我的里的头像 */
 .myself_top{
 	width:100%;
 	height:12rem;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* 上次的头像 */
 .file {
@@ -254,6 +392,14 @@ modify_topbody{
 	border-radius:50%;
 }
 
+
+
+
+
+
+
+
+
 /* 输入的头像 */
 .file input {
 	position: absolute;
@@ -264,6 +410,15 @@ modify_topbody{
 	top: 0;
 	opacity: 0;
 }
+
+
+
+
+
+
+
+
+
 
 /* 名称 */
 .myself_word{
@@ -282,6 +437,13 @@ modify_topbody{
 	margin-top:0.5rem;
 }
 
+
+
+
+
+
+
+
 /* 箭头 */
 .arrow{
 	width:0.75rem;
@@ -294,12 +456,26 @@ modify_topbody{
 	cursor:pointer;
 }
 
+
+
+
+
+
+
+
 /* 身份和人数 */
 .myself_nows{
 	height:3.1rem;
 	width:100%;
 	border-bottom:2px solid #e0ddda;
 }
+
+
+
+
+
+
+
 
 /* now_left */
 .now_left{
@@ -317,6 +493,10 @@ modify_topbody{
 	color:#ef982f;
 }
 
+
+
+
+
 /* now_right */
 .now_right{
 	text-align:center;
@@ -331,6 +511,10 @@ modify_topbody{
 	margin-top:0.25rem;
 	color:#ef982f;
 }
+
+
+
+
 
 /* 个人资料 self——means */
 .self_means .daturn_top{
@@ -354,6 +538,10 @@ modify_topbody{
 	font-size:0.8rem;
 }
 
+
+
+
+
 /* 个人资料 名字和住址 */
 .wuye_head{
 	width:5rem;
@@ -363,6 +551,10 @@ modify_topbody{
 	margin:0 auto;
 	margin-top:1.5rem;
 }
+
+
+
+
 
 /* 游客修改的信息 */
 .daturn_bottom p{
@@ -375,6 +567,12 @@ modify_topbody{
 .daturn_bottom p:last-of-type{
 	font-size:0.6rem;
 }
+
+
+
+
+
+
 
 /* 修改按钮 button */
 .put{
@@ -389,6 +587,10 @@ modify_topbody{
 	color:#fff;
 	font-size:0.6rem;
 }
+
+
+
+
 
 /* 编辑资料 modify */
 .modify_top{
@@ -409,6 +611,13 @@ modify_topbody{
 	color:#393939;
 
 }
+
+
+
+
+
+
+
 
 /* 每个修改的input框 */
 .modify input[type="text"]{
@@ -438,6 +647,12 @@ modify_topbody{
 	margin-left:0.6rem;
 }
 
+
+
+
+
+
+
 /* 提交按钮 （物业） */
 .submit{
 	width:80%;
@@ -450,6 +665,14 @@ modify_topbody{
 	background:#ee9121;
 	border-radius:0.4rem 0.4rem;
 }
+
+
+
+
+
+
+
+
 
 /*
      住户管理
@@ -531,11 +754,17 @@ modify_topbody{
 
 
 
+
+
+
+
+
 /* 物业   邮包 */
 .add_parcel{
 	width:100%;
 	height:2.4rem;
 	border-bottom:1px solid #ccc;
+	padding-top: 3.1rem;
 }
 .add_parcel img{
 	width:1.2rem;
