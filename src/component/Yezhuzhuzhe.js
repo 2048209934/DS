@@ -3,6 +3,7 @@ import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
 import { Carousel } from 'react-bootstrap';
+import Yezhuaddress from './Yezhu_address';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,7 +35,9 @@ class Yezhuzhuzhe extends Component {
                         <div className="wrap">
                             {/*header*/}
                             <p className="head" id="head">
-                                <img src="../images/xiaoxi.png" alt="" />
+                               <Link to="/yezhu/index/address"> 
+                                    <img src="../images/xiaoxi.png" alt="" />
+                               </Link>
                                 <span>北京半岛馨苑</span>
                             </p>
 
@@ -98,6 +101,7 @@ class Yezhuzhuzhe extends Component {
                     <Route path="/yezhu/index/accept" component={YezhuAccept}/>
                     <Route path="/yezhu/index/package" component={YezhuPackage}/>
                     <Route path="/yezhu/index/share" component={YezhuShare}/>
+                    <Route path="/yezhu/index/address" component={Yezhuaddress}/>
                 </div>
             </Router>
         );

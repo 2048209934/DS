@@ -1,6 +1,6 @@
 
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj'
+import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
 import {spackage} from './hcc'
 
@@ -51,3 +51,20 @@ export function wuye_bx(con,village,address){
 	return wuyebaoxiu(con,village,address)
 }
 
+export function yezhu_addres(village){
+	return yezhuaddress(village)
+}
+
+export function wuye_bxs(village,address){
+	return wuyejieshou(village,address)
+}
+
+export function wuyetzs(village){
+	return wuyenotices(village)
+}
+export function wuye_box(id,village,address){
+	return wuyeboxs(id,village,address)
+}
+export function wuye_boxs(village){
+	return yezhuaddresss(village)
+}

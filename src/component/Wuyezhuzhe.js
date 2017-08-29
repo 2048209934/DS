@@ -20,7 +20,7 @@ class Wuyezhuzhe extends Component {
                   <Route exact path='/wuye/index' render={() => (
                       <div>
                           <div className="banner">
-                              <img src="../images/banner_one.jpg" alt=""/>
+                                 <img src="../images/banner_one.jpg" alt=""/>
                               <div className="banner_box">
                                   <span className="banner_word">北京爱这城D-shen</span>
                                   <span className="banner_news"><img src="../images/xiaoxi.png" alt=""/></span>

@@ -10,7 +10,7 @@ import {} from './my';
 import {a} from './hcc';
 import {yezhudata,wuyedata} from './my';
 import {huodong,yezhuhuodong} from './mds';
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
+import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddres} from './ghj';
 
 /*
 function a(state=[],action){
@@ -31,5 +31,6 @@ export default combineReducers({
 	a,
 	wuyeantee,
 	wuyebaoxiu,
-	yezhuhuodong
+	yezhuhuodong,
+	yezhuaddres
 })
