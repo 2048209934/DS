@@ -15,13 +15,13 @@ class WuyeOrganize extends Component {
 			var wuyesjjson=JSON.parse(window.sessionStorage.getItem('wuye'))
     	this.props.wuyehd(wuyesjjson[0].village)
     $(".admin_con").hide()
-  }
-  componentWillUnmount(){
-    $(".admin_con").show()
-  }
-  ok=function(){
-    window.history.go(-1)
-  }
+      }
+      componentWillUnmount(){
+        $(".admin_con").show()
+      }
+      ok=function(){
+        window.history.go(-1)
+      }
   
   fns=function(){
 if($(".orgin").val()!=""){

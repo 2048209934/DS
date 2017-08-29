@@ -59,8 +59,8 @@ class Yezhushequ extends Component {
                             </p>
                             <p>{e.con}</p>
                           
-                            <img className="prompt" src="../../../images/prompt_03.jpg" alt="" />
-                            <div className="time">{e.time.substr(0,19).split("T").join("   ")}</div>
+                            <img className="prompt" src="../../images/prompt_03.jpg" alt="" />
+                            <div className="times">{e.time.substr(0,19).split("T").join("   ")}</div>
                         </li>
                         </Link>
                     })}

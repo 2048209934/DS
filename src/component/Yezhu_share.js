@@ -46,13 +46,12 @@ class YezhuShare extends Component {
                           {this.props.data.length==1?this.props.data[0].con:""}
                         </p>
                         <img className="prompt" src="../../../../images/prompt_03.jpg" alt="" />
-                        <div className="time">{this.props.data.length==1?this.props.data[0].time.substr(0,19).split("T").join("   "):""}</div>
+                        <div className="times">{this.props.data.length==1?this.props.data[0].time.substr(0,19).split("T").join("   "):""}</div>
                     </div>
                 </div>
                 <div className="dianzan">
                     <span className="left">已有{this.props.data.length==1?this.props.data[0].help==""?0:this.props.data[0].help==null?0:this.props.data[0].help.split("?").length:"0"}人点赞</span>
                     <button className="right" onClick={this.zanfn.bind(this)}><img src={this.props.data.length==1?this.props.data[0].obes=="false"?"../../../../images/like.png":"../../../../images/like_fill.png":"../../../../images/like.png"} alt="" /></button>
-
                 </div>
                 <div className="publish">
                     <input type="text" placeholder="评论" />

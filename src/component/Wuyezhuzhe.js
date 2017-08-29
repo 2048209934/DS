@@ -20,7 +20,7 @@ class Wuyezhuzhe extends Component {
                   <Route exact path='/wuye/index' render={() => (
                       <div>
                           <div className="banner">
-                              <img src="../images/banner_one.jpg" alt=""/>
+                                 <img src="../images/banner_one.jpg" alt=""/>
                               <div className="banner_box">
                                   <span className="banner_word">北京爱这城D-shen</span>
                                   <span className="banner_news"><img src="../images/xiaoxi.png" alt=""/></span>
@@ -71,7 +71,7 @@ class Wuyezhuzhe extends Component {
                                   <p>今日限行</p>
                                   <p>[  今夜山区有雨 注意防范  ]今天白天阴转多云，早晨有轻雾并有分散小阵雨，最高气温30℃；夜间多云间阴，山区有阵雨或雷阵雨，最低气温23℃，受轻雾影响，今晨能见度不...</p>
                                   <img className="prompt" src="../images/prompt_03.jpg" alt="" />
-                                  <div className="time">23小时前</div>
+                                  <div className="timess">23小时前</div>
                               </div>
                           </div>
                         </div>

@@ -3,6 +3,7 @@ import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
 import { Carousel } from 'react-bootstrap';
+import Yezhuaddress from './Yezhu_address';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,7 +35,9 @@ class Yezhuzhuzhe extends Component {
                         <div className="wrap">
                             {/*header*/}
                             <p className="head" id="head">
-                                <img src="../images/xiaoxi.png" alt="" />
+                               <Link to="/yezhu/index/address"> 
+                                    <img src="../images/xiaoxi.png" alt="" />
+                               </Link>
                                 <span>北京半岛馨苑</span>
                             </p>
 
@@ -90,7 +93,7 @@ class Yezhuzhuzhe extends Component {
                                         <p>今日限行</p>
                                         <p>【今夜山区有雨 注意防范】今天白天阴转多云，早晨有轻雾并有分散小阵雨，最高气温30℃；夜间多云间阴，山区有阵雨或雷阵雨，最低气温23℃，受轻雾影响，今晨能见度不...</p>
                                         <img className="prompt" src="../images/prompt_03.jpg" alt="" />
-                                        <div className="time">23小时前</div>
+                                        <div className="timess">23小时前</div>
                                     </div>
                                     </Link>
                                 </div>
@@ -100,6 +103,7 @@ class Yezhuzhuzhe extends Component {
                     <Route path="/yezhu/index/accept" component={YezhuAccept}/>
                     <Route path="/yezhu/index/package" component={YezhuPackage}/>
                     <Route path="/yezhu/index/share" component={YezhuShare}/>
+                    <Route path="/yezhu/index/address" component={Yezhuaddress}/>
                 </div>
             </Router>
         );

@@ -61,12 +61,7 @@ font-family: "微软雅黑";}
 }
 
 /* 人，时间，内容 */
-.orgin_box p:first-of-type{
 
-}
-.orgin_box p:nth-of-type(2){
-	text-align:center;
-}
 .orgin_box p:nth-of-type(2) span:first-of-type{
 	font-size:0.8rem;
 	font-weight:700;
@@ -81,7 +76,7 @@ font-family: "微软雅黑";}
 }
 
 .orgin_box p:nth-of-type(4){
-	margin-top:0.4rem;
+	margin-top:2rem;
 	margin-left:0.8rem;
 	margin-right:0.4rem;
 	float:right;
@@ -102,7 +97,7 @@ font-family: "微软雅黑";}
 	margin-left:0.2rem
 }
 .orgin_box p:nth-of-type(5){
-	margin-top:0.4rem;
+	margin-top:2rem;
 	margin-left:0.8rem;
 	float:right;	
 }
