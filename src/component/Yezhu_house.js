@@ -18,6 +18,12 @@ class Yezhuhouse extends Component {
     go=function(){
         window.history.go(-1)
     }
+    wyxq(){
+        $(".add_message").slideDown();
+    }
+    wysq(){
+        $(".add_message").slideUp();
+    }
     render() {
         return (
     	    <div>
@@ -26,6 +32,24 @@ class Yezhuhouse extends Component {
                     <img onClick={this.go} src="../../../images/arrow.png" alt="" />
                     <span>我的房屋</span>
                 </p>
+
+                <p className="add_house" onClick={this.wyxq}>
+                    <img src="../../../images/addressbook.png" alt="" />
+                    添加住户
+                </p>
+                <div className="add_message">
+                    <div>
+                        <span>住户姓名</span>
+                        <input type="text" placeholder="户主姓名" />
+                    </div>
+                    <div>
+                        <span>联系方式</span>
+                        <input type="text" placeholder="联系方式" />
+                    </div>
+                    <button onClick={this.wysq.bind(this)}>确定</button>
+                </div>
+
+
                 <div className="my_house clear">
                     <div className="xq_name left">
                         <p>北京半岛馨苑</p>

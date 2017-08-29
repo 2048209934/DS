@@ -512,7 +512,6 @@ body{
 
 /* 业主   我的房屋 */
 .my_house{
-	margin-top:2.8rem;
 	border-bottom:1px solid #ccc;
 }
 .xq_name{
@@ -534,4 +533,43 @@ body{
 	padding-left:0.7rem;
 	font:0.7rem/1.4rem 'Microsoft Yahei';
 	border-bottom:1px solid #ccc;
+}
+.add_house{
+	margin-top:2.8rem;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	padding: 0 0 0 1rem;
+	font-size: 0.75rem;
+	color: #707070;
+	border-bottom: 1px solid #d4d4d4;
+}
+.add_house img{
+	width: 1rem;
+	vertical-align: middle; 
+	margin: 0 0.2rem 0 0;
+}
+.add_message{
+	display: none;
+}
+.add_message div{
+	padding: 0 0 0 1rem;
+	margin:  0.2rem 0;
+}
+.add_message input{
+	outline: none;
+	width: 10rem;
+	height: 1.5rem;
+	padding: 0 0 0 0.5rem;
+	margin: 0 0 0 0.5rem;
+	border:1px solid #ccc;
+	border-radius: 0.5rem;
+}
+.add_message button{
+	width: 4rem;
+	height: 1.5rem;
+	background: #46a1ff;
+    color: #fff;
+    display: block;
+    margin: 0.5rem auto;
+	border-radius: 0.5rem;
 }
