@@ -7,8 +7,10 @@ import {} from './my';
 */
 
 
+
+
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel} from './hcc';
-import {yezhudata,wuyedata} from './my';
+import {yezhudata,wuyedata,wuyegllb} from './my';
 import {huodong,yezhuhuodong} from './mds';
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddres} from './ghj';
 
@@ -26,6 +28,7 @@ function a(state=[],action){
 export default combineReducers({
 	yezhudata,
 	wuyedata,
+	wuyegllb,
 	huodong,
 	wuyenotice,
 	a,

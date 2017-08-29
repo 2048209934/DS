@@ -1,11 +1,5 @@
-
-
-
-
-
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
-
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
 
@@ -23,6 +17,12 @@ export function yezhuzcv(zcuser,zcpass){
 }
 export function wuyedlv(dluser,dlpass){
 	return wuyedlpost(dluser,dlpass)
+}
+export function wuyegllist(address){
+	return wuyegllistpost(address)
+}
+export function wuyegltj(address,name,sex,phone,family,homeyard){
+	return wuyegltjpost(address,name,sex,phone,family,homeyard)
 }
 
 
