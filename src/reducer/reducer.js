@@ -7,13 +7,10 @@ import {} from './my';
 */
 
 
-<<<<<<< HEAD
-import {a} from './hcc';
-import {yezhudata,wuyedata,wuyegllb} from './my';
-=======
+
+
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel} from './hcc';
-import {yezhudata,wuyedata} from './my';
->>>>>>> origin/master
+import {yezhudata,wuyedata,wuyegllb} from './my';
 import {huodong,yezhuhuodong} from './mds';
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddres} from './ghj';
 

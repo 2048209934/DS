@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
-=======
-
-
-
-
-
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
-
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
->>>>>>> origin/master
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
 
 
