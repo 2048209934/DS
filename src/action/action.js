@@ -1,8 +1,8 @@
 
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj'
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
-import {spackage} from './hcc'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my';
+import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds';
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
 
 
 
@@ -51,3 +51,23 @@ export function wuye_bx(con,village,address){
 	return wuyebaoxiu(con,village,address)
 }
 
+export function wuye_addpackage(name,address,phone,delivery){
+	return addpackage(name,address,phone,delivery)
+}
+
+export function wuye_showpackage(address){
+	return showpackage(address)
+}
+
+export function yezhu_showhouse(address,family){
+	return showhouse(address,family)
+}
+
+export function yezhu_addhouse(name,address,family){
+	return addhouse(name,address,family)
+}
+
+
+export function parcel_makesure(id,address){
+	return wuyemakesure(id,address)
+}

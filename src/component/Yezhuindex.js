@@ -74,7 +74,7 @@ class Yezhuindex extends Component {
             </div>
           </div>    
       </Router>
-    );
+    )
   }
 }
 

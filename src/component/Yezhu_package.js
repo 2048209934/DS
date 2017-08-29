@@ -30,8 +30,24 @@ class YezhuPackage extends Component {
                     <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
                     邮包
                 </div>
-                <img className="YB" src="../../images/youbao_img.png" alt="" />
-                <p className="nows">您现在有<span>{this.props.data.length}</span>个包裹噢~</p>
+                <p className="nows">您现在有<span> {this.props.data.length} </span>个包裹噢~</p>
+                
+                <div className="parcels">
+                    {
+                        this.props.data.map(function(con,i){
+                            return (
+                                <div key={i} className="user_message">
+                                    <p>收件人：{con.name}</p>
+                                    <p>电话：{con.phone}</p>
+                                    <p>快递名称：{con.delivery}</p>
+                                    <p>收货时间：{con.time.substr(0,19).split("T").join("   ")}</p>
+                                    
+                                </div>
+                            )
+                        })
+                    }
+                    
+                </div>
             </div>
         )
     }

@@ -575,3 +575,41 @@ modify_topbody{
 	font:0.8rem/1.5rem 'Microsoft Yahei';
 	border-bottom:1px solid #ccc;
 }
+
+.user_message p.did{
+	background:#46a1ff;
+	text-align:center;
+	color:#fff;
+}
+.user_message p.do{
+	background:#f00;
+	text-align:center;
+	color:#fff;
+}
+
+.add_package{
+	display:none;
+}
+.add_package div{
+	padding: 0 0 0 1rem;
+	margin:  0.2rem 0;
+}
+.add_package input{
+	outline: none;
+	width: 10rem;
+	height: 1.5rem;
+	padding: 0 0 0 0.5rem;
+	margin: 0 0 0 0.5rem;
+	border:1px solid #ccc;
+	border-radius: 0.5rem;
+}
+.add_package button{
+	width: 4rem;
+	height: 1.5rem;
+	background: #46a1ff;
+    color: #fff;
+    display: block;
+    margin: 0.5rem auto;
+	border-radius: 0.5rem;
+	outline: none;
+}

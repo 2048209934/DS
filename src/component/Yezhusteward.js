@@ -56,16 +56,13 @@ class Yezhusteward extends Component {
                                     <span className="left">访客邀请</span>
                                     <span className="right">></span>
                                 </li>
-                               <Link to="/yezhu/index/steward/huodong">
+                                <Link to="/yezhu/index/steward/huodong">
                                     <li className="clear">
                                         <span className="left">社区活动</span>
                                         <span className="right">></span>
                                     </li>
                                 </Link>
-                                <li className="clear">
-                                    <span className="left">邮包</span>
-                                    <span className="right">></span>
-                                </li>
+                                <li className="white">  </li>
                                 <li className="clear">
                                     <span className="left">物业缴费</span>
                                     <span className="right">></span>
@@ -78,20 +75,7 @@ class Yezhusteward extends Component {
                                     <span className="left">你知道么</span>
                                     <span className="right">></span>
                                 </li>
-                                <li className="white">  </li>
-                                <li className="clear">
-                                    <span className="left">房屋租赁</span>
-                                    <span className="right">></span>
-                                </li>
-                                <li className="clear">
-                                    <span className="left">二手房交易</span>
-                                    <span className="right">></span>
-                                </li>
-                                <li className="white">  </li>
-                                <li className="clear">
-                                    <span className="left">投诉</span>
-                                    <span className="right">></span>
-                                </li>
+                                
                             </ul>
                         </div>
                     )} />  

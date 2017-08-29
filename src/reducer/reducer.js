@@ -7,7 +7,7 @@ import {} from './my';
 */
 
 
-import {a} from './hcc';
+import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel} from './hcc';
 import {yezhudata,wuyedata} from './my';
 import {huodong,yezhuhuodong} from './mds';
 import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
@@ -29,6 +29,8 @@ export default combineReducers({
 	huodong,
 	wuyenotice,
 	a,
+	add_wuyepackage,
+	add_yezhuhouse,
 	wuyeantee,
 	wuyebaoxiu,
 	yezhuhuodong
