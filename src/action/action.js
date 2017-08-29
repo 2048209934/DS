@@ -1,7 +1,7 @@
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my';
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds';
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
-import {spackage} from './hcc';
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
+import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
+import {spackage} from './hcc'
 
 
 export function yezhudlv(dluser,dlpass){

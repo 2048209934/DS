@@ -80,3 +80,26 @@
 	color:#fff;
 	background:#ff6e40;
 }
+
+.baoxiu_box{	
+	margin:0 auto;
+	width:90%;
+	padding:0.8rem;
+	font-family: "微软雅黑";
+	transition: 1s;
+	box-sizing: border-box;
+	border:1px solid #eee;
+	margin-top: 1.1rem;
+	box-shadow:2px 2px 5px #eee;
+}
+.baoxiu_box div span:first-of-type{
+	margin-right:0.6rem;
+}
+.two{
+	
+	margin-top:0.4rem;
+	margin-left:0.4rem;
+}
+.time{
+	margin-left:4.5rem;
+}

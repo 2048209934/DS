@@ -61,19 +61,13 @@ font-family: "微软雅黑";}
 }
 
 /* 人，时间，内容 */
-.orgin_box p:first-of-type{
 
-}
-.orgin_box p:nth-of-type(2){
-	text-align:center;
-}
 .orgin_box p:nth-of-type(2) span:first-of-type{
 	font-size:0.8rem;
 	font-weight:700;
 
 }
 .orgin_box p:nth-of-type(3){
-	margin-left:3.8rem;
 	width: 100%;
 }
 .orgin_box p:nth-of-type(3) span:first-of-type{

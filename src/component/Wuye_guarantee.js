@@ -40,28 +40,19 @@ class WuyeGuarantee extends Component {
             </div>
             <Route path="/wuye/index/guarantee" render={()=>(
                 <div className="guarantee_bottom">
-                    <ul className="repari">
-                      {this.props.data.map( (v,i)=>{
-                        return <li key={i}>
-                            <div className="repari_top">
-                                <p>{}</p>
-                            </div>
-                            <div className="repari_bottom">
-                                <div className="book">
-                                    <p className="porto">{v.con}</p>
-                                    <div className="porto_con">
-                                        <p>大圣</p>
-                                        <p>大圣花园小区</p>
-                                    </div>
-                                </div>
-                                <div className="tener" onClick={this.deal.bind(this)}>标记为处理</div>
-                            </div>
-                        </li>
-                      })}
-                    </ul>
-                     <div className="tip" onClick={this.tip}>
-                        <p><img src="../../images/tip.png" alt=""/></p>
+                    <ul className="orgin_con">
+           {console.log(this.props.data)}
+            {this.props.data.map(function(e,i){
+  return        <li key={i} className="baoxiu_box">
+                    <div className="one">
+                        <span>{e.village}</span>
+                        <span>{e.address}</span>
                     </div>
+                    <p className="two">{e.con}</p>
+                    <p className="time">{e.time}</p>
+                </li>
+})}
+            </ul>
                 </div>
               )} />
             <Route path="/wuye/index/already" component={wuyealready} />

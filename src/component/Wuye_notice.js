@@ -39,7 +39,7 @@ class WuyeNotice extends Component {
             </div>
             <ul className="notice_con">
                  {this.props.data.map(function(e,i){
-                     <li> {console.log(e.con)} </li>
+                     <li> {e.con} </li>
                  })}              
             </ul>
         </div>
