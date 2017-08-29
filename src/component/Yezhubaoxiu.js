@@ -14,8 +14,8 @@ import Btn from './Btn';
 class Yezhubaoxiu extends Component {
   componentDidMount(){
     $(".admin_con").hide()
-    var bb=JSON.parse(window.sessionStorage.getItem("yezhu"))
-    this.props.yezhu_antee(bb[0].address)
+          var dd=JSON.parse(window.sessionStorage.getItem("yezhu"))
+        this.props.wuye_bxs(dd[0].address,dd[0].family)
   }
   componentWillUnmount(){
     $(".admin_con").show()
@@ -23,19 +23,19 @@ class Yezhubaoxiu extends Component {
   
   bxtj(){
     if($(".orgin").val()!=""){
-      var bb=JSON.parse(window.sessionStorage.getItem("yezhu"))
-    this.props.wuye_bx($("#con").val(),bb[0].address,bb[0].family)
+        var dd=JSON.parse(window.sessionStorage.getItem("yezhu"))
+        this.props.wuye_bx($("#con").val(),dd[0].address,dd[0].family)
     $(".orgin").val(" ")
     document.getElementById("organize").style.height="0"
       $(".topsbtn").css("display","block")
     }else{
    $(".organize p").css("opacity","1")
     }
-    
   }
   btnfn=function(){
     $(".topsbtn").css("display","none")
     document.getElementById("organize").style.height="7.5rem"
+
   }
   render() {
     return (
@@ -56,16 +56,17 @@ class Yezhubaoxiu extends Component {
                   </div>
               </div>
            <ul className="orgin_con">
-           {console.log(this.props.data)}
             {this.props.data.map(function(e,i){
-  return        <li key={i} className="baoxiu_box">
+               return   (
+                 <li key={i} className="baoxiu_box">
                     <div className="one">
                         <span>{e.village}</span>
                         <span>{e.address}</span>
                     </div>
                     <p className="two">{e.con}</p>
-                    <p className="time">{e.time}</p>
+                    <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>
                 </li>
+    )
 })}
             </ul>
         </div>
@@ -73,4 +74,4 @@ class Yezhubaoxiu extends Component {
   }
 }
 
-export default connect(e=>({data:e.wuyeantee}),action)(Yezhubaoxiu);
+export default connect(e=>({data:e.wuyebaoxiu}),action)(Yezhubaoxiu);

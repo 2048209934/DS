@@ -1,36 +1,41 @@
 import React, { Component } from 'react';
 
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 class Wuyealready extends Component {
     tip=function(){
          window.history.go(-2)
     }
+   componentDidMount(){
+    var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
+    this.props.wuye_boxs(bb[0].village)
+
+   }
 	render(){
 		return (
 			<div className="already">
 				<div className="guarantee_bottom">
-                    <ul className="repari">
-                        <li>
-                            <div className="repari_top">
-                                <p>感应灯坏了，一直都不亮，请师傅尽快安排维修，要不然没办法走路。</p>
-                            </div>
-                            <div className="repari_bottom">
-                                <div className="book">
-                                    <p className="porto"></p>
-                                    <div className="porto_con">
-                                        <p>大圣</p>
-                                        <p>大圣花园小区</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div className="tip" onClick={this.tip}>
-                        <p><img src="../../images/tip.png" alt=""/></p>
-                    </div>
+              <div className="notice_editor">
+                <span onClick={this.tip}><img src="../../images/tip.png" alt=""/></span>
+                <span>保修服务</span>
+              </div>
+            <ul className="orgin_con">
+              {console.log(this.props.data)}
+              {this.props.data.map(function(e,i){
+    return        <li key={i} className="baoxiu_box">
+                      <div className="one">
+                          <span>{e.village}</span>
+                          <span>{e.address}</span>
+                      </div>
+                      <p className="two">{e.con}</p>
+                      <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>
+                  </li>
+                }.bind(this))}
+            </ul>
                 </div>
 			</div>
 			)
 	}
 }
 
-export default Wuyealready
+export default connect(e=>({data:e.wuyebaoxiu}),action)(Wuyealready);

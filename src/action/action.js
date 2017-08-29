@@ -1,8 +1,14 @@
 
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my';
-import {wuyenotice,wuyeantee,wuyebaoxiu} from './ghj';
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds';
+
+
+
+
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
+
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost} from './my'
+import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts} from './mds'
+
 
 
 
@@ -51,6 +57,7 @@ export function wuye_bx(con,village,address){
 	return wuyebaoxiu(con,village,address)
 }
 
+
 export function wuye_addpackage(name,address,phone,delivery){
 	return addpackage(name,address,phone,delivery)
 }
@@ -71,3 +78,22 @@ export function yezhu_addhouse(name,address,family){
 export function parcel_makesure(id,address){
 	return wuyemakesure(id,address)
 }
+
+export function yezhu_addres(village){
+	return yezhuaddress(village)
+}
+
+export function wuye_bxs(village,address){
+	return wuyejieshou(village,address)
+}
+
+export function wuyetzs(village){
+	return wuyenotices(village)
+}
+export function wuye_box(id,village,address){
+	return wuyeboxs(id,village,address)
+}
+export function wuye_boxs(village){
+	return yezhuaddresss(village)
+}
+
