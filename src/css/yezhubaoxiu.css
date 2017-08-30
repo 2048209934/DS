@@ -1,4 +1,8 @@
-.del_top p:first-of-type,.del_top p:nth-of-type(3){
+.deal_top{
+	margin-top:2.8rem;
+}
+
+.deal_top .del_top p:first-of-type,.del_top p:nth-of-type(3){
 	width:0.622rem;
 	height:0.1rem;
 	background:red;
