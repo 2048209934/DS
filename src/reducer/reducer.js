@@ -8,6 +8,7 @@ import {} from './my';
 
 
 
+
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel} from './hcc';
 import {yezhudata,wuyedata,wuyegllb} from './my';
 import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq} from './mds';
@@ -32,7 +33,7 @@ export default combineReducers({
 	wuyenotice,
 	a,
 	yezhuhuodong,
-	yezhuluntan,   //论坛
+	yezhuluntan,   
 	yezhuluntanxq,
 	add_wuyepackage,
 	add_yezhuhouse,
