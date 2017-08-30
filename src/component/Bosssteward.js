@@ -13,9 +13,9 @@ class Bosssteward extends Component {
         <Router>
         	<div>
         	  	{/*header*/}
-                    <p className="head" id="head">
-                        管家
-                    </p>
+                <p className="head" id="head">
+                    管家
+                </p>
             </div>
         </Router>
     );

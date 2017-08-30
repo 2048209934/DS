@@ -10,9 +10,14 @@ import {
 class Bossshequ extends Component {
   render() {
     return (
-    	  <div>
-    	  	shequ
-        </div>
+    	<Router>
+            <div>
+                {/*header*/}
+                <p className="head" id="head">
+                    社区
+                </p>
+            </div>
+        </Router>
     );
   }
 }
