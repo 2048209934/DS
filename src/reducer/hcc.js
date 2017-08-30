@@ -34,4 +34,11 @@ export function add_yezhuhouse(state=[],action){
 
 
 
-
+export function yezhuactivity(state=[],action){
+	switch(action.type){
+		case 'SHOW_ACTIVITY':
+		return action.datad;
+		default:
+		return state
+	}
+}

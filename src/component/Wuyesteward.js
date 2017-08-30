@@ -40,7 +40,7 @@ class Wuyesteward extends Component {
     	  <div className="zhgl">
     	  	<h2>住户管理</h2>
     	  	<p className="tjgl" onClick={this.wyxq}>
-    	  		<img src="../../images/addressbook.png" alt="" />
+    	  		<img className="left" src="../../images/addressbook.png" alt="" />
     	  		添加住户
     	  	</p>
     	  	<div className="tjglk">
@@ -62,7 +62,10 @@ class Wuyesteward extends Component {
     	  		</div>
     	  		<button onClick={this.wysq.bind(this)}>确定</button>
     	  	</div>
-    	  	<p className="sytj"><img src="../../images/addpeople.png" alt="" />所有住户</p>
+    	  	<p className="sytj">
+                <img className="left" src="../../images/addpeople.png" alt="" />
+                所有住户
+            </p>
     	  	<ul className="zhlist">  	
     	  		{
     	  			this.props.data.map(function(v,i){

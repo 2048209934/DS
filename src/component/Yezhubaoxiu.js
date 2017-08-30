@@ -14,12 +14,15 @@ import Btn from './Btn';
 class Yezhubaoxiu extends Component {
   componentDidMount(){
     $(".admin_con").hide()
-          var dd=JSON.parse(window.sessionStorage.getItem("yezhu"))
+        var dd=JSON.parse(window.sessionStorage.getItem("yezhu"))
         this.props.wuye_bxs(dd[0].address,dd[0].family)
-  }
-  componentWillUnmount(){
-    $(".admin_con").show()
-  }
+    }
+    componentWillUnmount(){
+      $(".admin_con").show()
+    }
+    go=function(){
+      window.history.go(-1)
+    }
   
   bxtj(){
     if($(".orgin").val()!=""){
@@ -29,17 +32,22 @@ class Yezhubaoxiu extends Component {
     document.getElementById("organize").style.height="0"
       $(".topsbtn").css("display","block")
     }else{
-   $(".organize p").css("opacity","1")
+      $(".organize p").css("opacity","1")
     }
   }
   btnfn=function(){
-    $(".topsbtn").css("display","none")
-    document.getElementById("organize").style.height="7.5rem"
+    $(".topsbtn").css("display","none");
+      document.getElementById("organize").style.height="7.5rem"
 
   }
   render() {
     return (
     	  <div>
+            {/*header*/}
+            <p className="head" id="head">
+                <img onClick={this.go} src="../../../images/arrow.png" alt="" />
+                <span>保修</span>
+            </p>
              <div className="deal_top">
                 <div className='del_top'>
                     <p></p>

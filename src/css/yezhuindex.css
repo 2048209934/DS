@@ -505,6 +505,7 @@ body{
 /* 业主   我的房屋 */
 .my_house{
 	border-bottom:1px solid #ccc;
+	margin-top:2.8rem;
 }
 .xq_name{
 	padding-top:0.3rem;
@@ -524,12 +525,11 @@ body{
 	font:0.7rem/3rem 'Microsoft Yahei';
 }
 .house_list li{
-	padding-left:0.7rem;
-	font:0.7rem/1.4rem 'Microsoft Yahei';
+	padding-left:1rem;
+	font:0.7rem/2rem 'Microsoft Yahei';
 	border-bottom:1px solid #ccc;
 }
 .add_house{
-	margin-top:2.8rem;
 	height: 2.75rem;
 	line-height: 2.75rem;
 	padding: 0 0 0 1rem;
@@ -538,9 +538,9 @@ body{
 	border-bottom: 1px solid #d4d4d4;
 }
 .add_house img{
-	width: 1rem;
+	width: 1.1rem;
 	vertical-align: middle; 
-	margin: 0 0.2rem 0 0;
+	margin: 0.9rem 0.2rem 0 0;
 }
 .add_message{
 	display: none;
@@ -561,10 +561,42 @@ body{
 .add_message button{
 	width: 4rem;
 	height: 1.5rem;
-	background: #46a1ff;
+	background: #707070;
     color: #fff;
     display: block;
     margin: 0.5rem auto;
 	border-radius: 0.5rem;
 	outline: none;
+}
+
+
+
+
+
+
+
+/* 业主  参与的活动 */
+.activity{
+	width:14.6rem;
+	margin:0 auto;
+	margin-top:3.2rem;
+}
+.activity p{
+	font:0.7rem/1.2rem 'Microsoft Yahei';
+}
+.activity p.activity_time{
+	margin-left:5rem;
+}
+.activity p.activity_time img{
+	margin-top:0.1rem;
+}
+.activity p span img{
+	width:1rem;
+}
+.activities{
+	background:#fff;
+	padding:0.5rem;
+	border-radius: 0.25rem;
+	box-shadow: 0px 3px 7px 3px #c2bfbf;
+	margin-top:0.8rem;
 }

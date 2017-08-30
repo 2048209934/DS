@@ -121,7 +121,7 @@ export function add_house(data) {
 		datassss:data
 	}
 }
-export function addhouse(name,address,family){
+export function addhouse(name,address,family,homeyard){
 	return dispatch=>{
 		return $.ajax({
 			type:"post",
@@ -129,7 +129,8 @@ export function addhouse(name,address,family){
 			data:{
 				name:name,
 				address:address,
-				family:family
+				family:family,
+				homeyard:homeyard
 			},
 			success:function(data){
 				dispatch(add_house(data))
@@ -169,5 +170,36 @@ export function showhouse(address,family){
 		})
 	}
 }
+
+
+
+
+/*业主  已参加的活动  展示*/
+
+export function show_activity(data) {
+	return {
+		type:"SHOW_ACTIVITY",
+		datad:data
+	}
+}
+export function showactivity(id,village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/activity/yzkzjcjdhd",
+			data:{
+				id:id,
+				village:village
+			},
+			success:function(data){
+				dispatch(show_activity(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}
+
 
 
