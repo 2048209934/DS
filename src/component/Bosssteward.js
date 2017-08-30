@@ -10,9 +10,14 @@ import {
 class Bosssteward extends Component {
   render() {
     return (
-    	  <div>
-    	  	steward
-        </div>
+        <Router>
+        	<div>
+        	  	{/*header*/}
+                    <p className="head" id="head">
+                        管家
+                    </p>
+            </div>
+        </Router>
     );
   }
 }
