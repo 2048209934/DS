@@ -2,13 +2,6 @@ modify_topbody{
 	background:#f5f3ef;
 }
 
-
-
-
-
-
-
-
 /* Admin button 管理按钮 */
 .admin_con{
 	width:100%;
@@ -43,11 +36,6 @@ modify_topbody{
 }
 
 
-
-
-
-
-
 /* hover时变样式 */
 .admin_con a.active{
 	border-top:4px solid #f39800;
@@ -63,13 +51,6 @@ modify_topbody{
 }
 
 
-
-
-
-
-
-
-
 /* property banner 住这儿的banner */
 .banner{
 	width:100%;
@@ -83,12 +64,6 @@ modify_topbody{
 }
 
 
-
-
-
-
-
-
 /* banner 图片上的盒子 */
 .banner_box{
 	position:fixed;
@@ -100,9 +75,6 @@ modify_topbody{
 }
 
 
-
-
-
 /* 文字 word */
 .banner .banner_word{
 	color:#fff;
@@ -112,11 +84,6 @@ modify_topbody{
 	left:30%;
 	font-size:0.8rem;
 }
-
-
-
-
-
 
 
 /* 信息 news */
@@ -132,18 +99,10 @@ modify_topbody{
 
 
 
-
-
 /* property_con   住这儿的管理内容 */
 .property_manage{
 	clear:both;
 }
-
-
-
-
-
-
 
 
 
@@ -152,13 +111,6 @@ modify_topbody{
 	width:48%;
 	margin-top:0.4rem;
 }
-
-
-
-
-
-
-
 
 
 /* every 每个小块的样式 */
@@ -181,12 +133,6 @@ modify_topbody{
 
 
 
-
-
-
-
-
-
 /* word left小块里边的字和图片 */
 .organize_left{
 	color:#fff;
@@ -206,11 +152,6 @@ modify_topbody{
 
 
 
-
-
-
-
-
 /* word right小块里边的字和图片 */
 .organize_right{
 	float:right;
@@ -225,10 +166,6 @@ modify_topbody{
 
 
 
-
-
-
-
 /* content */
 .content{
 	width:100%;
@@ -239,21 +176,11 @@ modify_topbody{
 }
 
 
-
-
-
-
-
 /* 盒子 */
 .box{
 	width:94%;
 	margin:0 auto;
 }
-
-
-
-
-
 
 
 
@@ -280,22 +207,12 @@ modify_topbody{
 	color:#ff9500;
 }
 
-
-
-
-
-
-
 /* 图片 */
 .prompt{
 	width:100%;
 	display:block;
 	margin-top:0.6rem;
 }
-
-
-
-
 
 
 /* 时间 */
@@ -307,12 +224,6 @@ modify_topbody{
 }
 
 
-
-
-
-
-
-
 /* fresh */
 .fresh{
 	clear:both;
@@ -321,13 +232,6 @@ modify_topbody{
 	font:1rem/3rem 'Microsoft Yahei';
 	padding-left:5%;
 }
-
-
-
-
-
-
-
 
 /* wuyeMe */
 .myself{
@@ -340,26 +244,11 @@ modify_topbody{
 }
 
 
-
-
-
-
-
-
-
-
 /* wuye touxiang 物业我的里的头像 */
 .myself_top{
 	width:100%;
 	height:12rem;
 }
-
-
-
-
-
-
-
 
 
 
@@ -394,12 +283,6 @@ modify_topbody{
 
 
 
-
-
-
-
-
-
 /* 输入的头像 */
 .file input {
 	position: absolute;
@@ -410,14 +293,6 @@ modify_topbody{
 	top: 0;
 	opacity: 0;
 }
-
-
-
-
-
-
-
-
 
 
 /* 名称 */
@@ -439,11 +314,6 @@ modify_topbody{
 
 
 
-
-
-
-
-
 /* 箭头 */
 .arrow{
 	width:0.75rem;
@@ -457,24 +327,12 @@ modify_topbody{
 }
 
 
-
-
-
-
-
-
 /* 身份和人数 */
 .myself_nows{
 	height:3.1rem;
 	width:100%;
 	border-bottom:2px solid #e0ddda;
 }
-
-
-
-
-
-
 
 
 /* now_left */
@@ -494,9 +352,6 @@ modify_topbody{
 }
 
 
-
-
-
 /* now_right */
 .now_right{
 	text-align:center;
@@ -514,31 +369,30 @@ modify_topbody{
 
 
 
-
-
 /* 个人资料 self——means */
 .self_means .daturn_top{
 	width:100%;
 	height:3.8rem;
-	background:#fff;
+	background:#46a1ff;
+
 }
 .self_means .daturn_top:first-of-type{
 	text-align: center;
 	line-height:3.8rem;
 	border-bottom:1px solid #e0ddda;
 }
-.self_means .daturn_top:first-of-type span:first-of-type{
+.daturn_top span img{
+	width:1rem;
+	height:1rem;
 	position:absolute;
 	left:0.8rem;
-	font-size:0.6rem;
-	color:#f39800;
+	top:1.3rem;
 }
+
 .self_means .daturn_top:first-of-type span:nth-of-type(2){
-	color:#3c3c3c;
+	color:#fff;
 	font-size:0.8rem;
 }
-
-
 
 
 
@@ -553,9 +407,6 @@ modify_topbody{
 }
 
 
-
-
-
 /* 游客修改的信息 */
 .daturn_bottom p{
 	text-align:center;
@@ -567,11 +418,6 @@ modify_topbody{
 .daturn_bottom p:last-of-type{
 	font-size:0.6rem;
 }
-
-
-
-
-
 
 
 /* 修改按钮 button */
@@ -588,35 +434,27 @@ modify_topbody{
 	font-size:0.6rem;
 }
 
-
-
-
-
 /* 编辑资料 modify */
 .modify_top{
-	height:3rem;
-	line-height:3rem;
-	text-align:center;
-	background:#fff;
+	width: 100%;
+    height: 3.8rem;
+    background: #46a1ff;
+    text-align: center;
+    line-height: 3.8rem;
+    border-bottom: 1px solid #e0ddda;
 }
-.modify_top span:first-of-type{
-	font-size:0.6rem;
+.modify_top span:first-of-type img{
+	width:1rem;
+	height:1rem;
 	position:absolute;
 	left:0.8rem;
-	top:0;
-	color:#f1a549;
+	top:1.3rem;
 }
 .modify_top span:nth-of-type(2){
 	font-size:0.8rem;
-	color:#393939;
+	color:#fff;
 
 }
-
-
-
-
-
-
 
 
 /* 每个修改的input框 */
@@ -648,11 +486,6 @@ modify_topbody{
 }
 
 
-
-
-
-
-
 /* 提交按钮 （物业） */
 .submit{
 	width:80%;
@@ -665,13 +498,6 @@ modify_topbody{
 	background:#ee9121;
 	border-radius:0.4rem 0.4rem;
 }
-
-
-
-
-
-
-
 
 
 /*
@@ -754,13 +580,6 @@ modify_topbody{
 	font-size: 0.8rem;
 	margin: 0.25rem 0;
 }
-
-
-
-
-
-
-
 
 
 /* 物业   邮包 */
