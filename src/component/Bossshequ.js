@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../css/boss_shequ.css';
 
 import {
   BrowserRouter as Router,
@@ -11,7 +12,7 @@ class Bossshequ extends Component {
   render() {
     return (
     	  <div>
-    	  	shequ
+    	  	  <div className="community_top">社区</div>
         </div>
     );
   }
