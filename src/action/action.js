@@ -1,6 +1,6 @@
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun} from './mds'
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
 
@@ -25,6 +25,16 @@ export function wuyegllist(address){
 export function wuyegltj(address,name,sex,phone,family,homeyard){
 	return wuyegltjpost(address,name,sex,phone,family,homeyard)
 }
+export function yzdpwyd(village){
+	return yzdpwypost(village)
+}
+export function yzhpwyd(id,uid,village){
+	return yzhpwypost(id,uid,village)
+}
+export function yzcpwyd(id,uid,village){
+	return yzcpwypost(id,uid,village)
+}
+
 
 //论坛
 export function yezhutljs(village,uid){
