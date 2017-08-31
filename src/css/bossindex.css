@@ -45,3 +45,128 @@
 .boss_con a.active p:last-of-type{
 	color:#ed860a;
 }
+
+
+
+/* boss  管理 */
+.heads{
+	width:100%;
+	height:2.8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font: 0.9rem/2.8rem 'Microsoft Yahei';
+    text-align: center;
+    z-index: 1000;
+    border-bottom:1px solid #999;
+    background:url("../images/head.jpg");
+}
+.heads img{
+	width:1rem;
+	position:absolute;
+	top:0.9rem;
+	left:1rem;
+}
+.bj{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background:url("../images/bj.jpg");
+	background-size:100% 100%;
+}
+.all_xq{
+	margin-top:4.42rem;
+	font:1.5rem/5rem 'Microsoft Yahei ';
+	margin-left:0.5rem;
+}
+.more_xq{
+	width:15rem;
+	height:1.6rem;
+	margin:0 auto;
+	margin-left:0.5rem;
+	outline:none;
+}
+.xq_btn{
+	width:6rem;
+	height:2rem;
+	font:1rem/2rem 'Microsoft Yahei';
+	background:#f39800;
+	outline:none;
+	color:#fff;
+	margin-left:5rem;
+	margin-top:2rem;
+}
+.all_count{
+	margin-top:2.8rem;
+}
+.all_count p{
+	width:calc(100% - 2rem);
+	height:2.8rem;
+	font:0.8rem/2.8rem 'Microsoft Yahei';
+	border-bottom:1px solid #999;
+	padding:0 1rem;
+	color:#000;
+}
+.all_count p span{
+	font:1rem/2.8rem 'Microsoft Yahei';
+}
+
+
+
+
+/* boss 添加物业 */
+.add_wuye{
+	width:100%;
+	height:2.4rem;
+	border-bottom:1px solid #999;
+	padding-top: 3.1rem;
+}
+.add_wuye img{
+	width:1.2rem;
+	margin:0.65rem 0.3rem 0.5rem 0.5rem;
+}
+.add_wuye span{
+	font:0.8rem/2.4rem 'Microsoft Yahei';
+}
+
+
+.add_wuyes{
+	display:none;
+}
+.add_wuyes div{
+	padding: 0 0 0 1rem;
+	margin:  0.2rem 0;
+}
+.add_wuyes input{
+	outline: none;
+	width: 10rem;
+	height: 1.5rem;
+	padding: 0 0 0 0.5rem;
+	margin: 0 0 0 0.5rem;
+	border:1px solid #ccc;
+	border-radius: 0.5rem;
+}
+.add_wuyes button{
+	width: 4rem;
+	height: 1.5rem;
+	background: #f39800;
+    color: #fff;
+    display: block;
+    margin: 0.5rem auto;
+	border-radius: 0.5rem;
+	outline: none;
+}
+
+.add_wydetail li{
+	width:14rem;
+	margin:0.5rem auto;
+	box-shadow: 0px 3px 7px 3px #c2bfbf;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+}
+.add_wydetail li p{
+	font:0.8rem/2rem 'Microsoft Yahei';
+}
