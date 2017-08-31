@@ -1,6 +1,9 @@
+
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
-import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
+
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost} from './my'
+
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
 
@@ -25,6 +28,16 @@ export function wuyegllist(address){
 export function wuyegltj(address,name,sex,phone,family,homeyard){
 	return wuyegltjpost(address,name,sex,phone,family,homeyard)
 }
+export function yzdpwyd(village){
+	return yzdpwypost(village)
+}
+export function yzhpwyd(id,uid,village){
+	return yzhpwypost(id,uid,village)
+}
+export function yzcpwyd(id,uid,village){
+	return yzcpwypost(id,uid,village)
+}
+
 
 //论坛
 export function yezhutljs(village,uid){
@@ -100,8 +113,8 @@ export function yezhu_showhouse(address,family){
 	return showhouse(address,family)
 }
 
-export function yezhu_addhouse(name,address,family){
-	return addhouse(name,address,family)
+export function yezhu_addhouse(name,address,family,homeyard){
+	return addhouse(name,address,family,homeyard)
 }
 
 
@@ -127,3 +140,9 @@ export function wuye_boxs(village){
 	return yezhuaddresss(village)
 }
 
+
+
+// 业主  已参加的活动  展示
+export function yezhu_activity(id,village){
+	return showactivity(id,village)
+}

@@ -203,3 +203,69 @@ export function wuyegltjpost(address,name,sex,phone,family,homeyard){
 		});
 	}
 }
+
+
+/*业主点评物业*/
+
+export function yzdpwy(data){
+	return {
+		type:"YZDPWY",
+		yepjwydata:data
+	}
+}
+export function yzdpwypost(village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/yzzhgxqwy",
+			data:{
+				village:village
+			},
+			success:function(data){
+				dispatch(yzdpwy(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});
+	}
+}
+export function yzhpwypost(id,uid,village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/yzhpwy",
+			data:{
+				id:id,
+				uid:uid,
+				village:village
+			},
+			success:function(data){
+				dispatch(yzdpwy(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});
+	}
+}
+export function yzcpwypost(id,uid,village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/yzcpwy",
+			data:{
+				id:id,
+				uid:uid,
+				village:village
+			},
+			success:function(data){
+				dispatch(yzdpwy(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});
+	}
+}
+

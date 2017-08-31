@@ -1,17 +1,20 @@
-.app{
+/* 背景图 */
+.app_con{
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background: url(images/bj.jpg);
+	background: url(images/bjqs.jpg);
 	background-size: 100% 100%;
+
 }
 .app a:first-of-type{
 	margin-top: 50%;
 }
-.app a{
+
+/* .app a{
 	width: 80%;
 	margin: 0 auto;
 	margin-bottom: 10%;
@@ -23,4 +26,108 @@
 	color: #fff;
 	font-size: 0.85rem;
 	border-radius: 1rem;
+} */
+/* 
+	按钮页面内容 
+*/
+.dl_top p{
+	text-align:center;
+}
+.dl_top p:first-of-type{
+    margin-top:2.1rem;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#fdfdfd;
+    margin-bottom:0.3555rem;
+}
+.dl_top p:nth-of-type(2){
+    font-size:0.6444rem;
+    font-weight:bold;
+    color:#fdfdfd;
+}
+.circle{
+	width:13rem;
+	height:13rem;
+	border-radius:50%;
+	border:2px solid #dfe2d7;
+	margin:0 auto;
+	margin-top:1.8rem;
+	position:relative;
+}
+.circle_con{
+	width:6rem;
+	height:6rem;
+	border-radius:50%;
+	border:2px solid #dfe2d7;
+	margin:0 auto;
+	margin-top:3.5rem;
+}
+.circle_con img{
+	width:6rem;
+	height:6rem;
+}
+.circle_one{
+	position:absolute;
+	bottom:0rem;
+	width:3rem;
+	height:3rem;
+	left:0;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.circle_two{
+	position:absolute;
+	bottom:-12%;
+	width:3rem;
+	left:35%;
+	height:3rem;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.circle_three{
+	position:absolute;
+	bottom:0rem;
+	width:3rem;
+	left:72%;
+	height:3rem;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.circle_one img{
+	width:2.5rem;
+	height:2.5rem;
+	margin-left:0.4rem;
+	margin-top:0.3rem;
+}
+.circle_two img{
+	width:2.5rem;
+	height:2.5rem;
+	margin-left:0.4rem;
+	margin-top:0.3rem;
+	transform:rotate(-20deg);
+}
+.circle_three img{
+	width:2.5rem;
+	height:2.5rem;
+	margin-left:0.3rem;
+	margin-top:0.3rem;
+	
+}
+.circle_one p{
+	font-size:0.8rem;
+	font-weight:bold;
+	color:#fff;
+	margin-top:0.8rem;
+}
+.circle_two p{
+	font-size:0.8rem;
+	font-weight:bold;
+	color:#fff;
+	margin-top:0.8rem;
+}
+.circle_three p{
+	font-size:0.8rem;
+	font-weight:bold;
+	color:#fff;
+	margin-top:0.8rem;
 }

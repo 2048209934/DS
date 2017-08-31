@@ -34,13 +34,23 @@ class Yezhuaddress extends Component {
               <ul className="orgin_con">
                 {console.log(this.props.data)}
                 {this.props.data.map(function(e,i){
-      return        <li key={i} className="baoxiu_box">
-                        <div className="one">
+      return        <li key={i} className="adds_con">
+                        {/*<div className="one">
                             <span>{e.village}</span>
                             <span>{e.address}</span>
                         </div> 
                         <p className="two">{e.con}</p>
-                        <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>
+                        <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>*/}
+                        <div className="adds_left">
+                            <img src="../../images/add.png" alt="小区通知"/>
+                        </div>
+                        <div className="adds_right">
+                            <p><span>{e.name}</span><span>{e.village}</span></p>
+                            <p>{e.time.substr(0,19).split("T").join("   ")}</p>
+                            <div className="adds_content">
+                                <p>{e.con}</p>
+                            </div>
+                        </div>
                     </li>
                   })}
               </ul>             

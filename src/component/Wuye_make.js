@@ -15,7 +15,7 @@ class Wuyemake extends Component {
     return (
     	  <div>
             <div className="modify_top">
-                <span onClick={this.back}>返回</span>
+                <span onClick={this.back}><img src="../../../../images/tip.png" alt=""/></span>
                 <span>编辑资料</span>
             </div>
             <div className="modify">

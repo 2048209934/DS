@@ -26,3 +26,13 @@ export function wuyegllb(state=[],action){
 		return state
 	}
 }
+
+
+export function yzpjwydata(state=[],action){
+	switch(action.type){
+		case 'YZDPWY':
+		return action.yepjwydata
+		default:
+		return state
+	}
+}
