@@ -28,7 +28,8 @@ class Yezhuhouse extends Component {
     wysq(){
         var yezhusj=window.sessionStorage.getItem('yezhu');
         var yezhusjjson=JSON.parse(yezhusj);
-        this.props.yezhu_addhouse(this.refs.zh_name.value,yezhusjjson[0].address,yezhusjjson[0].family);
+        var time=new Date().getTime();
+        this.props.yezhu_addhouse(this.refs.zh_name.value,yezhusjjson[0].address,yezhusjjson[0].family,time);
         this.refs.zh_name.value='';
         $(".add_message").slideUp();
     }
@@ -41,8 +42,19 @@ class Yezhuhouse extends Component {
                     <span>我的房屋</span>
                 </p>
 
+                
+
+
+                <div className="my_house clear">
+                    <div className="xq_name left">
+                        <p>北京半岛馨苑</p>
+                        <p>一单元 101</p>
+                    </div>
+                    <span className="my_count right">共{this.props.data.length}人</span>
+                </div>
+
                 <p className="add_house" onClick={this.wyxq}>
-                    <img src="../../../images/addpeople.png" alt="" />
+                    <img className="left" src="../../../images/people.png" alt="" />
                     添加住户
                 </p>
                 <div className="add_message">
@@ -54,21 +66,14 @@ class Yezhuhouse extends Component {
                 </div>
 
 
-                <div className="my_house clear">
-                    <div className="xq_name left">
-                        <p>北京半岛馨苑</p>
-                        <p>一单元 101</p>
-                    </div>
-                    <span className="my_count right">共{this.props.data.length}人</span>
-                </div>
                 <ul className="house_list">
-                {
-                    this.props.data.map(function(con,i){
-                        return (
-                            <li key={i}>{con.owner==1?'户主':'家属'}：{con.name}</li>
-                        )
-                    })
-                }
+                    {
+                        this.props.data.map(function(con,i){
+                            return (
+                                <li key={i}>{con.owner==1?'户主':'家属'}：{con.name}</li>
+                            )
+                        })
+                    }
                     
                 </ul>
             </div>  	

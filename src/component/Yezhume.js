@@ -7,10 +7,18 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
+import * as action from './../action/action';
+import {connect} from 'react-redux';
 
 class Yezhume extends Component {
-  render() {
+    componentDidMount(){
+        var yezhusj=window.sessionStorage.getItem('yezhu');
+        var yezhusjjson=JSON.parse(yezhusj);
+        this.props.yezhu_showhouse(yezhusjjson[0].address,yezhusjjson[0].family);
+    }
+    render() {
+        var yezhusj=window.sessionStorage.getItem('yezhu');
+        var yezhusjjson=JSON.parse(yezhusj);
     return (
         <Router>
             <div>
@@ -32,11 +40,11 @@ class Yezhume extends Component {
                         <div className="myself_now">
                             <div className="now_left">
                                 <p>身份</p>
-                                <p>待审核</p>
+                                <p>{yezhusjjson[0].owner==1?'户主':'家属'}</p>
                             </div> 
                             <div className="now_right">
                                 <p>当前房屋人数</p>
-                                <p>0</p>
+                                <p>共{this.props.data.length}人</p>
                             </div> 
                         </div>
                         {/*list*/}
@@ -66,4 +74,5 @@ class Yezhume extends Component {
   }
 }
 
-export default Yezhume;
+
+export default connect(e=>({data:e.add_yezhuhouse}),action)(Yezhume);

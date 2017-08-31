@@ -1,5 +1,5 @@
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun} from './mds'
-import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
@@ -92,8 +92,8 @@ export function yezhu_showhouse(address,family){
 	return showhouse(address,family)
 }
 
-export function yezhu_addhouse(name,address,family){
-	return addhouse(name,address,family)
+export function yezhu_addhouse(name,address,family,homeyard){
+	return addhouse(name,address,family,homeyard)
 }
 
 
@@ -119,3 +119,9 @@ export function wuye_boxs(village){
 	return yezhuaddresss(village)
 }
 
+
+
+// 业主  已参加的活动  展示
+export function yezhu_activity(id,village){
+	return showactivity(id,village)
+}

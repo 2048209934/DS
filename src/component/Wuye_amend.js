@@ -25,7 +25,7 @@ class Wuyeamend extends Component {
            <Route exact path='/wuye/index/me/amend' render={() => (
             <div className="self_means">
                 <div className="daturn_top">
-                    <span onClick={this.go}>返回</span>
+                    <span onClick={this.go}><img src="../../../images/tip.png" alt=""/></span>
                     <span>个人资料</span>
                 </div>
                 <div className="daturn_bottom">
