@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../css/boss_shequ.css';
 
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ class Bossshequ extends Component {
                 </p>
             </div>
         </Router>
+
     );
   }
 }
