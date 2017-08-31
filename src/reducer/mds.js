@@ -33,3 +33,36 @@ export function yezhuluntanxq(yezhuluntanxq=[],action){
 		return yezhuluntanxq
 	}
 }
+//评论
+export function yezhuluntanpl(yezhuluntanpl=[],action){
+	switch(action.type){
+		case 'YEZHUPINGLUN':
+		return action.yezhupinglun
+		default:
+		return yezhuluntanpl
+	}
+}
+
+//评论回复人
+export function pinglunhuifu(pinglunhuifu="",action){
+	switch(action.type){
+		case 'PINGLUNHUIFU':
+		return action.pinglunhuifu
+		case 'PINGLUNSHURU':
+		return action.pinglunshuru
+		default:
+		return pinglunhuifu
+	}
+}
+
+//论坛图片
+export function luntantupian(luntantupian=[],action){
+	switch(action.type){
+		case 'LUNTANTUPIAN':
+		return action.luntantupian
+		case 'LUNTANTUPIANS':
+		return action.luntantupians
+		default:
+		return luntantupian
+	}
+}

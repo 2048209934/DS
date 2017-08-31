@@ -340,7 +340,8 @@ body{
 	height:2.5rem;
 	background:#fff;
 	text-align:center;
-	position:relative;
+	position:fixed;
+	top: 0;
 	font:0.8rem/2.5rem 'Microsoft Yahei';
 	border-bottom:1px solid #ccc;
 }
@@ -373,6 +374,9 @@ body{
 .live{
 	width:100%;
 	background:#fff;
+	box-sizing: border-box;
+	padding-top: 2.5rem;
+	font-family: "微软雅黑";
 	border-bottom:1px solid #ccc;
 }
 .lives{
@@ -391,7 +395,11 @@ body{
 .pl_detail span{
 	font:0.7rem/2.6rem 'Microsoft Yahei';
 }
-
+.luntanimgss{ width: 100%;
+display: block;
+height: 7.3rem;
+margin: 0 auto;}
+.luntancon{ margin-bottom: 0.5rem;}
 .dianzan{
 	width:100%;
 	height:2.4rem;
@@ -427,6 +435,7 @@ body{
 	left:0;
 	width:100%;
 	height:2.4rem;
+	background-color: white;
 	border-top:1px solid #ccc;
 }
 .publish input{
@@ -434,23 +443,36 @@ body{
 	height:1.3rem;
 	border-radius:5px;
 	border:1px solid #ccc;
+	box-sizing: border-box;
+	padding-left: 0.2rem;
 	outline:none;
 	margin:0.5rem 0.3rem 0 0.5rem;
 }
 .publish button{
 	width:2.7rem;
 	height:1.33rem;
-	background:#dedace;
+	background:#5372B5;
 	border-radius:5px;
 	color:#fff;
 	outline:none;
 }
-
-
-
-
-
-
+.luntansj{ font-size: 0.65rem;
+margin-top: 0.4rem;
+margin-bottom: 0.4rem;}
+.pingluns{ width: 90%;
+margin: 0 auto;
+box-sizing: border-box;
+margin-bottom: 2.4rem;
+padding-top: 0.3rem;}
+.pingluns div>p:nth-child(1) span{ margin-right: 0.2rem;}
+.pingluns div>p:nth-child(1)>span:nth-child(2){ color: #515151;}
+.pingluns div>p:nth-child(2){ color: #848484;
+margin-top: 0.2rem;}
+.luntantjsc{
+position: absolute;
+font-size: 1.4rem;
+color: black;
+right: 1.6rem;}
 /* 业主  服务 */
 .kong{
 	width:100%;

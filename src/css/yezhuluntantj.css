@@ -1,0 +1,57 @@
+.luntantj{position: absolute;
+right: 1.6rem;}
+.liboxs{ padding-top: 3.5rem;
+width: 90%;
+margin:  0 auto;}
+.liboxs textarea{ width: 100%;
+height: 5.8rem;
+resize: none;
+font-family: "微软雅黑";
+border: 1px solid #CCCCCC;}
+
+
+.filep {
+	position: relative;
+	display: inline-block;
+	background: white;
+	border-radius: 0.2rem;
+	padding: 0.8rem 0.8rem;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 0.8rem;
+	top: 0.2rem;
+	color: #000;
+	
+}
+
+.filep span{
+	display: inline-block;
+	text-align: center;
+	z-index: 1;
+}
+
+.filep input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+
+#zpd p {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 88;
+}
+#zpd img {
+	width: 100%;
+	height: 100%;
+}
+.luntanimg img{ width: 25%;}
+.margints{ margin-top: 0;}

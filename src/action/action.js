@@ -1,4 +1,4 @@
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun} from './mds'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure} from './hcc';
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
@@ -38,6 +38,24 @@ export function yezhutlzan(id,uid){  //点赞
 }
 export function yezhuplzs(uid){  //评论
 	return yezhultpinglun(uid)
+}
+export function pinglunhffn(name){  //评论回复	
+	return pinglunhuifu(name)
+}
+export function pinglunsrfn(name){  //评论回复pinglunshuru
+	return pinglunshuru(name)
+}
+export function yezhupinglunfns(uid,title,name,names){  //评论输入
+	return yezhupinglunss(uid,title,name,names)
+}
+export function yezhultfbfn(fd){  //论坛图片
+	return yezhuluntanfb(fd)
+}
+export function yezhultfbfns(e){  //图片清空
+	return luntantupians(e)
+}
+export function yezhultfbsn(name,con,village,uid,img){  //论坛发布
+	return yezhuluntantjes(name,con,village,uid,img)
 }
 //活动
 export function wuyehd(village){

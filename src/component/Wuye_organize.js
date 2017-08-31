@@ -40,11 +40,12 @@ if($(".orgin").val()!=""){
   }
   render() {
     return (
-    	  <div>{console.log(this.props.data)}
+    	  <div>
             <div className="notice_editor">
                 <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
                 <span>组织活动</span>
             </div>
+            <div className="huodongbox">
             <div className="topsbtn" onClick={this.btnfn}><Btn btnVal="发表活动" ></Btn></div>
             <div className="organize" id="organize">
             <textarea  className="orgin"></textarea>
@@ -68,6 +69,7 @@ if($(".orgin").val()!=""){
 })}
 
             </ul>
+            </div>
         </div>
     );
   }

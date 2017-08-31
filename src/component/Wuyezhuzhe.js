@@ -9,9 +9,14 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 class Wuyezhuzhe extends Component {
+		componentDidMount(){
+	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
+	this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+	}
   render() {
     return (
       <Router>
@@ -58,22 +63,24 @@ class Wuyezhuzhe extends Component {
                           </div>
                           <p className="fresh">社区新鲜事</p>
                           {/*content*/}
-                          <div className="content">
-                              <div className="box">
-                                  <p className="name clear">
-                                      <img className="left" src="../images/guanjia_03.jpg" alt="" />
-                                      <span className="left">白桐</span>
-                                      <span className="left">在</span>
-                                      <span className="left">邻里分享</span>
-                                  </p>
-                                  <p>2017年8月20日</p>
-                                  <p>星期日</p>
-                                  <p>今日限行</p>
-                                  <p>[  今夜山区有雨 注意防范  ]今天白天阴转多云，早晨有轻雾并有分散小阵雨，最高气温30℃；夜间多云间阴，山区有阵雨或雷阵雨，最低气温23℃，受轻雾影响，今晨能见度不...</p>
-                                  <img className="prompt" src="../images/prompt_03.jpg" alt="" />
-                                  <div className="timess">23小时前</div>
-                              </div>
-                          </div>
+                          <ul className="contents margints">
+                    {this.props.data.slice(0,3).map(function(e,i){
+                    	return <li key={i} id="li" className="box">
+                            <p className="name clear">
+                                <img className="left" src="./../../images/guanjia_03.jpg" alt="" />
+                                <span className="left">{e.name}</span>
+                                <span className="left">在</span>
+                                <span className="left">邻里分享</span>
+                            </p>
+                            <p className="luntancon">{e.con}</p>
+                          
+                         {e.img==null?"":e.img==""?"":e.img.split("?").map(function(v,s){
+                            	return <img key={s} className=" luntanimgss" src={v} alt="" />
+                            })}
+                            <div className="luntansj">{e.time.substr(0,19).split("T").join("   ")}</div>
+                        </li>
+                    })}
+                    </ul>
                         </div>
                      )} />  
                   <Route path="/wuye/index/parcel" component={WuyeParcel}/>
@@ -87,4 +94,4 @@ class Wuyezhuzhe extends Component {
   }
 }
 
-export default Wuyezhuzhe;
+export default connect(e=>({data:e.yezhuluntan}),action)(Wuyezhuzhe);

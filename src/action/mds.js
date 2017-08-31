@@ -123,6 +123,7 @@ export function yezhultjspost(village,uid){
 				uid:uid
 			},
 			success:function(data){
+				
 				dispatch(yezhultjs(data))
 			},
 			error:function(){
@@ -181,6 +182,12 @@ export function yezhultzan(id,uid){
 }
 
 //业主论坛评论展示
+export function yezhultpl(data){
+	return {
+		type:"YEZHUPINGLUN",
+		yezhupinglun:data
+	}
+}
 export function yezhultpinglun(uid){
 	return dispatch=>{
 		return $.ajax({
@@ -190,7 +197,103 @@ export function yezhultpinglun(uid){
 				uid:uid
 			},
 			success:function(data){
-			console.log(data)
+			dispatch(yezhultpl(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+//评论选择回复人
+export function pinglunhuifu(data){
+	return {
+		type:"PINGLUNHUIFU",
+		pinglunhuifu:data
+	}
+}
+
+export function pinglunshuru(data){
+	return {
+		type:"PINGLUNSHURU",
+		pinglunshuru:data
+	}
+}
+
+//业主论坛评论输入
+export function yezhupinglunss(uid,title,name,names){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/reply/yzpinglun",
+			data:{
+				uid:uid,
+				title:title,
+				name:name,
+				names:names
+			},
+			success:function(data){
+			dispatch(yezhultpl(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+//业主论坛发布图片
+export function luntantupians(data){
+	return {
+		type:"LUNTANTUPIANS",
+		luntantupians:data
+	}
+}
+export function luntantupian(data){
+	return {
+		type:"LUNTANTUPIAN",
+		luntantupian:data
+	}
+}
+export function yezhuluntanfb(fd){
+	return dispatch=>{
+		return $.ajax({
+				type:"post",
+				url:"http://localhost:8100/forum/img",
+				async:true,
+				data:fd,
+				contentType:false,
+				processData:false,
+				success:function(e){				
+					dispatch(luntantupian(e))
+      			}
+			});
+	}
+}
+
+//论坛提交
+export function luntantijiao(data){
+	return {
+		type:"LUNTANTUPIAN",
+		luntantupian:data
+	}
+}
+export function yezhuluntantjes(name,con,village,uid,img){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/forum/yzluntan",
+			data:{
+				name:name,
+				con:con,
+				village:village,
+				uid:uid,
+				img:img
+			},
+			success:function(data){
+			dispatch(yezhultxq(data))	
+			window.location.href="http://localhost:3000/yezhu/index/shequ"
 			},
 			error:function(){
 				alert("0.0")

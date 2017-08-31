@@ -10,7 +10,7 @@ import {} from './my';
 
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel} from './hcc';
 import {yezhudata,wuyedata,wuyegllb} from './my';
-import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq} from './mds';
+import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq,yezhuluntanpl,pinglunhuifu,luntantupian} from './mds';
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddres} from './ghj';
 
 /*
@@ -38,5 +38,8 @@ export default combineReducers({
 	add_yezhuhouse,
 	wuyeantee,
 	wuyebaoxiu,
-	yezhuaddres
+	yezhuaddres,
+	yezhuluntanpl,//评论展示
+	pinglunhuifu,
+	luntantupian,//论坛图片
 })

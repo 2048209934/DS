@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  YezhuShare from './Yezhu_share';
+import  Yezhuluntantj from './Yezhuluntantj';
 import {
   BrowserRouter as Router,
   Route,
@@ -45,6 +46,7 @@ class Yezhushequ extends Component {
                     	<div>
                    <p className="head" id="head">
                         <span>社区</span>
+                      <Link to={`/yezhu/index/shequ/tjshequ`}><span className="luntantjsc">+</span></Link>
                     </p>
                     {/*content*/}
                     <ul className="contents">
@@ -57,10 +59,12 @@ class Yezhushequ extends Component {
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>
                             </p>
-                            <p>{e.con}</p>
+                            <p className="luntancon">{e.con}</p>
                           
-                            <img className="prompt" src="../../images/prompt_03.jpg" alt="" />
-                            <div className="times">{e.time.substr(0,19).split("T").join("   ")}</div>
+                         {e.img==null?"":e.img==""?"":e.img.split("?").map(function(v,s){
+                            	return <img key={s} className=" luntanimgss" src={v} alt="" />
+                            })}
+                            <div className="luntansj">{e.time.substr(0,19).split("T").join("   ")}</div>
                         </li>
                         </Link>
                     })}
@@ -69,6 +73,7 @@ class Yezhushequ extends Component {
                     )} /> 
                 </div>
                 <Route path="/yezhu/index/shequ/share/:id" component={YezhuShare}/>
+                <Route path="/yezhu/index/shequ/tjshequ" component={Yezhuluntantj}/>
             </div>
         </Router>
     )
