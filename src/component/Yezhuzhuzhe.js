@@ -15,7 +15,9 @@ class Yezhuzhuzhe extends Component {
 	componentDidMount(){
 		setTimeout(function(){
 			var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
-			this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+			if(yezhu!=0){
+				this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+			}	
 		}.bind(this),100)
 	}
     /*componentDidMount(){
