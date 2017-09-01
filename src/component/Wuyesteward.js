@@ -21,7 +21,7 @@ class Wuyesteward extends Component {
 	}
 	wysq(){
 		if($("#wyhzxm").val()==''||$("#wyhzsex").val()==''||$("#wylxfs").val()==''||$("#wyhzzz").val()==''){
-			alert("请输入内容")
+			alert("请输入内容");
 		}else{
 			var wuyesj=window.sessionStorage.getItem('wuye')
 			var wuyesjjson=JSON.parse(wuyesj)
