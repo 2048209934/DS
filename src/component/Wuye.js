@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Wuyeindex from './Wuyeindex';
 import Btn from './Btn'
+import Alert from './Alert';
 import './../css/wuye.css'
 import $ from 'jquery'
 import {
@@ -15,7 +16,7 @@ import {connect} from 'react-redux';
 class Wuye extends Component {
 	wuyedl(e){
 		if ($("#wuyedluser").val()==''||$("#wuyedlpass").val()=='') {
-			alert("请输入内容")
+			$(".mask").show()
 			e.preventDefault()
 		} else{
 			this.props.wuyedlv($("#wuyedluser").val(),$("#wuyedlpass").val())
@@ -39,6 +40,7 @@ class Wuye extends Component {
     	  				</div>    	  	  	  				
     	  				<Link to="/wuye/index" onClick={this.wuyedl.bind(this)}><Btn btnVal="登 录" /></Link>
     	  			</div>
+    	  			<Alert data="请输入内容" />
             </div>
            )} />  
           <Route path="/wuye/index" component={Wuyeindex} />
