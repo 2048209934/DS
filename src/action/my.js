@@ -269,3 +269,31 @@ export function yzcpwypost(id,uid,village){
 	}
 }
 
+
+
+/*boss登录*/
+export function bossdlpost(dluser,dlpass){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/boss/bossdl",
+			data:{
+				user:dluser,
+				pass:dlpass
+			},
+			success:function(data){
+				if(data.length==0){	
+					window.sessionStorage.setItem('boss',0)
+				}else if(dluser!=data[0].user||dlpass!=data[0].pass){	
+					window.sessionStorage.setItem('boss',0)
+				}else{
+					var bossstr=JSON.stringify(data)
+					window.sessionStorage.setItem('boss',bossstr)
+				}
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}

@@ -1,19 +1,45 @@
 import React, { Component } from 'react';
 import Bossindex from './Bossindex';
+import Btn from './Btn'
+import './../css/boss.css'
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Boss extends Component {
+	bossdl(e){
+		if ($("#bossdluser").val()==''||$("#bossdlpass").val()=='') {
+			alert("请输入内容")
+			e.preventDefault()
+		} else{
+			this.props.bossdlv($("#bossdluser").val(),$("#bossdlpass").val())
+		}
+	}
   render() {
     return (
     	 <Router>
     	  <div>
     	  	<Route exact path='/boss' render={() => (
-    	  		<Link to="/boss/index">登录</Link>
+    	  		<div className="bosslogin">
+    	  			<div className="bossdenglu">
+    	  				<h2>欢迎登录</h2>
+    	  				<div>
+    	  					<span>账号</span>
+    	  					<input type="text" id="bossdluser" placeholder="请输入" />
+    	  				</div>
+    	  				<div>
+    	  					<span>密码</span>
+    	  					<input type="password" id="bossdlpass"  placeholder="请输入" />
+    	  				</div>    	  	  	  				
+    	  				<Link to="/boss/index" onClick={this.bossdl.bind(this)}><Btn btnVal="登 录" /></Link>
+    	  			</div>
+            </div>
            )} />  
           <Route path="/boss/index" component={Bossindex} />
         </div>
@@ -22,4 +48,4 @@ class Boss extends Component {
   }
 }
 
-export default Boss;
+export default connect(e=>({data:e}),action)(Boss);
