@@ -59,7 +59,7 @@ class Wuyezhuzhe extends Component {
                               </Link>                                                       
                               <Link to="/wuye/index/guarantee" className="manage">
                                   <div className="organize_left">
-                                        <p className="one">保修</p>
+                                        <p className="one">报修</p>
                                         <p className="two">修复更快速</p>
                                   </div>
                                   <div className="organize_right"><img src="../images/manage.png" alt=""/></div>

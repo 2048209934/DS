@@ -36,7 +36,7 @@ class WuyeGuarantee extends Component {
     	  <div className="guarantee">
                 <div className="notice_editor">
                      <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
-                      <span>保修服务</span>
+                      <span>报修服务</span>
                 </div>
     	  	  <div className="guarantee_top">
                 <p><Link to="/wuye/index/guarantee">未处理</Link></p>
@@ -47,7 +47,7 @@ class WuyeGuarantee extends Component {
              <ul className="orgin_con">
               {console.log(this.props.data)}
               {this.props.data.map(function(e,i){
-    return        <li key={i} className="baoxiu_box">
+                  return        <li key={i} className="baoxiu_box">
                       <div className="one">
                           <span>{e.village}</span>
                           <span>{e.address}</span>
