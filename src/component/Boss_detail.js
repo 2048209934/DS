@@ -15,7 +15,8 @@ import {connect} from 'react-redux';
 class Bossdetail extends Component {
 	componentDidMount(){
 		var xq=window.sessionStorage.getItem('xq')
-		this.props.bosszsxqhzd(xq)
+		this.props.bosszsxqhzd(xq);
+        this.props.boss_lwuye(xq);
         $(".boss_con").hide()
     }
     componentWillUnmount(){
@@ -38,7 +39,7 @@ class Bossdetail extends Component {
                             <div className="all_count">
                                 <p>目前住户总人数：{this.props.data.bosszsxqhzdata.length}</p>
                                 <Link to="/boss/index/detail/bosswuye">
-                                    <p>目前物业总人数：1111<span className="right">></span></p>
+                                    <p>目前物业总人数：{this.props.data.bosslwuye.length}<span className="right">></span></p>
                                 </Link>
                             </div>
                         </div>

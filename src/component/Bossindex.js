@@ -4,7 +4,6 @@ import './../css/bossindex.css';
 
 import Bosssteward from './Bosssteward';
 import Bossshequ from './Bossshequ';
-
 import  Bossdetail from './Boss_detail';
 
 import $ from 'jquery';
