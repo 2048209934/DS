@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  Bossdetail from './Boss_detail';
+import $ from 'jquery';
 import {
   BrowserRouter as Router,
   Route,
@@ -8,6 +9,25 @@ import {
 
 
 class Bosssteward extends Component {
+	componentDidMount(){
+  	setTimeout(()=>{
+			var bosssj=window.sessionStorage.getItem('boss')
+			var bosssjjson=JSON.parse(bosssj)
+			if(bosssjjson==0){
+				$(".bj").parent().parent().html(`
+					<div>
+						<div style="height:50px; line-height:50px; text-align:center; position:relative; border-bottom:1px solid #ccc; font-size:16px;">
+							<img id="hwuyedl" src="../images/arrow.png" alt="" style="width:20px; height:22px; position:absolute; top:30%; left:15px;">登录
+						</div>
+						<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>
+					<div>
+					`)
+				$("#hwuyedl").click(function(){
+					window.history.go(-1)
+				})
+			}
+		},10)
+  }
   render() {
     return (
         <Router>
