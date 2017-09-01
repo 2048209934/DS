@@ -1,7 +1,7 @@
 
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
 
-import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity,bosslookwuye,bossaddwuye,bossaddwuyeshow} from './hcc';
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost} from './my'
 
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
@@ -155,4 +155,26 @@ export function wuye_boxs(village){
 // 业主  已参加的活动  展示
 export function yezhu_activity(id,village){
 	return showactivity(id,village)
+}
+
+
+
+//boss 查看物业 人数
+
+export function boss_lwuye(village){
+	return bosslookwuye(village)
+}
+
+
+//boss 添加物业 人数
+
+export function boss_awuye(name,village,user,pass,phone){
+	return bossaddwuye(name,village,user,pass,phone)
+}
+
+
+//boss 添加物业 人数展示
+
+export function boss_awuyeshow(village){
+	return bossaddwuyeshow(village)
 }

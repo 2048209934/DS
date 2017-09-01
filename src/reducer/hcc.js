@@ -42,3 +42,26 @@ export function yezhuactivity(state=[],action){
 		return state
 	}
 }
+
+export function bosslwuye(state=[],action){
+	switch(action.type){
+		case 'BOSS_LOOKWUYE':
+		return action.datac;
+		default:
+		return state
+	}
+}
+
+
+export function bossawuye(state=[],action){
+	switch(action.type){
+		case 'BOSS_ADDWUYE':
+		return action.dataaa;
+		default:
+		return state
+	}
+}
+
+
+
+
