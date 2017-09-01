@@ -14,8 +14,8 @@ import {connect} from 'react-redux';
 
 class Wuyezhuzhe extends Component {
 		componentDidMount(){
-	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
-	this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
+	this.props.yezhutljs(wuye[0].address,wuye[0].id)
 	}
   render() {
     return (
