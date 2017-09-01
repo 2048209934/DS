@@ -63,6 +63,7 @@ class Yezhume extends Component {
                                 </li>
                             </Link>
                         </ul>
+                        <Link className="yztcdl" to="/yezhu/index">退出登录</Link>
                     </div>
                 )} />
                 <Route path="/yezhu/index/me/amend" component={Yezhuamend}/>
