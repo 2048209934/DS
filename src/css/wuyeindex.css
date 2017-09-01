@@ -10,7 +10,7 @@ modify_topbody{
 	position:fixed;
 	bottom:0rem;
 	z-index:1000;
-	font-size:0.1rem;
+	font-size:0.6rem;
 	/* border-top:1px solid #e7e6e4; */
 }
 .admin_con a{
@@ -22,7 +22,7 @@ modify_topbody{
 }
 .admin_con a p{
 	color:#3e3e3e;
-	font-size:0.1rem;
+	font-size:0.6rem;
 }
 .admin_con  a p img{
 	width:1.2rem;
