@@ -1,0 +1,36 @@
+/*弹窗*/
+.mask{
+	display: none;
+	position:fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: rgba(0,0,0,0.5);
+}
+.mask .alert{
+	width: 70%;
+	height: 6rem;
+	background: #fff;
+	position:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 0.5rem;
+}
+.mask .alert p{
+	text-align: center;
+	padding: 1.7rem 0 0;
+	font-size: 0.75rem;
+}
+.mask .alert span{
+	display: block;
+	width: 2.2rem;
+	text-align: center;
+	margin: 0.7rem auto 0;
+	
+}

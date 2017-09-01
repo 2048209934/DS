@@ -36,3 +36,23 @@ export function yzpjwydata(state=[],action){
 		return state
 	}
 }
+
+
+export function bosszsxqdata(state=[],action){
+	switch(action.type){
+		case 'BOSSZSXQ':
+		return action.bosszsxqdata
+		default:
+		return state
+	}
+}
+
+
+export function bosszsxqhzdata(state=[],action){
+	switch(action.type){
+		case 'BOSSZSXQHZ':
+		return action.bosszsxqhzdata
+		default:
+		return state
+	}
+}

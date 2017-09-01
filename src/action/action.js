@@ -2,7 +2,7 @@
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
 
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost} from './my'
 
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
@@ -40,6 +40,13 @@ export function yzhpwyd(id,uid,village){
 export function yzcpwyd(id,uid,village){
 	return yzcpwypost(id,uid,village)
 }
+export function bosszsxqd(){
+	return bosszsxqpost()
+}
+export function bosszsxqhzd(address){
+	return bosszsxqhzpost(address)
+} 
+
 
 
 //论坛

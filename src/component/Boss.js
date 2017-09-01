@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Bossindex from './Bossindex';
+import Alert from './Alert';
 import Btn from './Btn'
 import './../css/boss.css'
 import $ from 'jquery'
@@ -15,7 +16,7 @@ import {connect} from 'react-redux';
 class Boss extends Component {
 	bossdl(e){
 		if ($("#bossdluser").val()==''||$("#bossdlpass").val()=='') {
-			alert("请输入内容")
+			$(".mask").show()
 			e.preventDefault()
 		} else{
 			this.props.bossdlv($("#bossdluser").val(),$("#bossdlpass").val())
@@ -39,6 +40,7 @@ class Boss extends Component {
     	  				</div>    	  	  	  				
     	  				<Link to="/boss/index" onClick={this.bossdl.bind(this)}><Btn btnVal="登 录" /></Link>
     	  			</div>
+    	  			<Alert data="请输入内容" />
             </div>
            )} />  
           <Route path="/boss/index" component={Bossindex} />

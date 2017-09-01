@@ -52,9 +52,9 @@ export function yezhurhmpost(homeyard){
 			},
 			success:function(data){
 				if(data.length==0){				
-					alert("输入错误")	
+					$(".mask").eq(1).show()
 				}else if(data[0].user!=null){
-					alert("该入户码已被使用")	
+					$(".mask").eq(2).show()	
 				}else{
 					$(".yezhudenglu").hide()
 					$(".yezhuzhuce").show()
@@ -90,7 +90,7 @@ export function yezhuzcpost(zcuser,zcpass){
 							id:id
 						},
 						success:function(data){
-							alert("注册成功")
+							$(".mask").eq(3).show()
 							$(".yezhudenglu").show()
 							$(".yezhuzhuce").hide()
 							$(".yezhuruhuma").hide()
@@ -100,7 +100,7 @@ export function yezhuzcpost(zcuser,zcpass){
 						}
 					});	
 				}else{
-					alert("该用户名已被注册")
+					$(".mask").eq(4).show()
 				}
 			},
 			error:function(){
@@ -290,6 +290,59 @@ export function bossdlpost(dluser,dlpass){
 					var bossstr=JSON.stringify(data)
 					window.sessionStorage.setItem('boss',bossstr)
 				}
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+
+/*展示小区*/
+
+export function bosszsxq(data){
+	return {
+		type:"BOSSZSXQ",
+		bosszsxqdata:data
+	}
+}
+export function bosszsxqpost(){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/plot/plotzs",
+			success:function(data){
+				dispatch(bosszsxq(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+
+/*展示小区人数*/
+
+export function bosszsxqhz(data){
+	return {
+		type:"BOSSZSXQHZ",
+		bosszsxqhzdata:data
+	}
+}
+export function bosszsxqhzpost(address){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/owner/xqydshz",
+			data:{
+				address:address
+			},
+			success:function(data){
+				dispatch(bosszsxqhz(data))
 			},
 			error:function(){
 				alert("0.0")

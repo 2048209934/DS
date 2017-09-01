@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alert from './Alert';
 
 import $ from 'jquery'
 import {
@@ -21,7 +22,7 @@ class Wuyesteward extends Component {
 	}
 	wysq(){
 		if($("#wyhzxm").val()==''||$("#wyhzsex").val()==''||$("#wylxfs").val()==''||$("#wyhzzz").val()==''){
-			alert("请输入内容")
+			$(".mask").show()
 		}else{
 			var wuyesj=window.sessionStorage.getItem('wuye')
 			var wuyesjjson=JSON.parse(wuyesj)
@@ -38,6 +39,7 @@ class Wuyesteward extends Component {
   render() {
     return (
     	  <div className="zhgl">
+    	  	<Alert data="请输入内容" />
     	  	<h2>住户管理</h2>
     	  	<p className="tjgl" onClick={this.wyxq}>
     	  		<img className="left" src="../../images/addressbook.png" alt="" />

@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import  Bossdetail from './Boss_detail';
+import  Alert from './Alert';
 import $ from 'jquery';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Bosssteward extends Component {
 	componentDidMount(){
+		this.props.bosszsxqd()
   	setTimeout(()=>{
 			var bosssj=window.sessionStorage.getItem('boss')
 			var bosssjjson=JSON.parse(bosssj)
@@ -28,27 +32,37 @@ class Bosssteward extends Component {
 			}
 		},10)
   }
+	qdda(e){
+		var xqd=document.getElementById("xqd")
+		if(xqd.value==0){
+//			console.log(xqd.value)
+			$(".mask").show()
+			e.preventDefault()
+		}else{
+			window.sessionStorage.setItem('xq',xqd.value)
+		}
+	}
   render() {
     return (
         <Router>
         	<div>
                 <Route exact path='/boss/index' render={() => (
                     <div className="bj">
+                    		<Alert data="请选择小区" />
                         {/*header*/}
                         <p className="heads" id="head">
                             管家
                         </p>
                         <p className="all_xq">所有小区：</p>
-                        <select className="more_xq">
-                            <option>选择小区</option>
-                            <option>金都景苑小区</option>
-                            <option>幸福E家</option>
-                            <option>纳帕溪谷</option>
-                            <option>天伦锦城</option>
-                            <option>雅居园小区</option>
-                            <option>阳光佳园</option>
+                        <select className="more_xq" id="xqd">
+                            <option value="0">选择小区</option>
+                            {
+                            	this.props.data.map(function(v,i){
+                            		return <option key={i} value={v.name}>{v.name}</option>
+                            	})
+                            }
                         </select>
-                        <Link to="/boss/index/detail">
+                        <Link to="/boss/index/detail" onClick={this.qdda}>
                             <button className="xq_btn">确定</button>
                         </Link>
                     </div>
@@ -60,4 +74,4 @@ class Bosssteward extends Component {
   }
 }
 
-export default Bosssteward;
+export default connect(e=>({data:e.bosszsxqdata}),action)(Bosssteward);

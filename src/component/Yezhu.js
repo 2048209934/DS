@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Yezhuindex from './Yezhuindex';
 import Btn from './Btn'
+import Alert from './Alert';
 import './../css/yezhu.css'
 import $ from 'jquery'
 import {
@@ -30,7 +31,7 @@ class Yezhu extends Component {
 	}
 	yezhudl(e){
 		if ($("#yezhudluser").val()==''||$("#yezhudlpass").val()=='') {
-			alert("请输入内容")
+			$(".mask").eq(0).show()
 			e.preventDefault()
 		} else{
 			this.props.yezhudlv($("#yezhudluser").val(),$("#yezhudlpass").val())
@@ -41,14 +42,14 @@ class Yezhu extends Component {
 	}
 	yezhurhm(){
 		if ($("#yezhurhm").val()=='') {
-			alert("请输入内容")
+			$(".mask").eq(0).show()
 		} else{
 			this.props.yezhurhmv($("#yezhurhm").val())	
 		}
 	}
 	yezhuzc(e){
 		if ($("#yezhuzcuser").val()==''||$("#yezhuzcpass").val()=='') {
-			alert("请输入内容")
+			$(".mask").eq(0).show()
 		} else{
 			this.props.yezhuzcv($("#yezhuzcuser").val(),$("#yezhuzcpass").val())	
 		}
@@ -59,6 +60,11 @@ class Yezhu extends Component {
     	  <div>
     	  	<Route exact path='/yezhu' render={() => (
     	  		<div className="yezhulogin">
+    	  			<Alert data="请输入内容" />
+    	  			<Alert data="输入错误" />
+    	  			<Alert data="该入户码已被使用" />
+    	  			<Alert data="注册成功" />
+    	  			<Alert data="该用户名已被注册" />
     	  			{/*
     	  			  入户码
     	  			*/}
