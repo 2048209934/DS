@@ -551,6 +551,8 @@ right: 1.6rem;}
 	font:0.7rem/2rem 'Microsoft Yahei';
 	border-bottom:1px solid #ccc;
 }
+.house_list li span{ float: right;
+margin-right: 1.3rem;}
 .add_house{
 	height: 2.75rem;
 	line-height: 2.75rem;

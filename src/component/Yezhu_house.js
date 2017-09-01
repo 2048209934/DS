@@ -70,7 +70,7 @@ class Yezhuhouse extends Component {
                     {
                         this.props.data.map(function(con,i){
                             return (
-                                <li key={i}>{con.owner==1?'户主':'家属'}：{con.name}</li>
+                                <li key={i}>{con.owner==1?'户主':'家属'}：{con.name} <span className="zcmfolat">{con.owner==1?'':"注册码:"+con.homeyard}</span></li>
                             )
                         })
                     }
