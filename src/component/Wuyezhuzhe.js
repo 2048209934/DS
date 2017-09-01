@@ -14,12 +14,10 @@ import {connect} from 'react-redux';
 
 class Wuyezhuzhe extends Component {
 		componentDidMount(){
-
 			setTimeout(function(){
 				var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
 				this.props.yezhutljs(wuye[0].village,wuye[0].id)
 			}.bind(this),100)
-
 	}
   render() {
     return (
