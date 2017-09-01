@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './../css/bossindex.css';
 
-import Bosszhuzhe from './Bosszhuzhe';
+
 import Bosssteward from './Bosssteward';
 import Bossshequ from './Bossshequ';
-import Bossme from './Bossme';
+
 import  Bossdetail from './Boss_detail';
 
 import $ from 'jquery';
