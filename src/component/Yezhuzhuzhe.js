@@ -13,8 +13,10 @@ import * as action from './../action/action'
 import {connect} from 'react-redux';
 class Yezhuzhuzhe extends Component {
 	componentDidMount(){
-	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
-	this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+		setTimeout(function(){
+			var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
+			this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+		}.bind(this),100)
 	}
     /*componentDidMount(){
         if(window.addEventListener){
