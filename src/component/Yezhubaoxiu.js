@@ -46,7 +46,7 @@ class Yezhubaoxiu extends Component {
             {/*header*/}
             <p className="head" id="head">
                 <img onClick={this.go} src="../../../images/arrow.png" alt="" />
-                <span>保修</span>
+                <span>报修</span>
             </p>
              <div className="deal_top">
                 <div className='del_top'>
@@ -56,7 +56,7 @@ class Yezhubaoxiu extends Component {
                 </div>
              </div>
               <div className="deal_con">
-                  <div className="topsbtn" onClick={this.btnfn}><Btn btnVal="快捷保修" ></Btn></div>
+                  <div className="topsbtn" onClick={this.btnfn}><Btn btnVal="快捷报修" ></Btn></div>
                   <div className="organize" id="organize">
                       <textarea  className="orgin" id="con"></textarea>
                       <p>不能为空</p>

@@ -48,7 +48,7 @@ class Yezhusteward extends Component {
                                 </Link>
                                 <Link to="/yezhu/index/steward/baoxiu">
                                     <li className="clear">
-                                        <span className="left">保修</span>
+                                        <span className="left">报修</span>
                                         <span className="right">></span>
                                     </li>
                                 </Link>
