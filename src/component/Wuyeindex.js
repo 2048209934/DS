@@ -71,7 +71,7 @@ class Wuyeindex extends Component {
             <Route path="/wuye/index/guarantee" component={WuyeGuarantee}/>
             <div className="admin_con">
                 <OldMenuLink to={'/wuye/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={'../../../images/account_eight.png'} img2={'../../../images/account_server.png'}></OldMenuLink>
-              	<OldMenuLink to={'/wuye/index/steward'} label={'管家'} img1={img} img2={'../../../../images/account_six.png'}></OldMenuLink>
+              	<OldMenuLink to={'/wuye/index/steward'} label={'管家'} img1={'../../../../images/account_five.png'} img2={'../../../../images/account_six.png'}></OldMenuLink>
               	<OldMenuLink to={'/wuye/index/shequ'} label={'社区'} img1={'../../../images/account_four.png'} img2={'../../../images/account_three.png'}></OldMenuLink>
               	<OldMenuLink to={'/wuye/index/me'} label={'我'} img1={'../../../images/account_one.png'} img2={'../../../images/account_two.png'}></OldMenuLink>
             </div>

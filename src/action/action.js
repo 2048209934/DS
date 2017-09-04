@@ -1,9 +1,9 @@
 
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes,wuyeyoubaobj,fangkepost,touxiangpost,bossshequ,wytouxiangpost} from './mds'
 
-import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost} from './my'
 
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity,bosslookwuye,bossaddwuye,bossaddwuyeshow,yezhurevise} from './hcc';
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost,wyxgxx,wykzjdpjpost} from './my'
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
 
@@ -40,6 +40,18 @@ export function yzhpwyd(id,uid,village){
 export function yzcpwyd(id,uid,village){
 	return yzcpwypost(id,uid,village)
 }
+export function bosszsxqd(){
+	return bosszsxqpost()
+}
+export function bosszsxqhzd(address){
+	return bosszsxqhzpost(address)
+} 
+export function wyxgxxd(id,name,phone,sex,email){
+	return wyxgxx(id,name,phone,sex,email)
+} 
+export function wykzjdpjd(id){
+	return wykzjdpjpost(id)
+} 
 
 
 //论坛
@@ -171,4 +183,30 @@ export function wytouxiangfn(fd,id){
 // 换头像
 export function bosssqfn(){
 	return bossshequ()
+}
+//boss 查看物业 人数
+
+export function boss_lwuye(village){
+	return bosslookwuye(village)
+}
+
+
+//boss 添加物业 人数
+
+export function boss_awuye(name,village,user,pass,phone){
+	return bossaddwuye(name,village,user,pass,phone)
+}
+
+
+//boss 添加物业 人数展示
+
+export function boss_awuyeshow(village){
+	return bossaddwuyeshow(village)
+}
+
+
+//业主修改信息
+
+export function yezhu_revisemsg(id,name,phone,email,sex){
+	return yezhurevise(id,name,phone,email,sex)
 }

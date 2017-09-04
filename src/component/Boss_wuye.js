@@ -6,11 +6,15 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+
+import  Alert from './Alert';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
 
 class Bosswuye extends Component {
 	componentDidMount(){
+        var xq=window.sessionStorage.getItem('xq');
+        this.props.boss_awuyeshow(xq);
         $(".boss_con").hide()
     }
     componentWillUnmount(){
@@ -20,7 +24,18 @@ class Bosswuye extends Component {
         $(".add_wuyes").slideDown();
     }
     wysq(){
-        $(".add_wuyes").slideUp();
+        if(this.refs.username.value==''||this.refs.phone.value==''){
+            $('.mask').show();
+        }else{
+            function random(min,max){
+                return parseInt(Math.random()*((max+1)-min)+min);
+            };
+            var xq=window.sessionStorage.getItem('xq');
+            var time=new Date().getTime();
+            this.props.boss_awuye(this.refs.username.value,xq,time,random(100000,999999),this.refs.phone.value)
+            $(".add_wuyes").slideUp();
+        }
+        
     }
     fn=function(){
         window.history.go(-1);
@@ -29,6 +44,7 @@ class Bosswuye extends Component {
         return (
             <Route>
                 <div className="bj">
+                    <Alert data="请输入内容"/>
                     <div className="heads">
                         <img className="back" src="../../../images/arrow.png" onClick={this.fn} alt="" />
                         物业详情
@@ -50,26 +66,16 @@ class Bosswuye extends Component {
                         <button onClick={this.wysq.bind(this)}>确定</button>
                     </div>
                     <ul className="add_wydetail">
-                        <li>
-                            <p>物业姓名：</p>
-                            <p>联系方式：</p>
-                        </li>
-                        <li>
-                            <p>物业姓名：</p>
-                            <p>联系方式：</p>
-                        </li>
-                        <li>
-                            <p>物业姓名：</p>
-                            <p>联系方式：</p>
-                        </li>
-                        <li>
-                            <p>物业姓名：</p>
-                            <p>联系方式：</p>
-                        </li>
-                        <li>
-                            <p>物业姓名：</p>
-                            <p>联系方式：</p>
-                        </li>
+                        {
+                            this.props.data.map(function(v,i){
+                                return (
+                                    <li key={i}>
+                                        <p>物业姓名：{v.name}</p>
+                                        <p>联系方式：{v.phone}</p>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             </Route>
@@ -77,4 +83,5 @@ class Bosswuye extends Component {
     }
 }
 
-export default Bosswuye;
+
+export default connect(e=>({data:e.bossawuye}),action)(Bosswuye);

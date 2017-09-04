@@ -37,6 +37,7 @@ class Yezhuzhuzhe extends Component {
         }
     }*/
     render() {
+    		var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
         return (
             <Router>
         	    <div>
@@ -47,7 +48,7 @@ class Yezhuzhuzhe extends Component {
                                <Link to="/yezhu/index/address"> 
                                     <img src="../images/xiaoxi.png" alt="" />
                                </Link>
-                                <span>北京半岛馨苑</span>
+                                <span>{yezhu[0].address}</span>
                             </p>
 
 

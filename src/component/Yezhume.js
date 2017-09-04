@@ -59,7 +59,7 @@ class Yezhume extends Component {
                             </div> 
                             <div className="now_right">
                                 <p>当前房屋人数</p>
-                                <p>共{this.props.data.length}人</p>
+                                <p>共{this.props.ens.length}人</p>
                             </div> 
                         </div>
                         {/*list*/}
@@ -90,4 +90,4 @@ class Yezhume extends Component {
 }
 
 
-export default connect(e=>({data:e.yezhuyx}),action)(Yezhume);
+export default connect(e=>({data:e.yezhuyx,ens:e.add_yezhuhouse}),action)(Yezhume);

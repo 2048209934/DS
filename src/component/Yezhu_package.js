@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Yezhuindex from './Yezhuindex';
-import $ from 'jquery'
+import $ from 'jquery';
 import {
     BrowserRouter as Router,
     Route,
@@ -14,7 +14,6 @@ class YezhuPackage extends Component {
 		$(".admin_con").hide()
         var yezhusj=window.sessionStorage.getItem('yezhu');
         var yezhusjjson=JSON.parse(yezhusj);
-        console.log(yezhusjjson)
         this.props.yezhu_spackage(yezhusjjson[0].family,yezhusjjson[0].address);
 	}
 	componentWillUnmount(){

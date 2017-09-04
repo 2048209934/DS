@@ -204,3 +204,117 @@ export function showactivity(id,village){
 
 
 
+/*boss 查看物业 人数*/
+
+export function boss_lookwuye(data) {
+	return {
+		type:"BOSS_LOOKWUYE",
+		datac:data
+	}
+}
+export function bosslookwuye(village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/bosskwyrs",
+			data:{
+				village:village
+			},
+			success:function(data){
+				dispatch(boss_lookwuye(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}
+
+
+
+
+
+/*boss 添加物业 人数*/
+
+export function boss_addwuye(data) {
+	return {
+		type:"BOSS_ADDWUYE",
+		dataaa:data
+	}
+}
+export function bossaddwuye(name,village,user,pass,phone){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/bosstjwy",
+			data:{
+				name:name,
+				village:village,
+				user:user,
+				pass:pass,
+				phone:phone
+			},
+			success:function(data){
+				dispatch(boss_addwuye(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}
+
+
+
+
+
+/*boss 添加物业 人数 展示*/
+
+export function bossaddwuyeshow(village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/yzzhgboss",
+			data:{
+				village:village
+			},
+			success:function(data){
+				dispatch(boss_addwuye(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}
+
+
+
+
+/*业主 修改信息*/
+
+
+
+export function yezhurevise(id,name,phone,email,sex){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/owner/yhxzxx",
+			data:{
+				id:id,
+				name:name,
+				phone:phone,
+				email:email,
+				sex:sex
+			},
+			success:function(data){
+				var yzstr=JSON.stringify(data)
+				window.sessionStorage.setItem('yezhu',yzstr)
+
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}

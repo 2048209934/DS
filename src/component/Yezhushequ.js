@@ -46,7 +46,7 @@ class Yezhushequ extends Component {
                     	<div>
                    <p className="head" id="head">
                         <span>社区</span>
-                      <Link to={`/yezhu/index/shequ/tjshequ`}><span className="luntantjsc">+</span></Link>
+                      <Link to={`/yezhu/index/shequ/tjshequ`}><c className="luntantjsc">+</c></Link>
                     </p>
                     {/*content*/}
                     <ul className="contents">

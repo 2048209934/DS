@@ -31,7 +31,7 @@ class Yezhuaddress extends Component {
                 通知
             </div>
     
-              <ul className="orgin_con">
+              <ul className="orgin_con margss">
                 {console.log(this.props.data)}
                 {this.props.data.map(function(e,i){
       return        <li key={i} className="adds_con">
