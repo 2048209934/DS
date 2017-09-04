@@ -93,7 +93,7 @@ class Yezhuzhuzhe extends Component {
                     	return <Link key={i} to={`/yezhu/index/share/${e.id}`}>
                         <li id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src="./../../images/guanjia_03.jpg" alt="" />
+                                <img className="left" src={e.toux} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

@@ -399,10 +399,12 @@ modify_topbody{
 /* 个人资料 名字和住址 */
 .wuye_head{
 	width:5rem;
+	display: block;
 	height:5rem;
 	border-radius:50%;
 	background:#eee;
 	margin:0 auto;
+	margin-top: 3.1rem;
 	margin-top:1.5rem;
 }
 
@@ -641,6 +643,7 @@ modify_topbody{
 
 .add_package{
 	display:none;
+	font-size: 0.6rem;
 }
 .add_package div{
 	padding: 0 0 0 1rem;
@@ -648,7 +651,7 @@ modify_topbody{
 }
 .add_package input{
 	outline: none;
-	width: 10rem;
+	width: 72%;
 	height: 1.5rem;
 	padding: 0 0 0 0.5rem;
 	margin: 0 0 0 0.5rem;
@@ -665,3 +668,9 @@ modify_topbody{
 	border-radius: 0.5rem;
 	outline: none;
 }
+.wuyemails{ width: 75%;
+margin-left: 0.6rem;
+height: 1.5rem;
+	border:1px solid #ccc;
+	outline: none;
+	border-radius: 0.5rem;}

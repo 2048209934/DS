@@ -35,7 +35,7 @@ export function add_package(data) {
 		datas:data
 	}
 }
-export function addpackage(name,address,phone,delivery){
+export function addpackage(name,address,phone,delivery,village){
 	return dispatch=>{
 		return $.ajax({
 			type:"post",
@@ -44,7 +44,8 @@ export function addpackage(name,address,phone,delivery){
 				name:name,
 				address:address,
 				phone:phone,
-				delivery:delivery
+				delivery:delivery,
+				village:village
 			},
 			success:function(data){
 				dispatch(add_package(data))

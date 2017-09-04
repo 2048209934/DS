@@ -14,7 +14,7 @@ class Yezhuserves extends Component {
 	componentDidMount(){
 		var yezhusj=window.sessionStorage.getItem('yezhu')
 		var yezhusjjson=JSON.parse(yezhusj)
-		this.props.yzdpwyd(yezhusjjson[0].address)
+		this.props.yzdpwyd(yezhusjjson[0].address,yezhusjjson[0].id)
 		$(".admin_con").hide()
 	}
 	componentWillUnmount(){
@@ -39,12 +39,12 @@ class Yezhuserves extends Component {
     return (
     	<div>
             {/*header*/}
-            <p className="head" id="head">
+            <p className="head" id="head">{console.log(this.props.data)}
                 <img onClick={this.go} src="../../../images/arrow.png" alt="" />
                 <span>他们为你服务</span>
             </p>
             <div className="kong"></div>
-            {
+           {
             	this.props.data.map(function(v,i){
             		return <div key={i} className="serves clear">
             			<div className="serves_left left">
@@ -54,13 +54,13 @@ class Yezhuserves extends Component {
                     <p>{v.name}</p>
                     <div className="zan clear">
                         <p className="left zan_first clear" onClick={this.chap.bind(this,v.id)}>
-                            <img className="left" src={(v.cha.split("?").indexOf(""+yezhusjjson[0].id)==-1)?"../../../images/cw.png":"../../../images/cy.png"} alt="" />
+                            <img className="left" src={v.chas=="false"?"../../../images/cw.png":"../../../images/cy.png"} alt="" />
                             <span className="left">
                             {(v.cha==null||v.cha=='')?"0":v.cha.split("?").length}
                             </span>
                         </p>
                         <p className="left zan_second clear" onClick={this.haop.bind(this,v.id)}>
-                            <img className="left" src={(v.hao.split("?").indexOf(""+yezhusjjson[0].id)==-1)?"../../../images/hw.png":"../../../images/hy.png"} alt="" />
+                            <img className="left" src={v.haos=="false"?"../../../images/hw.png":"../../../images/hy.png"} alt="" />
                             <span className="left">
                             {(v.hao==null||v.hao=='')?"0":v.hao.split("?").length}
                             </span>
@@ -69,8 +69,7 @@ class Yezhuserves extends Component {
                 </div>
             		</div>
             	}.bind(this))
-            }
-            
+           }
         </div>  	
     )
   }

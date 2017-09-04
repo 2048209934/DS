@@ -32,11 +32,12 @@ class Yezhuluntantj extends Component {
 				}
     luntantjfs=function(){
     	if($(".lttext").val()!=""){
-  	    	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
+  	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
   	//console.log(this.props.data.length>0?this.props.data.join("?"):"")
   	var img=this.props.data.length>0?this.props.data.join("?"):""
   	this.props.yezhultfbfns([])
-  	this.props.yezhultfbsn(yezhu[0].name,$(".lttext").val(),yezhu[0].address,yezhu[0].id,img)	
+  	this.props.yezhultfbsn(yezhu[0].name,$(".lttext").val(),yezhu[0].address,yezhu[0].id,img,yezhu[0].imgs)	
+  	//console.log(yezhu[0].imgs)
  	}
     }
     render() {

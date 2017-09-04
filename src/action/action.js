@@ -1,5 +1,5 @@
 
-import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
+import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes,wuyeyoubaobj,fangkepost,touxiangpost,bossshequ,wytouxiangpost} from './mds'
 
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity} from './hcc';
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost} from './my'
@@ -31,8 +31,8 @@ export function wuyegllist(address){
 export function wuyegltj(address,name,sex,phone,family,homeyard){
 	return wuyegltjpost(address,name,sex,phone,family,homeyard)
 }
-export function yzdpwyd(village){
-	return yzdpwypost(village)
+export function yzdpwyd(village,uid){
+	return yzdpwypost(village,uid)
 }
 export function yzhpwyd(id,uid,village){
 	return yzhpwypost(id,uid,village)
@@ -70,8 +70,12 @@ export function yezhultfbfn(fd){  //论坛图片
 export function yezhultfbfns(e){  //图片清空
 	return luntantupians(e)
 }
-export function yezhultfbsn(name,con,village,uid,img){  //论坛发布
-	return yezhuluntantjes(name,con,village,uid,img)
+export function yezhultfbsn(name,con,village,uid,img,toux){  //论坛发布
+	return yezhuluntantjes(name,con,village,uid,img,toux)
+}
+//物业邮包编辑
+export function wuyeyoubaobjfn(village){
+	return wuyeyoubaobj(village)
 }
 //活动
 export function wuyehd(village){
@@ -104,8 +108,8 @@ export function wuye_bx(con,village,address){
 }
 
 
-export function wuye_addpackage(name,address,phone,delivery){
-	return addpackage(name,address,phone,delivery)
+export function wuye_addpackage(name,address,phone,delivery,village){
+	return addpackage(name,address,phone,delivery,village)
 }
 
 export function wuye_showpackage(address){
@@ -148,4 +152,23 @@ export function wuye_boxs(village){
 // 业主  已参加的活动  展示
 export function yezhu_activity(id,village){
 	return showactivity(id,village)
+}
+
+
+// 业主  访客邀请
+export function fangkefn(title,name){
+	return fangkepost(title,name)
+}
+// 换头像
+export function touxiangfn(fd,id){
+	return touxiangpost(fd,id)
+}
+// 物业换头像
+export function wytouxiangfn(fd,id){
+	return wytouxiangpost(fd,id)
+}
+//boss社区
+// 换头像
+export function bosssqfn(){
+	return bossshequ()
 }

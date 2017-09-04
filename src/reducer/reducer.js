@@ -9,7 +9,7 @@ import {} from './my';
 
 
 
-import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq,yezhuluntanpl,pinglunhuifu,luntantupian} from './mds';
+import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq,yezhuluntanpl,pinglunhuifu,luntantupian,wuyeyoubaobjs,yezhuyx,bosslt,wuyeyx} from './mds';
 
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel,yezhuactivity} from './hcc';
 import {yezhudata,wuyedata,wuyegllb,yzpjwydata} from './my';
@@ -46,4 +46,8 @@ export default combineReducers({
 	yezhuluntanpl,//评论展示
 	pinglunhuifu,
 	luntantupian,//论坛图片
+	wuyeyoubaobjs,
+	yezhuyx,
+	bosslt,
+	wuyeyx,
 })

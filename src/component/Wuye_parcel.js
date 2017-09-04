@@ -14,6 +14,7 @@ class WuyeParcel extends Component {
         var wuyesj=window.sessionStorage.getItem('wuye');
         var wuyesjjson=JSON.parse(wuyesj);
         this.props.wuye_showpackage(wuyesjjson[0].village);
+        this.props.wuyeyoubaobjfn(wuyesjjson[0].village)
     }
     ok=function(){
         window.history.go(-1)
@@ -22,13 +23,15 @@ class WuyeParcel extends Component {
         $(".add_package").slideDown();
     }
     wysq(){
-        var wuyesj=window.sessionStorage.getItem('wuye');
+    	if(this.refs.username.value!=""&&this.refs.phone.value!=""&&this.refs.delivery.value!=""&&$("#wuyeselect").val()!=""){
+    	  var wuyesj=window.sessionStorage.getItem('wuye');
         var wuyesjjson=JSON.parse(wuyesj);
-        this.props.wuye_addpackage(this.refs.username.value,wuyesjjson[0].village,this.refs.phone.value,this.refs.delivery.value);
+        this.props.wuye_addpackage(this.refs.username.value,wuyesjjson[0].village,this.refs.phone.value,this.refs.delivery.value,$("#wuyeselect").val());
         $(".add_package").slideUp();
         this.refs.username.value='';
         this.refs.phone.value='';
-        this.refs.delivery.value='';
+        this.refs.delivery.value='';	
+    	}
     }
     click(id){
         var wuyesj=window.sessionStorage.getItem('wuye');
@@ -37,7 +40,7 @@ class WuyeParcel extends Component {
     }
     render() {
         return (
-    	    <div>
+    	    <div>{console.log(this.props.mph)}
     	  	    <div className="notice_editor">
                     <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
                     <span>邮包</span>
@@ -51,6 +54,15 @@ class WuyeParcel extends Component {
                     <div>
                         <span>住户姓名</span>
                         <input ref="username" type="text" placeholder="户主姓名" />
+                    </div>
+                    <div>
+                        <span>  门  牌  号  </span>
+                        <select name="" id="wuyeselect" className="wuyemails">
+                        {this.props.mph.map(function(v,i){
+                        	return <option  key={i}>{v.family}</option>
+                        })}
+			
+		</select>
                     </div>
                     <div>
                         <span>联系方式</span>
@@ -73,6 +85,7 @@ class WuyeParcel extends Component {
                             return (
                                 <div key={i} className="user_message">
                                     <p>收件人：{con.name}</p>
+                                    <p>门牌号：{con.village}</p>
                                     <p>电话：{con.phone}</p>
                                     <p>快递名称：{con.delivery}</p>
                                     <p>收货时间：{con.time.substr(0,19).split("T").join("   ")}</p>
@@ -89,4 +102,4 @@ class WuyeParcel extends Component {
 }
 
 
-export default connect(e=>({data:e.add_wuyepackage}),action)(WuyeParcel);
+export default connect(e=>({data:e.add_wuyepackage,mph:e.wuyeyoubaobjs}),action)(WuyeParcel);

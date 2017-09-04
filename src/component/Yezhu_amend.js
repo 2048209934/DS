@@ -20,6 +20,8 @@ class Yezhuamend extends Component {
     window.history.go(-1)
   }
   render() {
+  	var yezhusj=window.sessionStorage.getItem('yezhu');
+        var yezhusjjson=JSON.parse(yezhusj);
     return (
         <Router>
     	  	<div className="revise">
@@ -31,7 +33,7 @@ class Yezhuamend extends Component {
                         </p>
                         <div className="SC">
                             <div className="daturn_bottom">
-                                <div className="wuye_head"></div>
+                            <img className="wuye_head" src={yezhusjjson[0].imgs}/>
                                 <p>游客</p>
                                 <p>大圣城市花园</p>
                             </div>

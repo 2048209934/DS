@@ -45,8 +45,8 @@ class Bossindex extends Component {
     	  	<Route path="/boss/index/shequ" component={Bossshequ} />
           <Route path="/boss/index/detail" component={Bossdetail}/>
 	         <div className="boss_con">
-                <OldMenuLink to={'/boss/index'} activeOnlyWhenExact={true} label={'管家'} img1={'../images/account_eight.png'} img2={'../images/account_server.png'}></OldMenuLink>
-                <OldMenuLink to={'/boss/index/shequ'} label={'社区'} img1={'../images/account_four.png'} img2={'../images/account_three.png'}></OldMenuLink>
+                <OldMenuLink to={'/boss/index'} activeOnlyWhenExact={true} label={'管家'} img1={'../../images/account_eight.png'} img2={'../../../images/account_server.png'}></OldMenuLink>
+                <OldMenuLink to={'/boss/index/shequ'} label={'社区'} img1={'../../images/account_four.png'} img2={'../../images/account_three.png'}></OldMenuLink>
             </div>
     	  	{/*<Link to="/boss/index">住这儿</Link>
     	  	<Link to="/boss/index/steward">管家</Link>
