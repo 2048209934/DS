@@ -350,3 +350,30 @@ export function bosszsxqhzpost(address){
 		});	
 	}
 }
+
+
+
+/*物业修改信息*/
+
+export function wyxgxx(id,name,phone,sex,email){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/wyxgxx",
+			data:{
+				id:id,
+				name:name,
+				phone:phone,
+				sex:sex,
+				email:email
+			},
+			success:function(data){
+				var wuyestr=JSON.stringify(data)
+				window.sessionStorage.setItem('wuye',wuyestr)
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}

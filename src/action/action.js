@@ -2,7 +2,7 @@
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
 
 import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity,bosslookwuye,bossaddwuye,bossaddwuyeshow} from './hcc';
-import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost} from './my'
+import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost,wyxgxx} from './my'
 
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
 
@@ -45,6 +45,9 @@ export function bosszsxqd(){
 }
 export function bosszsxqhzd(address){
 	return bosszsxqhzpost(address)
+} 
+export function wyxgxxd(id,name,phone,sex,email){
+	return wyxgxx(id,name,phone,sex,email)
 } 
 
 
