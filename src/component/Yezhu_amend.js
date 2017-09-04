@@ -19,6 +19,9 @@ class Yezhuamend extends Component {
   go=function(){
     window.history.go(-1)
   }
+  back=function(){
+    window.location.href="http://localhost:3000/yezhu"
+  }
   render() {
     return (
         <Router>
@@ -39,9 +42,12 @@ class Yezhuamend extends Component {
                         <Link to="/yezhu/index/me/amend/make">
                              <div className="put">修改信息</div>
                         </Link>
+                        <button onClick={this.back} className="quit">退出登录</button>
+                        
                     </div>
                  )} />
                 <Route path="/yezhu/index/me/amend/make" component={Yezhumake}/>  
+                
             </div>
         </Router>
     );

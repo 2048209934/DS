@@ -1,7 +1,7 @@
 
 import {wuyehdpost,wuyehdtjpost,yezhuhdpost,yezhuhdposts,yezhultjspost,yezhultxqpost,yezhultzan,yezhultpinglun,pinglunhuifu,pinglunshuru,yezhupinglunss,yezhuluntanfb,luntantupians,yezhuluntantjes} from './mds'
 
-import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity,bosslookwuye,bossaddwuye,bossaddwuyeshow} from './hcc';
+import {spackage,addpackage,showpackage,showhouse,addhouse,wuyemakesure,showactivity,bosslookwuye,bossaddwuye,bossaddwuyeshow,yezhurevise} from './hcc';
 import {yezhudlpost,yezhurhmpost,yezhuzcpost,wuyedlpost,wuyegllistpost,wuyegltjpost,yzdpwypost,yzhpwypost,yzcpwypost,bossdlpost,bosszsxqpost,bosszsxqhzpost} from './my'
 
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddress,wuyejieshou,wuyenotices,wuyeboxs,yezhuaddresss} from './ghj'
@@ -177,4 +177,11 @@ export function boss_awuye(name,village,user,pass,phone){
 
 export function boss_awuyeshow(village){
 	return bossaddwuyeshow(village)
+}
+
+
+//业主修改信息
+
+export function yezhu_revisemsg(id,name,phone,email,sex){
+	return yezhurevise(id,name,phone,email,sex)
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  Wuyemake from './Wuye_make';
-import $ from 'jquery'
+import $ from 'jquery';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,7 +9,7 @@ import {
 
 
 class Wuyeamend extends Component {
-    componentDidMount(){
+  componentDidMount(){
     $(".admin_con").hide()
   }
   componentWillUnmount(){
@@ -17,6 +17,9 @@ class Wuyeamend extends Component {
   }
   go=function(){
     window.history.go(-1)
+  }
+  back=function(){
+    window.location.href="http://localhost:3000/wuye"
   }
   render() {
     return (
@@ -36,6 +39,7 @@ class Wuyeamend extends Component {
                 <Link to="/wuye/index/me/amend/make">
                      <div className="put">修改信息</div>
                 </Link>
+                <button onClick={this.back} className="quit">退出登录</button>
             </div>
              )} />
             <Route path="/wuye/index/me/amend/make" component={Wuyemake}/>  

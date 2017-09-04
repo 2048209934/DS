@@ -432,7 +432,19 @@ modify_topbody{
 	line-height:1.8rem;
 	text-align:center;
 	color:#fff;
-	font-size:0.6rem;
+	font-size:0.8rem;
+}
+.quit{
+	width:10.75rem;
+	height:1.98rem;
+	background:#ed860a;
+	border-radius:0.4rem 0.4rem;
+	font:0.8rem/1.98rem 'Microsoft Yahei';
+	text-align:center;
+	color:#fff;
+	margin:1rem 0 0 2.65rem;
+	outline:none;
+	border:none;
 }
 
 /* 编辑资料 modify */
@@ -459,6 +471,10 @@ modify_topbody{
 
 
 /* 每个修改的input框 */
+.modify input{
+	outline:none;
+	border:none;
+}
 .modify input[type="text"]{
 	width:100%;
 	height:2rem;

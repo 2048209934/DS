@@ -286,3 +286,34 @@ export function bossaddwuyeshow(village){
 		})
 	}
 }
+
+
+
+
+/*业主 修改信息*/
+
+
+
+export function yezhurevise(id,name,phone,email,sex){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/owner/yhxzxx",
+			data:{
+				id:id,
+				name:name,
+				phone:phone,
+				email:email,
+				sex:sex
+			},
+			success:function(data){
+				var yzstr=JSON.stringify(data)
+				window.sessionStorage.setItem('yezhu',yzstr)
+
+			},
+			error:function(){
+				alert("0.0")
+			}
+		})
+	}
+}
