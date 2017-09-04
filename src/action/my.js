@@ -22,7 +22,6 @@ export function yezhudlpost(dluser,dlpass){
 				if(data.length==0){
 					dispatch(yezhuid(0))
 					window.sessionStorage.setItem('yezhu',0)
-					sessionStorage
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
 					dispatch(yezhuid(0))
 					window.sessionStorage.setItem('yezhu',0)
