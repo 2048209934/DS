@@ -279,7 +279,7 @@ export function luntantijiao(data){
 		luntantupian:data
 	}
 }
-export function yezhuluntantjes(name,con,village,uid,img){
+export function yezhuluntantjes(name,con,village,uid,img,toux){
 	return dispatch=>{
 		return $.ajax({
 			type:"post",
@@ -289,11 +289,172 @@ export function yezhuluntantjes(name,con,village,uid,img){
 				con:con,
 				village:village,
 				uid:uid,
-				img:img
+				img:img,
+				toux:toux
 			},
 			success:function(data){
 			dispatch(yezhultxq(data))	
 			window.location.href="http://localhost:3000/yezhu/index/shequ"
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+//物业邮包编辑
+export function wuyeybbj(data){
+	return {
+		type:"WUYEYOUBAOBJ",
+		wuyeyoubaobj:data
+	}
+}
+export function wuyeyoubaobj(village){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/mail/wymailmph",
+			data:{
+				village:village,
+			},
+			success:function(data){
+				dispatch(wuyeybbj(data))
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+//访客邀请
+
+export function fangkepost(title,name){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/code/codess",
+			data:{
+				title:title,
+				name:name
+			},
+			success:function(data){
+			console.log(data)
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}
+
+
+
+//换头像
+export function yezhutx(data){
+	return {
+		type:"YEZHITOUXIANG",
+		yezhutouxiang:data
+	}
+}
+export function touxiangpost(fd,id){
+	var aa=fd
+	var bb=id
+	var imgs=null
+	return dispatch=>{
+		return $.ajax({
+				type:"post",
+				url:"http://localhost:8100/owner/touxiangs",
+				async:true,
+				data:fd,
+				contentType:false,
+				processData:false,
+				success:function(e){
+				
+				imgs=e
+				$.ajax({
+				type:"post",
+				url:"http://localhost:8100/owner/touxiangcharu",
+				async:true,
+				data:{
+				id:bb,
+				img:imgs
+			},
+				success:function(s){
+			var yezhustr=JSON.stringify(s)
+			window.sessionStorage.setItem('yezhu',yezhustr)
+			dispatch(yezhutx(s[0].imgs))
+      			}
+			});
+      			}
+			});
+	}
+}
+
+//物业
+export function wuyetx(data){
+	return {
+		type:"WUYETOUX",
+		wuyetoux:data
+	}
+}
+export function wytouxiangpost(fd,id){
+	var aa=fd
+	var bb=id
+	var imgs=null
+	return dispatch=>{
+		return $.ajax({
+				type:"post",
+				url:"http://localhost:8100/property/touxiangs",
+				async:true,
+				data:fd,
+				contentType:false,
+				processData:false,
+				success:function(e){
+				
+				imgs=e
+				$.ajax({
+				type:"post",
+				url:"http://localhost:8100/property/touxiangcharu",
+				async:true,
+				data:{
+				id:bb,
+				img:imgs
+			},
+				success:function(s){
+					console.log(s)
+			var yezhustr=JSON.stringify(s)
+			window.sessionStorage.setItem('wuye',yezhustr)
+			dispatch(wuyetx(s[0].toux))
+      			}
+			});
+      			}
+			});
+	}
+}
+
+
+
+//boss luntan
+export function bossstat(data){
+	return {
+		type:"BOSSSTAT",
+		bossstass:data
+	}
+}
+export function bossshequ(){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/boss/bosslunt",
+			data:{
+				
+			},
+			success:function(data){
+			dispatch(bossstat(data))
 			},
 			error:function(){
 				alert("0.0")

@@ -1,0 +1,15 @@
+.erweima{ padding-top: 3.6rem;}
+.ermainput{ width: 90%;
+border-radius: 5px;
+border: 1px solid #ccc;
+display: block;
+margin: 0 auto;
+text-align: center;
+height: 1.6rem;
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;}
+.erweiname{text-align: center;
+font-family: "微软雅黑";
+font-size: 0.8rem;}
+.imgsboxs img{ width: 60%;
+display: block;}

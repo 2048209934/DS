@@ -46,7 +46,7 @@ class Yezhushequ extends Component {
                     	<div>
                    <p className="head" id="head">
                         <span>社区</span>
-                      <Link to={`/yezhu/index/shequ/tjshequ`}><span className="luntantjsc">+</span></Link>
+                      <Link to={`/yezhu/index/shequ/tjshequ`}><c className="luntantjsc">+</c></Link>
                     </p>
                     {/*content*/}
                     <ul className="contents">
@@ -54,7 +54,7 @@ class Yezhushequ extends Component {
                     	return <Link key={i} to={`/yezhu/index/shequ/share/${e.id}`}>
                         <li id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src="./../../images/guanjia_03.jpg" alt="" />
+                                <img className="left" src={e.toux} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

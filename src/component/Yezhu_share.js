@@ -55,7 +55,7 @@ class YezhuShare extends Component {
                 <div className="live">
                     <div className="lives">
                         <p className="pl_detail">
-                            <img className="left" src="../../../../images/guanjia_03.jpg" alt="" />
+                            <img className="left" src={this.props.data.length==1?this.props.data[0].toux:""} alt="" />
                             <span className="left">{this.props.data.length==1?this.props.data[0].name:""}</span>
                         </p>
                         <p className="pl_content">

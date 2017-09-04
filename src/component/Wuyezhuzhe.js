@@ -72,7 +72,7 @@ class Wuyezhuzhe extends Component {
                     {this.props.data.slice(0,3).map(function(e,i){
                     	return <li key={i} id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src="./../../images/guanjia_03.jpg" alt="" />
+                                <img className="left" src={e.toux} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

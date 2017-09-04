@@ -22,6 +22,8 @@ class Wuyeamend extends Component {
     window.location.href="http://localhost:3000/wuye"
   }
   render() {
+  	var yezhusj=window.sessionStorage.getItem('wuye');
+    var yezhusjjson=JSON.parse(yezhusj);
   	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
     return (
         <Router>
@@ -33,7 +35,7 @@ class Wuyeamend extends Component {
                     <span>个人资料</span>
                 </div>
                 <div className="daturn_bottom">
-                    <div className="wuye_head"></div>
+                   <img className="wuye_head" src={yezhusjjson[0].toux}/>
                     <p>{wuye[0].name}</p>
                     <p>{wuye[0].village}</p>
                 </div>

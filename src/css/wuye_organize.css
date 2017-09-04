@@ -47,8 +47,9 @@ margin-bottom: 1rem;}
 /* 清除浮动 */
 .orgin_con{
 	clear:both;
+	
 }
-
+.margss{ padding-top: 3rem;}
 /* 发布的内容的盒子 */
 .huodonguls{ padding-top: 3.6rem;}
 .orgin_box{	

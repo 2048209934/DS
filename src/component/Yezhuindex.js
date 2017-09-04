@@ -8,7 +8,7 @@ import  YezhuAccept from './Yezhu_accept';
 import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
 import OldMenuLink from './Navs';
-
+import Yezhuadd from './Yezhu_address';
 
 import $ from 'jquery';
 import {
@@ -66,14 +66,14 @@ class Yezhuindex extends Component {
               <Route path="/yezhu/index/accept" component={YezhuAccept}/>
               <Route path="/yezhu/index/package" component={YezhuPackage}/>
               <Route path="/yezhu/index/share" component={YezhuShare}/>
-
+              <Route path="/yezhu/index/address" component={Yezhuadd}/>
            
     
               <div className="admin_con">
-              	<OldMenuLink to={'/yezhu/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={'../../images/account_eight.png'} img2={'../../images/account_server.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/steward'} label={'管家'} img1={'../../images/account_five.png'} img2={'../../images/account_six.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/shequ'} label={'社区'} img1={'../../images/account_four.png'} img2={'../../images/account_three.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/me'} label={'我'} img1={'../../images/account_one.png'} img2={'../../images/account_two.png'}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={'../../../images/account_eight.png'} img2={'../../../images/account_server.png'}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/steward'} label={'管家'} img1={'../../../images/account_five.png'} img2={'../../../images/account_six.png'}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/shequ'} label={'社区'} img1={'../../../images/account_four.png'} img2={'../../../images/account_three.png'}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/me'} label={'我'} img1={'../../../images/account_one.png'} img2={'../../../images/account_two.png'}></OldMenuLink>
             </div>
           </div>    
       </Router>

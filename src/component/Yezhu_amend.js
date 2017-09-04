@@ -23,6 +23,8 @@ class Yezhuamend extends Component {
     window.location.href="http://localhost:3000/yezhu"
   }
   render() {
+  	var yezhusj=window.sessionStorage.getItem('yezhu');
+    var yezhusjjson=JSON.parse(yezhusj);
   	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
     return (
         <Router>
@@ -35,7 +37,7 @@ class Yezhuamend extends Component {
                         </p>
                         <div className="SC">
                             <div className="daturn_bottom">
-                                <div className="wuye_head"></div>
+                            <img className="wuye_head" src={yezhusjjson[0].imgs}/>
                                 <p>{yezhu[0].name}</p>
                                 <p>{yezhu[0].address}</p>
                             </div>

@@ -66,3 +66,43 @@ export function luntantupian(luntantupian=[],action){
 		return luntantupian
 	}
 }
+
+
+//物业门牌号选择
+export function wuyeyoubaobjs(wuyeyoubaobj=[],action){
+	switch(action.type){
+		case 'WUYEYOUBAOBJ':
+		return action.wuyeyoubaobj
+		default:
+		return wuyeyoubaobj
+	}
+}
+
+//头像
+export function yezhuyx(yezhutx="",action){
+	switch(action.type){
+		case 'YEZHITOUXIANG':
+		return action.yezhutouxiang
+		default:
+		return yezhutx
+	}
+}
+//头像
+export function wuyeyx(wuyetx="",action){
+	switch(action.type){
+		case 'WUYETOUX':
+		return action.wuyetoux
+		default:
+		return wuyetx
+	}
+}
+
+//bossluntan
+export function bosslt(bosslunt=[],action){
+	switch(action.type){
+		case 'BOSSSTAT':
+		return action.bossstass
+		default:
+		return bosslunt
+	}
+}

@@ -212,13 +212,14 @@ export function yzdpwy(data){
 		yepjwydata:data
 	}
 }
-export function yzdpwypost(village){
+export function yzdpwypost(village,uid){
 	return dispatch=>{
 		return $.ajax({
 			type:"post",
 			url:config.url+"/property/yzzhgxqwy",
 			data:{
-				village:village
+				village:village,
+				uid:uid
 			},
 			success:function(data){
 				dispatch(yzdpwy(data))
@@ -240,6 +241,7 @@ export function yzhpwypost(id,uid,village){
 				village:village
 			},
 			success:function(data){
+				console.log(data)
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
@@ -259,6 +261,7 @@ export function yzcpwypost(id,uid,village){
 				village:village
 			},
 			success:function(data){
+				console.log(data)
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
