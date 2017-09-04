@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Yezhuindex from './Yezhuindex';
-import $ from 'jquery'
+import $ from 'jquery';
 import {
     BrowserRouter as Router,
     Route,

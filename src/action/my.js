@@ -377,3 +377,31 @@ export function wyxgxx(id,name,phone,sex,email){
 		});	
 	}
 }
+
+
+
+/*物业看自己的评价*/
+
+export function wykzjdpjz(data){
+	return {
+		type:"WYKZJDPJZ",
+		wykzjdpjsdata:data
+	}
+}
+export function wykzjdpjpost(id){
+	return dispatch=>{
+		return $.ajax({
+			type:"post",
+			url:config.url+"/property/wyckzjdqj",
+			data:{
+				id:id
+			},
+			success:function(data){
+				dispatch(wykzjdpjz(data))			
+			},
+			error:function(){
+				alert("0.0")
+			}
+		});	
+	}
+}

@@ -9,19 +9,22 @@
 }
 
 /* 保修或未保修 */
+.guarantee_top p{
+	font-family:"Microsoft YaHei";
+	color:#aeaeae;
+	font-size:0.6rem;
+}
 .guarantee_top p:first-of-type{
 	float:left;
 	margin-left:0.85rem;
-	font-size:0.6rem;
-	color:#73b8fc;
-	font-family:"Microsoft YaHei";
-	font-weight:600;
 }
 .guarantee_top p:nth-of-type(2){
 	float:right;
 	margin-right:0.85rem;
-	font-size:0.6rem;
-	color:#aeaeae;
+}
+.guarantee_top p.cl{
+	color:#73b8fc;
+	font-weight:600;
 }
 
 /* 未处理的保修信息*/

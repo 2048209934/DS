@@ -109,6 +109,7 @@ class Yezhu extends Component {
     	  		</div>
            )} />  
           <Route path="/yezhu/index" component={Yezhuindex} />
+          
         </div>
     	 </Router> 
     );

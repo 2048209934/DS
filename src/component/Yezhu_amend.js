@@ -19,7 +19,11 @@ class Yezhuamend extends Component {
   go=function(){
     window.history.go(-1)
   }
+  back=function(){
+    window.location.href="http://localhost:3000/yezhu"
+  }
   render() {
+  	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
     return (
         <Router>
     	  	<div className="revise">
@@ -32,16 +36,19 @@ class Yezhuamend extends Component {
                         <div className="SC">
                             <div className="daturn_bottom">
                                 <div className="wuye_head"></div>
-                                <p>游客</p>
-                                <p>大圣城市花园</p>
+                                <p>{yezhu[0].name}</p>
+                                <p>{yezhu[0].address}</p>
                             </div>
                         </div>
                         <Link to="/yezhu/index/me/amend/make">
                              <div className="put">修改信息</div>
                         </Link>
+                        <button onClick={this.back} className="quit">退出登录</button>
+                        
                     </div>
                  )} />
                 <Route path="/yezhu/index/me/amend/make" component={Yezhumake}/>  
+                
             </div>
         </Router>
     );

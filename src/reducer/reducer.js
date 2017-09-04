@@ -12,7 +12,7 @@ import {} from './my';
 import {huodong,yezhuhuodong,yezhuluntan,yezhuluntanxq,yezhuluntanpl,pinglunhuifu,luntantupian} from './mds';
 
 import {a,add_wuyepackage,add_yezhuhouse,wuye_makesureparcel,yezhuactivity,bosslwuye,bossawuye} from './hcc';
-import {yezhudata,wuyedata,wuyegllb,yzpjwydata,bosszsxqdata,bosszsxqhzdata} from './my';
+import {yezhudata,wuyedata,wuyegllb,yzpjwydata,bosszsxqdata,bosszsxqhzdata,wykzjdpjdata} from './my';
 import {wuyenotice,wuyeantee,wuyebaoxiu,yezhuaddres} from './ghj';
 
 /*
@@ -27,6 +27,7 @@ function a(state=[],action){
 */
 
 export default combineReducers({
+	wykzjdpjdata,
 	bosszsxqhzdata,
 	bosszsxqdata,
 	yzpjwydata,

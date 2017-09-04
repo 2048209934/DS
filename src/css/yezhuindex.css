@@ -21,6 +21,16 @@ body{
 	position:absolute;
 	top:0.9rem;
 	left:1rem;
+	z-index: 99;
+}
+.head span{
+	position:absolute;
+	color: #333;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size:0.8rem;
 }
 /* banner */
 .banner img{
@@ -266,7 +276,9 @@ body{
 	position: absolute;
 	bottom:1.2rem;
 	text-align:center;
-	left:35%;
+	left:0;
+	right: 0;
+	margin: 0 auto;
 }
 .myself_word p:first-of-type{
 	color:#fcfbf9;
@@ -624,3 +636,4 @@ margin-right: 1.3rem;}
 	box-shadow: 0px 3px 7px 3px #c2bfbf;
 	margin-top:0.8rem;
 }
+

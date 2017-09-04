@@ -56,3 +56,13 @@ export function bosszsxqhzdata(state=[],action){
 		return state
 	}
 }
+
+
+export function wykzjdpjdata(state=null,action){
+	switch(action.type){
+		case 'WYKZJDPJZ':
+		return action.wykzjdpjsdata
+		default:
+		return state
+	}
+}

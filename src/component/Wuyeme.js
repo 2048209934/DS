@@ -6,10 +6,17 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import * as action from './../action/action'
+import {connect} from 'react-redux';
 
 
 class Wuyeme extends Component {
+	componentDidMount(){
+		var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
+		this.props.wykzjdpjd(wuye[0].id)
+	}
   render() {
+  	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
     return (
       <Router>
     	  <div>
@@ -21,8 +28,8 @@ class Wuyeme extends Component {
                           <input type="file" name="" id="file"/>
                       </a>
                       <div className="myself_word">
-                          <p>游客</p>
-                          <p>大圣城市花园</p>
+                          <p>{wuye[0].name}</p>
+                          <p>{wuye[0].village}</p>
                       </div>
                       <Link to="/wuye/index/me/amend">
                            <div className="arrow">></div>
@@ -30,12 +37,12 @@ class Wuyeme extends Component {
                   </div>
                   <div className="myself_nows">
                       <div className="now_left">
-                          <p>评价</p>
-                          <p>内容</p>
+                          <p>好评</p>
+                          <p>{this.props.data==null?'':(this.props.data[0].hao==''?'0':this.props.data[0].hao.split("?").length)}</p>
                       </div> 
                       <div className="now_right">
-                          <p>评价分数</p>
-                          <p>0</p>
+                          <p>差评</p>
+                          <p>{this.props.data==null?'':(this.props.data[0].cha==''?'0':this.props.data[0].cha.split("?").length)}</p>
                       </div> 
                   </div>
                 </div>
@@ -47,4 +54,4 @@ class Wuyeme extends Component {
   }
 }
 
-export default Wuyeme;
+export default connect(e=>({data:e.wykzjdpjdata}),action)(Wuyeme);

@@ -38,6 +38,7 @@ class App extends Component {
             <Route path="/boss" component={Boss} />
             <Route path="/wuye" component={Wuye} />
             <Route path="/yezhu" component={Yezhu} />
+            
         </div>
       </Router>
     );

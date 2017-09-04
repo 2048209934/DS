@@ -13,7 +13,7 @@ import * as action from './../action/action'
 import {connect} from 'react-redux';
 
 class Wuyezhuzhe extends Component {
-		componentDidMount(){
+	componentDidMount(){
 			setTimeout(function(){
 				var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
 				if(wuye!=0){
@@ -22,6 +22,7 @@ class Wuyezhuzhe extends Component {
 			}.bind(this),100)
 	}
   render() {
+  	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
     return (
       <Router>
     	  <div className="property">
@@ -31,7 +32,7 @@ class Wuyezhuzhe extends Component {
                           <div className="banner">
                                  <img src="../images/banner_one.jpg" alt=""/>
                               <div className="banner_box">
-                                  <span className="banner_word">北京爱这城D-shen</span>
+                                  <span className="banner_word">{wuye==null?'':wuye[0].village}</span>
                                   <span className="banner_news"><img src="../images/xiaoxi.png" alt=""/></span>
                               </div>
                           </div>

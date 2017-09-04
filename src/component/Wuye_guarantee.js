@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './../css/wuye_guarantee.css';
-import wuyealready from './wuye_already';
 import $ from 'jquery'
 
 import {
@@ -14,9 +13,24 @@ import {connect} from 'react-redux';
 
 class WuyeGuarantee extends Component {
   componentDidMount(){
+  	$(".guarantees").show()
+  	$(".already").hide()
+  	$(".guarantee_top p").eq(0).click(function(){
+  		$(".guarantees").show()
+  		$(".already").hide()
+  		$(".guarantee_top p").removeClass("cl")
+  		$(this).addClass("cl")
+  	})
+  	$(".guarantee_top p").eq(1).click(function(){
+  		$(".guarantees").hide()
+  		$(".already").show()
+  		$(".guarantee_top p").removeClass("cl")
+  		$(this).addClass("cl")
+  	})
     $(".admin_con").hide()
     var bb=JSON.parse(window.sessionStorage.getItem("wuye"))
     this.props.yezhu_antee(bb[0].village)
+    this.props.wuye_boxs(bb[0].village)
   }
   componentWillUnmount(){
     $(".admin_con").show()
@@ -39,14 +53,13 @@ class WuyeGuarantee extends Component {
                       <span>报修服务</span>
                 </div>
     	  	  <div className="guarantee_top">
-                <p><Link to="/wuye/index/guarantee">未处理</Link></p>
-                <p><Link to="/wuye/index/already">已处理</Link></p>
+                <p className="cl">未处理</p>
+                <p className="">已处理</p>
             </div>
-            <Route path="/wuye/index/guarantee" render={()=>(
+            <div className="guarantees">
                 <div className="guarantee_bottom">
              <ul className="orgin_con">
-              {console.log(this.props.data)}
-              {this.props.data.map(function(e,i){
+              {this.props.data.wuyeantee.map(function(e,i){
                   return        <li key={i} className="baoxiu_box">
                       <div className="one">
                           <span>{e.village}</span>
@@ -58,13 +71,32 @@ class WuyeGuarantee extends Component {
                   </li>
                 }.bind(this))}
             </ul>
-                </div>
-              )} />
-            <Route path="/wuye/index/already" component={wuyealready} />
+            </div>
+            </div>
+            <div className="already">
+							<div className="guarantee_bottom">
+	              <div className="notice_editor">
+	                <span onClick={this.tip}><img src="../../images/tip.png" alt=""/></span>
+	                <span>保修服务</span>
+	              </div>
+	            <ul className="orgin_con">
+		              {this.props.data.wuyebaoxiu.map(function(e,i){
+		    return        <li key={i} className="baoxiu_box">
+		                      <div className="one">
+		                          <span>{e.village}</span>
+		                          <span>{e.address}</span>
+		                      </div>
+		                      <p className="two">{e.con}</p>
+		                      <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>
+		                  </li>
+		                }.bind(this))}
+		            </ul>
+			        </div>
+						</div>
             
         </div>
       </Router>
     );
   }
 }
-export default connect(e=>({data:e.wuyeantee}),action)(WuyeGuarantee);
+export default connect(e=>({data:e}),action)(WuyeGuarantee);
