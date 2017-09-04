@@ -14,7 +14,6 @@ class YezhuPackage extends Component {
 		$(".admin_con").hide()
         var yezhusj=window.sessionStorage.getItem('yezhu');
         var yezhusjjson=JSON.parse(yezhusj);
-        console.log(yezhusjjson)
         this.props.yezhu_spackage(yezhusjjson[0].family,yezhusjjson[0].address);
 	}
 	componentWillUnmount(){
