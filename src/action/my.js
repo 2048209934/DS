@@ -22,6 +22,7 @@ export function yezhudlpost(dluser,dlpass){
 				if(data.length==0){
 					dispatch(yezhuid(0))
 					window.sessionStorage.setItem('yezhu',0)
+					sessionStorage
 				}else if(dluser!=data[0].user||dlpass!=data[0].pass){
 					dispatch(yezhuid(0))
 					window.sessionStorage.setItem('yezhu',0)
@@ -212,14 +213,13 @@ export function yzdpwy(data){
 		yepjwydata:data
 	}
 }
-export function yzdpwypost(village,uid){
+export function yzdpwypost(village){
 	return dispatch=>{
 		return $.ajax({
 			type:"post",
 			url:config.url+"/property/yzzhgxqwy",
 			data:{
-				village:village,
-				uid:uid
+				village:village
 			},
 			success:function(data){
 				dispatch(yzdpwy(data))
@@ -241,7 +241,6 @@ export function yzhpwypost(id,uid,village){
 				village:village
 			},
 			success:function(data){
-				console.log(data)
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
@@ -261,7 +260,6 @@ export function yzcpwypost(id,uid,village){
 				village:village
 			},
 			success:function(data){
-				console.log(data)
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
