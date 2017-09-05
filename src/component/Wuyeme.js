@@ -38,7 +38,7 @@ class Wuyeme extends Component {
                 <div className="myself">
                     <div className="myself_top">
                       <a href="#" className="file"  id="zpd">
-                          <p id="pps"><img src={this.props.haha==""?yezhusjjson[0].toux:this.props.data}/></p>
+                          <p id="pps"><img src={this.props.haha==""?yezhusjjson[0].toux:this.props.haha}/></p>
                           <input type="file" onChange={this.chengfn.bind(this)} name="" id="file"/>
                       </a>
                       <div className="myself_word">

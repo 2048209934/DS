@@ -425,7 +425,7 @@ export function wytouxiangpost(fd,id){
 				img:imgs
 			},
 				success:function(s){
-					console.log(s)
+					//console.log(s[0].toux)
 			var yezhustr=JSON.stringify(s)
 			window.sessionStorage.setItem('wuye',yezhustr)
 			dispatch(wuyetx(s[0].toux))
