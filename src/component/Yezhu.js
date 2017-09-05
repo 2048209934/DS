@@ -104,7 +104,7 @@ class Yezhu extends Component {
     	  					<input type="password" id="yezhudlpass"  placeholder="请输入" />
     	  				</div>    	  	  	  				
     	  				<Link to="/yezhu/index" onClick={this.yezhudl.bind(this)}><Btn btnVal="登 录" /></Link>
-    	  				<span className="zhuce" onClick={this.yezhuzhuce}>注册</span>
+    	  				<span onClick={this.yezhuzhuce} style={{'margin-top':'13px','display':'block'}}><Btn btnVal="注 册" /></span>
     	  			</div>           	
     	  		</div>
            )} />  
