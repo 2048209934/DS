@@ -48,7 +48,7 @@ class Yezhuzhuzhe extends Component {
                                <Link to="/yezhu/index/address"> 
                                     <img src="../images/xiaoxi.png" alt="" />
                                </Link>
-                                <span>{yezhu[0].address}</span>
+                                <span>{yezhu?yezhu[0].address:""}</span>
                             </p>
 
 

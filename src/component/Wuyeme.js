@@ -52,11 +52,11 @@ class Wuyeme extends Component {
                   <div className="myself_nows">
                       <div className="now_left">
                           <p>好评</p>
-                          <p>{this.props.data==null?'':(this.props.data[0].hao==''?'0':this.props.data[0].hao.split("?").length)}</p>
+                          <p>{this.props.data==null?'':(this.props.data[0].hao==''?'0':this.props.data[0].hao==null?"0":this.props.data[0].hao.split("?").length)}</p>
                       </div> 
                       <div className="now_right">
                           <p>差评</p>
-                          <p>{this.props.data==null?'':(this.props.data[0].cha==''?'0':this.props.data[0].cha.split("?").length)}</p>
+                          <p>{this.props.data==null?'':(this.props.data[0].cha==''?'0':this.props.data[0].cha==null?"0":this.props.data[0].cha.split("?").length)}</p>
                       </div> 
                   </div>
                 </div>
