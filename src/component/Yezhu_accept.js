@@ -23,7 +23,8 @@ class YezhuAccept extends Component {
     	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
     	var con=$(".ermainput").val()+new Date().getTime()
     	this.props.fangkefn(con,yezhu[0].name)
-    	$("#imgsboxs").html("<img className=erweimaimg src=http://localhost:8100/create_qrcode?text="+con+"/>")
+    	$("#imgsboxs").html("<img className='erweimaimg' style='width: 290px;height: 290px;display: block;margin: 0 auto;' src=http://localhost:8100/create_qrcode?text="+con+"/>")
+    	$(".ermainput").val('')
     }
     render() {
         return (

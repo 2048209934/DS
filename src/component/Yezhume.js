@@ -45,8 +45,8 @@ class Yezhume extends Component {
                                 <input type="file" onChange={this.chengfn.bind(this)}  name="" id="file"/>
                             </a>
                             <div className="myself_word">
-                                <p>游客</p>
-                                <p>大圣城市花园</p>
+                                <p>{yezhusjjson[0].name}</p>
+                                <p>{yezhusjjson[0].address}</p>
                             </div>
                             <Link to="/yezhu/index/me/amend">
                                 <div className="arrow">></div>

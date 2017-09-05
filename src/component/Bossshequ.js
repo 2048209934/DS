@@ -25,7 +25,7 @@ componentDidMount(){
                     {this.props.data.map(function(e,i){
                     	return <li key={i} id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src={e.toux} alt="" />
+                                <img className="left" src={e.toux} style={{'border-radius':'50%',height:'1.2rem'}} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

@@ -94,7 +94,7 @@ class Yezhuzhuzhe extends Component {
                     	return <Link key={i} to={`/yezhu/index/share/${e.id}`}>
                         <li id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src={e.toux} alt="" />
+                                <img className="left" src={e.toux} style={{'border-radius':'50%',height:'1.2rem'}} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>
@@ -104,7 +104,7 @@ class Yezhuzhuzhe extends Component {
                          {e.img==null?"":e.img==""?"":e.img.split("?").map(function(v,s){
                             	return <img key={s} className=" luntanimgss" src={v} alt="" />
                             })}
-                            <div className="luntansj">{e.time.substr(0,19).split("T").join("   ")}</div>
+                            <div className="luntansj" style={{color:'#000'}}>{e.time.substr(0,19).split("T").join("   ")}</div>
                         </li>
                         </Link>
                     })}
