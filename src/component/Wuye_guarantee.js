@@ -3,14 +3,18 @@ import './../css/wuye_guarantee.css';
 import $ from 'jquery'
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory'
 
+import imgs1 from "./images/tip.png";
+
+const history = createHistory();
 class WuyeGuarantee extends Component {
   componentDidMount(){
   	$(".guarantees").show()
@@ -46,10 +50,10 @@ class WuyeGuarantee extends Component {
   }
   render() {
     return (
-      <Router>
+      <Router history={history}>
     	  <div className="guarantee">
                 <div className="notice_editor">
-                     <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
+                     <span onClick={this.ok}><img src={imgs1} alt=""/></span>
                       <span>报修服务</span>
                 </div>
     	  	  <div className="guarantee_top">
@@ -76,7 +80,7 @@ class WuyeGuarantee extends Component {
             <div className="already">
 							<div className="guarantee_bottom">
 	              <div className="notice_editor">
-	                <span onClick={this.tip}><img src="../../images/tip.png" alt=""/></span>
+	                <span onClick={this.tip}><img src={imgs1} alt=""/></span>
 	                <span>保修服务</span>
 	              </div>
 	            <ul className="orgin_con">

@@ -31,7 +31,6 @@ export function yezhuhdpost(village,id){
 				dispatch(yezhuhd(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -53,7 +52,6 @@ export function yezhuhdposts(id,uid,village){
 				dispatch(yezhuhd(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -74,7 +72,6 @@ export function wuyehdpost(village){
 				dispatch(wuhds(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -96,7 +93,6 @@ export function wuyehdtjpost(village,name,con){
 				dispatch(wuhds(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -127,7 +123,6 @@ export function yezhultjspost(village,uid){
 				dispatch(yezhultjs(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -155,7 +150,6 @@ export function yezhultxqpost(id,uid){
 				dispatch(yezhultxq(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -175,7 +169,6 @@ export function yezhultzan(id,uid){
 				dispatch(yezhultxq(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -200,7 +193,6 @@ export function yezhultpinglun(uid){
 			dispatch(yezhultpl(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -236,7 +228,6 @@ export function yezhupinglunss(uid,title,name,names){
 			dispatch(yezhultpl(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -260,7 +251,7 @@ export function yezhuluntanfb(fd){
 	return dispatch=>{
 		return $.ajax({
 				type:"post",
-				url:"http://localhost:8100/forum/img",
+				url:config.url+"/forum/img",
 				async:true,
 				data:fd,
 				contentType:false,
@@ -294,10 +285,9 @@ export function yezhuluntantjes(name,con,village,uid,img,toux){
 			},
 			success:function(data){
 			dispatch(yezhultxq(data))	
-			window.location.href="http://localhost:3000/yezhu/index/shequ"
+			window.location.href="http://www.sdxcjz.com/template/mds/build/#/yezhu/index/shequ"
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -323,7 +313,6 @@ export function wuyeyoubaobj(village){
 				dispatch(wuyeybbj(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -342,10 +331,9 @@ export function fangkepost(title,name){
 				name:name
 			},
 			success:function(data){
-			console.log(data)
+			   
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -367,7 +355,7 @@ export function touxiangpost(fd,id){
 	return dispatch=>{
 		return $.ajax({
 				type:"post",
-				url:"http://localhost:8100/owner/touxiangs",
+				url:config.url+"/owner/touxiangs",
 				async:true,
 				data:fd,
 				contentType:false,
@@ -377,7 +365,7 @@ export function touxiangpost(fd,id){
 				imgs=e
 				$.ajax({
 				type:"post",
-				url:"http://localhost:8100/owner/touxiangcharu",
+				url:config.url+"/owner/touxiangcharu",
 				async:true,
 				data:{
 				id:bb,
@@ -408,7 +396,7 @@ export function wytouxiangpost(fd,id){
 	return dispatch=>{
 		return $.ajax({
 				type:"post",
-				url:"http://localhost:8100/property/touxiangs",
+				url:config.url+"/property/touxiangs",
 				async:true,
 				data:fd,
 				contentType:false,
@@ -418,14 +406,14 @@ export function wytouxiangpost(fd,id){
 				imgs=e
 				$.ajax({
 				type:"post",
-				url:"http://localhost:8100/property/touxiangcharu",
+				url:config.url+"/property/touxiangcharu",
 				async:true,
 				data:{
 				id:bb,
 				img:imgs
 			},
 				success:function(s){
-					//console.log(s[0].toux)
+					
 			var yezhustr=JSON.stringify(s)
 			window.sessionStorage.setItem('wuye',yezhustr)
 			dispatch(wuyetx(s[0].toux))
@@ -457,7 +445,6 @@ export function bossshequ(){
 			dispatch(bossstat(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}

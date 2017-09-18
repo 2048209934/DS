@@ -3,13 +3,14 @@ import  Bossdetail from './Boss_detail';
 import  Alert from './Alert';
 import $ from 'jquery';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class Bosssteward extends Component {
 	componentDidMount(){
@@ -44,7 +45,7 @@ class Bosssteward extends Component {
 	}
   render() {
     return (
-        <Router>
+        <Router history={history}>
         	<div>
                 <Route exact path='/boss/index' render={() => (
                     <div className="bj">

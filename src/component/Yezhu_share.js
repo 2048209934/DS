@@ -6,7 +6,10 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import imgs1 from "./images/arrow.png";
+import imgs2 from "./images/circle.png";
+import imgs3 from "./images/like.png";
+import imgs4 from "./images/like_fill.png";
 import * as action from './../action/action'
 import {connect} from 'react-redux';
 //id:this.props.match.params.id
@@ -48,8 +51,8 @@ class YezhuShare extends Component {
         return (
             <div className="wapers">
                 <div className="package_head">
-                    <img className="back" src="../../../../images/arrow.png" onClick={this.fn} alt="" />
-                    <img className="more" src="../../../../images/circle.png" alt="" />
+                    <img className="back" src={imgs1} onClick={this.fn} alt="" />
+                    <img className="more" src={imgs2} alt="" />
                     邻里分享
                 </div>
                 <div className="live">
@@ -69,7 +72,7 @@ class YezhuShare extends Component {
                 </div>
                 <div className="dianzan">
                     <span className="left">已有{this.props.data.length==1?this.props.data[0].help==""?0:this.props.data[0].help==null?0:this.props.data[0].help.split("?").length:"0"}人点赞</span>
-                    <button className="right" onClick={this.zanfn.bind(this)}><img src={this.props.data.length==1?this.props.data[0].obes=="false"?"../../../../images/like.png":"../../../../images/like_fill.png":"../../../../images/like.png"} alt="" /></button>
+                    <button className="right" onClick={this.zanfn.bind(this)}><img src={this.props.data.length==1?this.props.data[0].obes=="false"?imgs3:imgs4:imgs3} alt="" /></button>
                 </div>
                 <div className="pingluns">
                 {this.props.pros.map(function(e,i){

@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import Btn from './Btn'
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import './../css/srweima.css';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import imgs1 from "./images/arrow.png";
+
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class YezhuAccept extends Component {
 		componentDidMount(){
 			$(".admin_con").hide()
@@ -30,7 +34,7 @@ class YezhuAccept extends Component {
         return (
             <div>
                 <div className="package_head">
-                    <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
+                    <img className="back" src={imgs1} onClick={this.fn} alt="" />
                     访客邀请
                 </div>
                 <div className="erweima">

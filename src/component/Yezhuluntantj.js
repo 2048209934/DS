@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import imgs1 from "./images/arrow.png";
+import imgs3 from "./images/xztp.png";
 import './../css/yezhuluntantj.css';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
@@ -44,7 +46,7 @@ class Yezhuluntantj extends Component {
         return (
             <div className="wapers">
             <div className="package_head">
-                    <img className="back" src="../../../../images/arrow.png" onClick={this.fn.bind(this)} alt="" />
+                    <img className="back" src={imgs1} onClick={this.fn.bind(this)} alt="" />
                     邻里分享
                     <span className="luntantj" onClick={this.luntantjfs.bind(this)}>提交</span>
                 </div>
@@ -52,7 +54,7 @@ class Yezhuluntantj extends Component {
                 <textarea  className="textareas" className="lttext"></textarea>
                 <div>
     <a href="javascript:;" className="filep"  id="zpd">
-	<p id="pps"><img className="back" src="../../../../images/xztp.png" onClick={this.fn} alt="" /></p>
+	<p id="pps"><img className="back" src={imgs3} onClick={this.fn} alt="" /></p>
         <input type="file" multiple="multiple" name="" id="file" onChange={this.filluefn.bind(this)}/>
     </a></div>
     <div className="luntanimg">{this.props.data.map(function(e,i){

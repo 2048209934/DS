@@ -33,7 +33,6 @@ export function yezhudlpost(dluser,dlpass){
 				}
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -63,7 +62,6 @@ export function yezhurhmpost(homeyard){
 				}
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -96,7 +94,6 @@ export function yezhuzcpost(zcuser,zcpass){
 							$(".yezhuruhuma").hide()
 						},
 						error:function(){
-							alert("0.0")
 						}
 					});	
 				}else{
@@ -104,7 +101,6 @@ export function yezhuzcpost(zcuser,zcpass){
 				}
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -131,9 +127,6 @@ export function wuyedlpost(dluser,dlpass){
 				if(data.length==0){	
 					dispatch(wuyeid(0))
 					window.sessionStorage.setItem('wuye',0)
-				}else if(dluser!=data[0].user||dlpass!=data[0].pass){	
-					dispatch(wuyeid(0))
-					window.sessionStorage.setItem('wuye',0)
 				}else{
 					dispatch(wuyeid(data))
 					var wuyestr=JSON.stringify(data)
@@ -141,7 +134,6 @@ export function wuyedlpost(dluser,dlpass){
 				}
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -167,7 +159,6 @@ export function wuyegllistpost(address){
 				dispatch(wuyeglb(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});
 	}
@@ -198,7 +189,6 @@ export function wuyegltjpost(address,name,sex,phone,family,homeyard){
 				dispatch(wuyegtj(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});
 	}
@@ -225,7 +215,6 @@ export function yzdpwypost(village){
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});
 	}
@@ -244,7 +233,6 @@ export function yzhpwypost(id,uid,village){
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});
 	}
@@ -263,7 +251,6 @@ export function yzcpwypost(id,uid,village){
 				dispatch(yzdpwy(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});
 	}
@@ -292,7 +279,6 @@ export function bossdlpost(dluser,dlpass){
 				}
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -317,7 +303,6 @@ export function bosszsxqpost(){
 				dispatch(bosszsxq(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -345,7 +330,6 @@ export function bosszsxqhzpost(address){
 				dispatch(bosszsxqhz(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -372,7 +356,6 @@ export function wyxgxx(id,name,phone,sex,email){
 				window.sessionStorage.setItem('wuye',wuyestr)
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -400,7 +383,6 @@ export function wykzjdpjpost(id){
 				dispatch(wykzjdpjz(data))			
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}

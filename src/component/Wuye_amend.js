@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import  Wuyemake from './Wuye_make';
 import $ from 'jquery';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
+import createHistory from 'history/createHashHistory'
 
+import imgs1 from "./images/tip.png";
+
+const history = createHistory();
 
 class Wuyeamend extends Component {
   componentDidMount(){
@@ -19,19 +23,19 @@ class Wuyeamend extends Component {
     window.history.go(-1)
   }
   back=function(){
-    window.location.href="http://localhost:3000/wuye"
+    window.location.href="http://www.sdxcjz.com/template/mds/build"
   }
   render() {
   	var yezhusj=window.sessionStorage.getItem('wuye');
     var yezhusjjson=JSON.parse(yezhusj);
   	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
     return (
-        <Router>
+        <Router history={history}>
     	  	<div className="revise">
            <Route exact path='/wuye/index/me/amend' render={() => (
             <div className="self_means">
                 <div className="daturn_top">
-                    <span onClick={this.go}><img src="../../../images/tip.png" alt=""/></span>
+                    <span onClick={this.go}><img src={imgs1} alt=""/></span>
                     <span>个人资料</span>
                 </div>
                 <div className="daturn_bottom">

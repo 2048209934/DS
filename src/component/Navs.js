@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 const OldMenuLink = ({ label, to, activeOnlyWhenExact, img1, img2 }) => (
   <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
     <Link to={to} className={match ? 'active' : ''}>

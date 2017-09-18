@@ -5,13 +5,14 @@ import Btn from './Btn'
 import './../css/boss.css'
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class Boss extends Component {
 	bossdl(e){
@@ -24,7 +25,7 @@ class Boss extends Component {
 	}
   render() {
     return (
-    	 <Router>
+    	 <Router history={history}>
     	  <div>
     	  	<Route exact path='/boss' render={() => (
     	  		<div className="bosslogin">

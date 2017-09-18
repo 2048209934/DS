@@ -4,15 +4,16 @@ import Boss from './component/Boss'
 import Wuye from './component/Wuye'
 import Yezhu from './component/Yezhu'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div className="App">
             <Route exact path='/' render={() => (
             	<div className="app_con">

@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 import './../css/boss_shequ.css';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Bossshequ extends Component {
 componentDidMount(){		
 	this.props.bosssqfn()	
 	}
   render() {
     return (
-    	<Router>
-            <div>{console.log(this.props.data)}
+    	<Router history={history}>
+            <div>
                 {/*header*/}
                 <p className="head" id="head">
                     社区
@@ -25,7 +26,7 @@ componentDidMount(){
                     {this.props.data.map(function(e,i){
                     	return <li key={i} id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src={e.toux} style={{'border-radius':'50%',height:'1.2rem'}} alt="" />
+                                <img className="left" src={e.toux} style={{'borderRadius':'50%',height:'1.2rem'}} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

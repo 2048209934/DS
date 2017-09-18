@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import $ from 'jquery'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
@@ -11,7 +11,12 @@ import  Bosswuye from './Boss_wuye';
 
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory';
 
+import imgs1 from "./images/arrow.png";
+
+
+const history = createHistory();
 class Bossdetail extends Component {
 	componentDidMount(){
 		var xq=window.sessionStorage.getItem('xq')
@@ -28,12 +33,12 @@ class Bossdetail extends Component {
     render() {
 		var xq=window.sessionStorage.getItem('xq')
         return (
-            <Router>
+            <Router history={history}>
                 <div>
                     <Route exact path='/boss/index/detail' render={() => (
                         <div className="bj">
                             <div className="heads">
-                                <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
+                                <img className="back" src={imgs1} onClick={this.fn} alt="" />
                                 {xq}
                             </div>
                             <div className="all_count">

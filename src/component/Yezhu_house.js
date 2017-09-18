@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 import * as action from './../action/action';
 import {connect} from 'react-redux';
+import imgs1 from "./images/arrow.png";
+import imgs2 from "./images/people.png";
 
 class Yezhuhouse extends Component {
 	componentDidMount(){
@@ -38,7 +40,7 @@ class Yezhuhouse extends Component {
     	    <div>
                 {/*header*/}
                 <p className="head" id="head">
-                    <img onClick={this.go} src="../../../images/arrow.png" alt="" />
+                    <img onClick={this.go} src={imgs1} alt="" />
                     <span>我的房屋</span>
                 </p>
 
@@ -54,7 +56,7 @@ class Yezhuhouse extends Component {
                 </div>
 
                 <p className="add_house" onClick={this.wyxq}>
-                    <img className="left" src="../../../images/people.png" alt="" />
+                    <img className="left" src={imgs2} alt="" />
                     添加住户
                 </p>
                 <div className="add_message">

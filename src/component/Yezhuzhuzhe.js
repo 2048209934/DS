@@ -5,20 +5,28 @@ import  YezhuShare from './Yezhu_share';
 import { Carousel } from 'react-bootstrap';
 import Yezhuaddress from './Yezhu_address';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+import imgs1 from "./images/xiaoxi.png";
+import imgs2 from "./images/ggg.jpg";
+import imgs3 from "./images/ewm2.jpg";
+import imgs4 from "./images/parcel.png";
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Yezhuzhuzhe extends Component {
 	componentDidMount(){
 		setTimeout(function(){
 			var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
+            console.log(yezhu)
 			if(yezhu!=0){
-				this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
+                
+				//this.props.yezhutljs(yezhu[0].address,yezhu[0].id)
 			}	
-		}.bind(this),100)
+		}.bind(this),1000)
 	}
     /*componentDidMount(){
         if(window.addEventListener){
@@ -39,14 +47,14 @@ class Yezhuzhuzhe extends Component {
     render() {
     		var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
         return (
-            <Router>
+            <Router history={history}>
         	    <div>
                     <Route exact path='/yezhu/index' render={() => (
                         <div className="wrap">
                             {/*header*/}
                             <p className="head" id="head">
                                <Link to="/yezhu/index/address"> 
-                                    <img src="../images/xiaoxi.png" alt="" />
+                                    <img src={imgs1} alt="" />
                                </Link>
                                 <span>{yezhu?yezhu[0].address:""}</span>
                             </p>
@@ -54,7 +62,7 @@ class Yezhuzhuzhe extends Component {
 
                             {/*banner*/}
                 	  	    <div className="banner">
-                                <img src="../images/ggg.jpg" alt="" />
+                                <img src={imgs2} alt="" />
                             </div>
 
                             
@@ -69,7 +77,7 @@ class Yezhuzhuzhe extends Component {
                                             <p>扫码过门禁</p>
                                         </div>
                                         <div className="icon left">
-                                            <img src="../images/ewm2.jpg" alt="" />
+                                            <img src={imgs3} alt="" />
                                         </div>
                                     </div>
                                 </Link>
@@ -80,7 +88,7 @@ class Yezhuzhuzhe extends Component {
                                             <p>收包更便捷</p>
                                         </div>
                                         <div className="icon left">
-                                            <img src="../images/parcel.png" alt="" />
+                                            <img src={imgs4} alt="" />
                                         </div>
                                     </div>
                                 </Link>
@@ -94,7 +102,7 @@ class Yezhuzhuzhe extends Component {
                     	return <Link key={i} to={`/yezhu/index/share/${e.id}`}>
                         <li id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src={e.toux} style={{'border-radius':'50%',height:'1.2rem'}} alt="" />
+                                <img className="left" src={e.toux} style={{'borderRadius':'50%',height:'1.2rem'}} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

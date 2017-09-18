@@ -3,12 +3,14 @@ import  Yezhumake from './Yezhu_make';
 
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+import imgs1 from "./images/arrow.png";
 
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Yezhuamend extends Component {
 	componentDidMount(){
 		$(".admin_con").hide()
@@ -20,19 +22,19 @@ class Yezhuamend extends Component {
     window.history.go(-1)
   }
   back=function(){
-    window.location.href="http://localhost:3000/yezhu"
+    window.location.href="http://www.sdxcjz.com/template/mds/build"
   }
   render() {
   	var yezhusj=window.sessionStorage.getItem('yezhu');
     var yezhusjjson=JSON.parse(yezhusj);
   	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
     return (
-        <Router>
+        <Router history={history}>
     	  	<div className="revise">
                 <Route exact path='/yezhu/index/me/amend' render={() => (
                     <div className="self_means">
                         <p className="head" id="head">
-                            <img onClick={this.go} src="../../../images/arrow.png" alt="" />
+                            <img onClick={this.go} src={imgs1} alt="" />
                             <span>个人资料</span>
                         </p>
                         <div className="SC">

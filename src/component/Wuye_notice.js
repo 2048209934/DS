@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './../css/wuye_notice.css';
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
@@ -10,6 +10,8 @@ import {
 
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+
+import imgs1 from "./images/tip.png";
 
 class WuyeNotice extends Component {
   componentDidMount(){
@@ -30,9 +32,9 @@ class WuyeNotice extends Component {
   }
   render() {
     return (
-    	  <div className="notice">  {console.log(this.props.data)}    
+    	  <div className="notice">   
     	  	  <div className="notice_editor"> 
-                <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
+                <span onClick={this.ok}><img src={imgs1} alt=""/></span>
                 <span>小区通知</span>
             </div>
             <div className="editor_con">    

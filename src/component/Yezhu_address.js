@@ -8,6 +8,8 @@ import {
 
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import imgs1 from "./images/arrow.png";
+import imgs2 from "./images/add.png";
 
 class Yezhuaddress extends Component {
   go=function(){
@@ -27,7 +29,7 @@ class Yezhuaddress extends Component {
     return (
     	  <div>
            <div className="package_head">
-                <img className="back" src="../../images/arrow.png" onClick={this.go} alt="" />
+                <img className="back" src={imgs1} onClick={this.go} alt="" />
                 通知
             </div>
     
@@ -42,7 +44,7 @@ class Yezhuaddress extends Component {
                         <p className="two">{e.con}</p>
                         <p className="time">{e.time.substr(0,19).split("T").join("   ")}</p>*/}
                         <div className="adds_left">
-                            <img src="../../images/add.png" alt="小区通知"/>
+                            <img src={imgs2} alt="小区通知"/>
                         </div>
                         <div className="adds_right">
                             <p><span>{e.name}</span><span>{e.village}</span></p>

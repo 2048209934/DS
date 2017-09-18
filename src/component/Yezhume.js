@@ -3,13 +3,14 @@ import  Yezhuamend from './Yezhu_amend';
 import  Yezhuactivity from './Yezhu_activity';
 import  Yezhuhouse from './Yezhu_house';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
 import * as action from './../action/action';
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Yezhume extends Component {
     componentDidMount(){
         var yezhusj=window.sessionStorage.getItem('yezhu');
@@ -33,9 +34,8 @@ class Yezhume extends Component {
     render() {
         var yezhusj=window.sessionStorage.getItem('yezhu');
         var yezhusjjson=JSON.parse(yezhusj);
-        console.log(yezhusjjson[0].imgs)
     return (
-        <Router>
+        <Router history={history}>
             <div>
                 <Route exact path='/yezhu/index/me' render={() => (
                 	<div className="myself">

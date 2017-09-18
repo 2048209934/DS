@@ -10,6 +10,11 @@ import {
 import * as action from './../action/action'
 import {connect} from 'react-redux';
 import Btn from './Btn';
+
+import imgs1 from "./images/tip.png";
+import imgs2 from "./images/time.png";
+import imgs3 from "./images/people.png";
+
 class WuyeOrganize extends Component {
     componentDidMount(){
 			var wuyesjjson=JSON.parse(window.sessionStorage.getItem('wuye'))
@@ -42,7 +47,7 @@ if($(".orgin").val()!=""){
     return (
     	  <div>
             <div className="notice_editor">
-                <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
+                <span onClick={this.ok}><img src={imgs1} alt=""/></span>
                 <span>组织活动</span>
             </div>
             <div className="huodongbox">
@@ -62,8 +67,8 @@ if($(".orgin").val()!=""){
                     <p><span>活动时间:</span><span>2017-8-24-2017-8-28</span></p>*/}
                     <p></p>
                     <p><span>活动内容:</span>{e.con}</p>
-                    <p><span><img src="../../images/time.png" alt=""/></span><span>{e.time.substr(0,19).split("T").join("   ")}</span></p>
-                    <p><span><img src="../../images/people.png" alt=""/></span><span>{e.nums==null?0:e.nums.split("?").length}</span></p>    
+                    <p><span><img src={imgs2} alt=""/></span><span>{e.time.substr(0,19).split("T").join("   ")}</span></p>
+                    <p><span><img src={imgs3} alt=""/></span><span>{e.nums==null?0:e.nums.split("?").length}</span></p>    
                     <div className="orgin_con"></div>
                 </li>
 })}

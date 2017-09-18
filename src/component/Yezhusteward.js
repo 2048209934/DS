@@ -3,16 +3,17 @@ import  YezhuServes from './Yezhu_serves';
 import  Yezhubaoxiu from './Yezhubaoxiu';
 import  Yezhuhuodong from './Yezhuhuodong';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class Yezhusteward extends Component {
     render() {
         return (
-            <Router>
+            <Router history={history}>
                 <div>
                     <Route exact path='/yezhu/index/steward' render={() => (
                         <div>
@@ -52,10 +53,7 @@ class Yezhusteward extends Component {
                                         <span className="right">></span>
                                     </li>
                                 </Link>
-                                <li className="clear">
-                                    <span className="left">访客邀请</span>
-                                    <span className="right">></span>
-                                </li>
+                                
                                 <Link to="/yezhu/index/steward/huodong">
                                     <li className="clear">
                                         <span className="left">社区活动</span>
@@ -63,18 +61,7 @@ class Yezhusteward extends Component {
                                     </li>
                                 </Link>
                                 <li className="white">  </li>
-                                <li className="clear">
-                                    <span className="left">物业缴费</span>
-                                    <span className="right">></span>
-                                </li>
-                                <li className="clear">
-                                    <span className="left">一卡通账单</span>
-                                    <span className="right">></span>
-                                </li>
-                                <li className="clear">
-                                    <span className="left">你知道么</span>
-                                    <span className="right">></span>
-                                </li>
+                                
                                 
                             </ul>
                         </div>

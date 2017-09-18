@@ -9,16 +9,24 @@ import  YezhuPackage from './Yezhu_package';
 import  YezhuShare from './Yezhu_share';
 import OldMenuLink from './Navs';
 import Yezhuadd from './Yezhu_address';
-
+import imgs1 from "./images/account_eight.png";
+import imgs2 from "./images/account_server.png";
+import imgs3 from "./images/account_five.png";
+import imgs4 from "./images/account_six.png";
+import imgs5 from "./images/account_four.png";
+import imgs6 from "./images/account_three.png";
+import imgs7 from "./images/account_one.png";
+import imgs8 from "./images/account_two.png";
 import $ from 'jquery';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
 import * as action from './../action/action';
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class Yezhuindex extends Component {
 //submits=function(){
@@ -39,14 +47,14 @@ class Yezhuindex extends Component {
 						<div style="height:50px; line-height:50px; text-align:center; position:relative; border-bottom:1px solid #ccc; font-size:16px;">
 							<img id="hyezhudl" src="../images/arrow.png" alt="" style="width:20px; height:22px; position:absolute; top:30%; left:15px;">登录
 						</div>
-						<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">对不起，您输入的内容错误</div>
+						<div style="margin:64% 0 0 0;text-align: center;font-size: 20px;">密码错误，请重新输入</div>
 					<div>
 					`)
 				$("#hyezhudl").click(function(){
 					window.history.go(-1)
 				})
 			}
-		},10)
+		},300)
 		/*setTimeout(()=>{
 //			console.log(this.props.data)
 			var yezhudata=this.props.data
@@ -57,7 +65,7 @@ class Yezhuindex extends Component {
 	}
   render() {	
     return (
-      <Router>
+      <Router history={history}>
   		  <div>
               <Route path="/yezhu/index" exact component={Yezhuzhuzhe} />
               <Route path="/yezhu/index/steward" component={Yezhusteward} />
@@ -70,10 +78,10 @@ class Yezhuindex extends Component {
            
     
               <div className="admin_con">
-              	<OldMenuLink to={'/yezhu/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={'../../../images/account_eight.png'} img2={'../../../images/account_server.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/steward'} label={'管家'} img1={'../../../images/account_five.png'} img2={'../../../images/account_six.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/shequ'} label={'社区'} img1={'../../../images/account_four.png'} img2={'../../../images/account_three.png'}></OldMenuLink>
-              	<OldMenuLink to={'/yezhu/index/me'} label={'我'} img1={'../../../images/account_one.png'} img2={'../../../images/account_two.png'}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index'} activeOnlyWhenExact={true} label={'住这儿'} img1={imgs1} img2={imgs2}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/steward'} label={'管家'} img1={imgs3} img2={imgs4}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/shequ'} label={'社区'} img1={imgs5} img2={imgs6}></OldMenuLink>
+              	<OldMenuLink to={'/yezhu/index/me'} label={'我'} img1={imgs7} img2={imgs8}></OldMenuLink>
             </div>
           </div>    
       </Router>

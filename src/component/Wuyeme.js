@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import  Wuyeamend from './Wuye_amend';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Wuyeme extends Component {
 		componentDidMount(){
 		var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
@@ -32,7 +34,7 @@ class Wuyeme extends Component {
         var yezhusjjson=JSON.parse(yezhusj);
   	var wuye=JSON.parse(window.sessionStorage.getItem('wuye'))
     return (
-      <Router>
+      <Router history={history}>
     	  <div>
             <Route exact path='/wuye/index/me' render={() => (
                 <div className="myself">

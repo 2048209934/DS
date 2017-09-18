@@ -1,5 +1,5 @@
 var config={
-    url:"http://localhost:8100"
+    url:"http://47.92.37.168:8100"
 };
 
 export default config;

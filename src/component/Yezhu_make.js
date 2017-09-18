@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import imgs1 from "./images/arrow.png";
 
 class Yezhumake extends Component {
   componentDidMount(){
@@ -37,7 +38,7 @@ class Yezhumake extends Component {
             <Alert data='修改成功'/>
             {/*header*/}
             <p className="head" id="head">
-                <img onClick={this.back} src="../../../../images/arrow.png" alt="" />
+                <img onClick={this.back} src={imgs1} alt="" />
                 <span>编辑资料</span>
             </p>
             <div className="modify">

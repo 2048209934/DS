@@ -8,6 +8,9 @@ import {
 import * as action from './../action/action';
 import {connect} from 'react-redux';
 
+import imgs1 from "./images/tip.png";
+import imgs2 from "./images/addition.png";
+import imgs3 from "./images/manage1.png";
 
 class WuyeParcel extends Component {
     componentDidMount(){
@@ -42,11 +45,11 @@ class WuyeParcel extends Component {
         return (
     	    <div>{console.log(this.props.mph)}
     	  	    <div className="notice_editor">
-                    <span onClick={this.ok}><img src="../../images/tip.png" alt=""/></span>
+                    <span onClick={this.ok}><img src={imgs1} alt=""/></span>
                     <span>邮包</span>
                 </div>
                 <p className="add_parcel clear"  onClick={this.wyxq}>
-                    <img className="left" src="../../../images/addition.png" alt="" />
+                    <img className="left" src={imgs2} alt="" />
                     <span className="left">添加邮包</span>
                 </p>
 
@@ -76,7 +79,7 @@ class WuyeParcel extends Component {
                 </div>
 
                 <p className="all_parcel clear">
-                    <img className="left" src="../../../images/manage1.png" alt="" />
+                    <img className="left" src={imgs3} alt="" />
                     <span className="left">所有邮包</span>
                 </p>
                 <div className="parcels">

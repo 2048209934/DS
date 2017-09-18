@@ -21,7 +21,6 @@ export function spackage(village,address){
 				dispatch(sspackage(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -51,7 +50,6 @@ export function addpackage(name,address,phone,delivery,village){
 				dispatch(add_package(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -79,7 +77,6 @@ export function showpackage(address){
 				dispatch(show_package(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -107,7 +104,6 @@ export function wuyemakesure(id,address){
 				dispatch(wuye_makesure(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -137,7 +133,6 @@ export function addhouse(name,address,family,homeyard){
 				dispatch(add_house(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -166,7 +161,6 @@ export function showhouse(address,family){
 				dispatch(show_house(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -196,7 +190,6 @@ export function showactivity(id,village){
 				dispatch(show_activity(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -224,7 +217,6 @@ export function bosslookwuye(village){
 				dispatch(boss_lookwuye(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -258,7 +250,6 @@ export function bossaddwuye(name,village,user,pass,phone){
 				dispatch(boss_addwuye(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -282,7 +273,6 @@ export function bossaddwuyeshow(village){
 				dispatch(boss_addwuye(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}
@@ -313,7 +303,6 @@ export function yezhurevise(id,name,phone,email,sex){
 
 			},
 			error:function(){
-				alert("0.0")
 			}
 		})
 	}

@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import imgs1 from "./images/arrow.png";
 
 class YezhuPackage extends Component {
 	componentDidMount(){
@@ -26,7 +27,7 @@ class YezhuPackage extends Component {
         return (
             <div>
                 <div className="package_head">
-                    <img className="back" src="../../images/arrow.png" onClick={this.fn} alt="" />
+                    <img className="back" src={imgs1} onClick={this.fn} alt="" />
                     邮包
                 </div>
                 <p className="nows">您现在有<span> {this.props.data.length} </span>个包裹噢~</p>

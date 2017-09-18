@@ -3,13 +3,17 @@ import Alert from './Alert'
 
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory'
 
+import imgs1 from "./images/tip.png";
+
+const history = createHistory();
 
 class Wuyemake extends Component {
 	componentDidMount(){
@@ -36,7 +40,7 @@ class Wuyemake extends Component {
     	  <div>
     	  		<Alert data="修改成功" />
             <div className="modify_top">
-                <span onClick={this.back}><img src="../../../../images/tip.png" alt=""/></span>
+                <span onClick={this.back}><img src={imgs1} alt=""/></span>
                 <span>编辑资料</span>
             </div>
             <div className="modify">

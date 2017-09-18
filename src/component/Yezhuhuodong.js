@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import imgs1 from "./images/arrow.png";
 import $ from 'jquery';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
@@ -43,8 +44,7 @@ class Yezhuhuodong extends Component {
         return (
         	<div>
         	<div className="package_head">
-        	{console.log(this.props.data)}
-                    <img className="back" src="../../../images/arrow.png" onClick={this.fn} alt="" />
+                    <img className="back" src={imgs1} onClick={this.fn} alt="" />
                     社区活动
                 </div>
                 <div>

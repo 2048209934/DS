@@ -22,7 +22,7 @@ export function wuyenotice(village,name,con){
 				dispatch(wuyeid(data))
 			},
 			error:function(){
-				alert("0.0")
+
 			}
 		});	
 	}
@@ -40,7 +40,6 @@ export function wuyenotices(village){
 				dispatch(wuyeid(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -64,7 +63,6 @@ export function wuyeantee(village){
 				dispatch(wuyeids(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -91,7 +89,6 @@ export function wuyebaoxiu(con,village,address){
 				dispatch(wuye_bx(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -111,7 +108,6 @@ export function wuyeboxs(id,village,address){
 				dispatch(wuyeids(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -130,7 +126,6 @@ export function wuyejieshou(village,address){
 				dispatch(wuye_bx(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -154,7 +149,6 @@ export function yezhuaddress(village){
 				dispatch(yezhu_address(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}
@@ -172,7 +166,6 @@ export function yezhuaddresss(village){
 				dispatch(wuye_bx(data))
 			},
 			error:function(){
-				alert("0.0")
 			}
 		});	
 	}

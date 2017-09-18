@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import $ from 'jquery'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
@@ -10,7 +10,12 @@ import {
 import  Alert from './Alert';
 import * as action from './../action/action'
 import {connect} from 'react-redux';
+import createHistory from 'history/createHashHistory';
 
+import imgs1 from "./images/arrow.png";
+import imgs2 from "./images/addwuye.png";
+
+const history = createHistory();
 class Bosswuye extends Component {
 	componentDidMount(){
         var xq=window.sessionStorage.getItem('xq');
@@ -46,11 +51,11 @@ class Bosswuye extends Component {
                 <div className="bj">
                     <Alert data="请输入内容"/>
                     <div className="heads">
-                        <img className="back" src="../../../images/arrow.png" onClick={this.fn} alt="" />
+                        <img className="back" src={imgs1} onClick={this.fn} alt="" />
                         物业详情
                     </div>
                     <p className="add_wuye clear"  onClick={this.wyxq}>
-                        <img className="left" src="../../../images/addwuye.png" alt="" />
+                        <img className="left" src={imgs2} alt="" />
                         <span className="left">添加物业</span>
                     </p>
 

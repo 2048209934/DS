@@ -9,7 +9,8 @@ import {
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import imgs1 from "./images/addressbook.png";
+import imgs2 from "./images/addpeople.png";
 
 class Wuyesteward extends Component {
 	componentDidMount(){
@@ -42,7 +43,7 @@ class Wuyesteward extends Component {
     	  	<Alert data="请输入内容" />
     	  	<h2>住户管理</h2>
     	  	<p className="tjgl" onClick={this.wyxq}>
-    	  		<img className="left" src="../../images/addressbook.png" alt="" />
+    	  		<img className="left" src={imgs1} alt="" />
     	  		添加住户
     	  	</p>
     	  	<div className="tjglk">
@@ -65,7 +66,7 @@ class Wuyesteward extends Component {
     	  		<button onClick={this.wysq.bind(this)}>确定</button>
     	  	</div>
     	  	<p className="sytj">
-                <img className="left" src="../../images/addpeople.png" alt="" />
+                <img className="left" src={imgs2} alt="" />
                 所有住户
             </p>
     	  	<ul className="zhlist">  	

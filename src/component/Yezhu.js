@@ -5,13 +5,14 @@ import Alert from './Alert';
 import './../css/yezhu.css'
 import $ from 'jquery'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class Yezhu extends Component {
 	yezhufh1(){
@@ -56,7 +57,7 @@ class Yezhu extends Component {
 	}
   render() {
     return (
-       <Router>
+       <Router history={history}>
     	  <div>
     	  	<Route exact path='/yezhu' render={() => (
     	  		<div className="yezhulogin">
@@ -104,7 +105,7 @@ class Yezhu extends Component {
     	  					<input type="password" id="yezhudlpass"  placeholder="请输入" />
     	  				</div>    	  	  	  				
     	  				<Link to="/yezhu/index" onClick={this.yezhudl.bind(this)}><Btn btnVal="登 录" /></Link>
-    	  				<span onClick={this.yezhuzhuce} style={{'margin-top':'13px','display':'block'}}><Btn btnVal="注 册" /></span>
+    	  				<span onClick={this.yezhuzhuce} style={{'marginTop':'13px','display':'block'}}><Btn btnVal="注 册" /></span>
     	  			</div>           	
     	  		</div>
            )} />  

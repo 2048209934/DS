@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import  YezhuShare from './Yezhu_share';
 import  Yezhuluntantj from './Yezhuluntantj';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import * as action from './../action/action'
 import {connect} from 'react-redux';
-
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 class Yezhushequ extends Component {
 		componentDidMount(){
 	var yezhu=JSON.parse(window.sessionStorage.getItem('yezhu'))
@@ -38,7 +39,7 @@ class Yezhushequ extends Component {
     }*/
   render() {
     return (
-        <Router>
+        <Router history={history}>
     	    <div>
     	  	    <div className="wrap">
                    {/*header*/}
@@ -54,7 +55,7 @@ class Yezhushequ extends Component {
                     	return <Link key={i} to={`/yezhu/index/shequ/share/${e.id}`}>
                         <li id="li" className="box">
                             <p className="name clear">
-                                <img className="left" src={e.toux} style={{'border-radius':'50%',height:'1.2rem'}} alt="" />
+                                <img className="left" src={e.toux} style={{'borderRadius':'50%',height:'1.2rem'}} alt="" />
                                 <span className="left">{e.name}</span>
                                 <span className="left">在</span>
                                 <span className="left">邻里分享</span>

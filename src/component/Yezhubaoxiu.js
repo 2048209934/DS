@@ -7,7 +7,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import imgs1 from "./images/arrow.png";
 import * as action from './../action/action'
 import {connect} from 'react-redux';
 import Btn from './Btn';
@@ -45,7 +45,7 @@ class Yezhubaoxiu extends Component {
     	  <div>
             {/*header*/}
             <p className="head" id="head">
-                <img onClick={this.go} src="../../../images/arrow.png" alt="" />
+                <img onClick={this.go} src={imgs1} alt="" />
                 <span>报修</span>
             </p>
              <div className="deal_top">
